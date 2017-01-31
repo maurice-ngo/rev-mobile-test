@@ -1,0 +1,958 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+    <meta charset="UTF-8" />
+		<meta name="viewport" content="initial-scale=1, maximum-scale=1">
+			<meta name="apple-itunes-app" content="app-id=377018720">
+
+        <title>REVOLVE Mobile</title>
+        <link rel="stylesheet" href="css/jqtouch.css" title="jQTouch">
+		<link rel="stylesheet" href="css/mobile.css" title="jQTouch">
+		<link rel="stylesheet" href="css/category.css" title="jQTouch">
+
+		<!--// MY REVOLVE CSS //-->
+		<link rel="stylesheet" href="css/my_revolve.css">
+		<!--// END //-->
+		
+		<link rel="apple-touch-icon-precomposed" href="images/mobile_icon.png" />
+
+        <script src="js/jquery-1.8.0.min.js" type="application/x-javascript" charset="utf-8"></script>
+	
+		<script src="js/search.js"></script>
+	    <script src="js/jquery.royalslider.min.js"></script>
+	    <script src="js/jquery.autocomplete.js"></script>
+		<script src="js/commonmethods.js" type="text/javascript" charset="utf-8"></script>
+
+
+	    <!-- slider stylesheets -->
+	    <link href="css/royalslider.css" rel="stylesheet">
+	  	<link href="css/rs-default.css" rel="stylesheet">
+
+	  	<link href="css/jquery.autocomplete.css" rel="stylesheet">
+
+
+       <!-- <script src="js/zepto.min.js" type="text/javascript" charset="utf-8"></script>-->
+        <script src="js/jqtouch.min.js" type="text/javascript" charset="utf-8"></script>
+        <!-- Uncomment the following two lines (and comment out the previous two) to use jQuery instead of Zepto. -->
+        <script src="js/jqtouch-jquery.min.js" type="application/x-javascript" charset="utf-8"></script>
+</head>
+<body>
+<div id="jqt" >
+<div id="home">
+
+<div id ="slide_menu_mhp">
+    <ul class="slide_col_mhp">
+        <li class="slide_myrevolve">
+            <a class="slide_left_myrevolve" rel="external" href="/r/mobile/myrevolve/Dashboard.jsp"><span class="mr_user">MY REVOLVE</span></a>
+            <a class="slide_left_myrevolve" rel="external" href="javascript:void(0)"><span class="mr_user"></span></a>
+				<span class="sign_inout">
+				
+				
+					<a rel="external" href="https://www.revolveclothing.com/r/mobile/LoginPage.jsp?ref=%2Fr%2Fmobile%2FShopTheLook.jsp%3Fproduct%3DMICH-WR39%26product%3DCALK-WZ4%26product%3DLINE-WB136%26product%3DNATA-WL181%26product%3DWANR-WL66%26product%3DMIMR-WL41%26product%3DEAND-WL107%26product%3DGORJ-WL636%26product%3DGORJ-WL613%26product%3DMKOR-WL81">SIGN IN / SIGN UP</a>
+				
+				</span>
+        </li>
+        <li><a class="slide_left_mhp" rel="external" href="/r/mobile/index_women.jsp">Shop Womens</a></li>
+        <li><a class="slide_left_mhp" rel="external" href="/r/mobile/index_men.jsp">Shop Mens</a></li>
+        <li><a rel="external" href="/r/mobile/mr_favorites.jsp">My Favorites</a></li>
+
+    </ul>
+</div>
+
+
+<div class="toolbar_mhp">
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+ <div id="logo_drop_down_mhp">
+		<a class="up_mhp" href="javascript:showRevolve()">
+			Revolve
+		</a>	
+	</div>
+	
+	
+	<div id="top_bag_mhp">
+		<a rel="external" href="https://www.revolveclothing.com/r/mobile/ShoppingBag.jsp" >
+		<span class="heartbagw" id="shopping_bag_count">
+		 0
+ 	
+			</span>
+		</a>
+	</div><!-- top_bag_mhp -->
+	
+	<div id="top_heart_mhp">
+		<a rel="external" href="/r/mobile/mr_favorites.jsp">
+		<span class="heartbagw" id="heart_total_count">
+		0
+		
+		</span>
+		</a>
+	</div><!-- top_heart_mhp -->
+	
+	<div class="top_search_btn">
+		<a rel="external" href="#" onclick="toggle_visibility('header_search_mhp');return false;">
+		<span class="search_btn_icon">
+		</span>
+		</a>
+	</div><!-- top_search_btn -->	
+    
+
+
+	<div id="logo_horz_mhp">
+		 <a rel="external" href="/r/mobile/index_women.jsp">
+
+			<img src="http://is4.revolveassets.com/r/mobile/images/m/logo_hrz.jpg"  height="30" />
+		</a>
+	</div>
+	
+	<div id="header_search_mhp">
+		<!-- 
+			<img class="header_search_lft_mhp" src="images/m/search_lft.jpg" width="3.5" height="30" />
+		 -->
+		<form class='form' method="get" id="frmSearch" name="frmSearch" action="/r/mobile/SearchResult.jsp">           
+			<fieldset class="mobile_search_bar_mhp">
+					
+			<input class="mobile_search_btn_mhp" onclick="clearSearchCookies();" value="GO" type="hidden" return false;>
+		 	<img class="mobile_search_btn_mhp" src="/r/mobile/images/m/search_right_btn.jpg" width="45px" height="30px" onclick="javascript:clearContents();if(event) event.returnValue=false;" />
+		
+			 <!--	  <input name="mobilecancel" class="mobile_search_btn_mhp" onclick="javascript:clearContents();if(event) event.returnValue=false;">         
+					  -->                      							
+			<div style="overflow: hidden; padding-right: .5em;">		     
+				<input class="search_input_mhp ac_input" autocomplete="off" id="search_term" name="search" placeholder="Search" type="text">    
+			</div>	          
+			</fieldset>          
+		</form>
+	</div>
+</div>
+
+<div class="scroll" style="background:white;">
+
+ <div class="mr_acct_settings">
+
+    	<div class="rev_page_header shoplook"><span class="backbtn"><a href="#">Back</a></span><h1>Shop this look</h1></div>
+    	<div class="cancel_remove_popup" id="showBagPopUp" style="display:none;">
+        <div class="cancel_remove_content">
+            <h1 id="bagCount">ITEM ADDED TO BAG </h1>  
+            <br style="clear:both;"/>
+            <a href="ShoppingBag.jsp" class="popup_cta">View Bag / Checkout</a>
+            <br style="clear:both;"/>
+            <span class="cancel_close_popup"><a href="#" onclick="hideDiv();">CLOSE</a></span>
+        </div><!-- cancel_remove_content -->
+        </div><!-- end coupon popup bar -->
+
+    	<div class="mcp shoplook_grid">
+		<div class="clear"></div>
+		<br />
+
+	<div class="citem">
+	<div style="display:block;" class="fav_btn">	 
+		<a href='#' onclick="heartProductM(this, 'MICH-WR39','');return false;">
+			<span class="fav_heart " style='z-index: 10'></span>
+
+	    </a>
+	</div>
+        <a href="/mobile/michael-stars-long-sleeve-collard-jumpsuit-in-black/dp/MICH-WR39/?d=F" rel="external"><img src="http://is4.revolveclothing.com/images/p4/ip2/pl2/MICH-WR39_V1.jpg" /></a>
+				<p class="c-brand-name">Michael Stars</p>
+				<p class="c-prod-desc">Michael Stars Long Sleeve Collard Jumpsuit in Black</p>
+				<p class="item-price">$228.00</p>
+				
+				<div class="shoplook_add">
+				
+				
+				<div class="add_bag_btn css_btn">
+				<a onclick="addToBag('MICH-WR39')" id="ajax-link">Add to bag</a>
+				</div><!-- add_bag_btn -->
+				<div id="MICH-WR39" class="co_input_box">
+					<div class="select_style_size">
+						<select id="size_MICH-WR39" name="select" class="selectbox">
+						  	 <option value="-1">Size</option>
+            
+                    <option value="S" >S</option>
+            
+                    <option value="XS" >XS</option>
+            
+                    <option value="M" >M</option>
+            
+                    <option value="L" >L</option>
+            
+						 			
+								
+						</select> 
+					</div><!-- select_style_size -->
+				</div><!-- shoplook_add -->
+				
+				
+				</div><!-- co_input_box -->
+			</div><!--citem-->
+	
+
+	<div class="citem">
+	<div style="display:block;" class="fav_btn">	 
+		<a href='#' onclick="heartProductM(this, 'CALK-WZ4','');return false;">
+			<span class="fav_heart " style='z-index: 10'></span>
+
+	    </a>
+	</div>
+        <a href="/mobile/calvin-klein-mayra-heel-in-black/dp/CALK-WZ4/?d=F" rel="external"><img src="http://is4.revolveclothing.com/images/p4/ip2/pl2/CALK-WZ4_V1.jpg" /></a>
+				<p class="c-brand-name">Calvin Klein</p>
+				<p class="c-prod-desc">Calvin Klein Mayra Heel in Black</p>
+				<p class="item-price">$119.00</p>
+				
+				<div class="shoplook_add">
+				
+				
+				<div class="add_bag_btn css_btn">
+				<a onclick="addToBag('CALK-WZ4')" id="ajax-link">Add to bag</a>
+				</div><!-- add_bag_btn -->
+				<div id="CALK-WZ4" class="co_input_box">
+					<div class="select_style_size">
+						<select id="size_CALK-WZ4" name="select" class="selectbox">
+						  	 <option value="-1">Size</option>
+            
+                    <option value="6" >6</option>
+            
+                    <option value="6.5" >6.5</option>
+            
+                    <option value="7" >7</option>
+            
+                    <option value="7.5" >7.5</option>
+            
+                    <option value="8" >8</option>
+            
+                    <option value="8.5" >8.5</option>
+            
+                    <option value="9" >9</option>
+            
+                    <option value="9.5" >9.5</option>
+            
+                    <option value="10" >10</option>
+            
+						 			
+								
+						</select> 
+					</div><!-- select_style_size -->
+				</div><!-- shoplook_add -->
+				
+				
+				</div><!-- co_input_box -->
+			</div><!--citem-->
+	
+
+	<div class="citem">
+	<div style="display:block;" class="fav_btn">	 
+		<a href='#' onclick="heartProductM(this, 'LINE-WB136','');return false;">
+			<span class="fav_heart " style='z-index: 10'></span>
+
+	    </a>
+	</div>
+        <a href="/mobile/linea-pelle-triangular-buckle-hip-belt-in-black/dp/LINE-WB136/?d=F" rel="external"><img src="http://is4.revolveclothing.com/images/p4/ip2/pl2/LINE-WB136_V1.jpg" /></a>
+				<p class="c-brand-name">Linea Pelle</p>
+				<p class="c-prod-desc">Linea Pelle Triangular Buckle Hip Belt in Black</p>
+				<p class="item-price">$158.00</p>
+				
+				<div class="shoplook_add">
+				
+				
+				<div class="add_bag_btn css_btn">
+				<a onclick="addToBag('LINE-WB136')" id="ajax-link">Add to bag</a>
+				</div><!-- add_bag_btn -->
+				<div id="LINE-WB136" class="co_input_box">
+					<div class="select_style_size">
+						<select id="size_LINE-WB136" name="select" class="selectbox">
+						  	 <option value="-1">Size</option>
+            
+                    <option value="XS" >XS</option>
+            
+                    <option value="S" >S</option>
+            
+                    <option value="M" >M</option>
+            
+						 			
+								
+						</select> 
+					</div><!-- select_style_size -->
+				</div><!-- shoplook_add -->
+				
+				
+				</div><!-- co_input_box -->
+			</div><!--citem-->
+	
+
+	<div class="citem">
+	<div style="display:block;" class="fav_btn">	 
+		<a href='#' onclick="heartProductM(this, 'NATA-WL181','');return false;">
+			<span class="fav_heart " style='z-index: 10'></span>
+
+	    </a>
+	</div>
+        <a href="/mobile/natalie-b-jewelry-this-bods-for-you-bodychain-in-gold/dp/NATA-WL181/?d=F" rel="external"><img src="http://is4.revolveclothing.com/images/p4/ip2/pl2/NATA-WL181_V1.jpg" /></a>
+				<p class="c-brand-name">Natalie B Jewelry</p>
+				<p class="c-prod-desc">Natalie B Jewelry This Bod's For You Bodychain in Gold</p>
+				<p class="item-price">$55.00</p>
+				
+				<div class="shoplook_add">
+				
+				
+				<div class="add_bag_btn css_btn">
+				<a onclick="addToBag('NATA-WL181')" id="ajax-link">Add to bag</a>
+				</div><!-- add_bag_btn -->
+				<div id="NATA-WL181" class="co_input_box">
+					<div class="select_style_size">
+						<select id="size_NATA-WL181" name="select" class="selectbox">
+						  	 <option value="-1">Size</option>
+            
+                    <option value="all" >all</option>
+            
+						 			
+								
+						</select> 
+					</div><!-- select_style_size -->
+				</div><!-- shoplook_add -->
+				
+				
+				</div><!-- co_input_box -->
+			</div><!--citem-->
+	
+
+	<div class="citem">
+	<div style="display:block;" class="fav_btn">	 
+		<a href='#' onclick="heartProductM(this, 'WANR-WL66','');return false;">
+			<span class="fav_heart " style='z-index: 10'></span>
+
+	    </a>
+	</div>
+        <a href="/mobile/wanderlust-co-dusk-to-dawn-xl-ring-in-gold/dp/WANR-WL66/?d=F" rel="external"><img src="http://is4.revolveclothing.com/images/p4/ip2/pl2/WANR-WL66_V1.jpg" /></a>
+				<p class="c-brand-name">Wanderlust + Co</p>
+				<p class="c-prod-desc">Wanderlust + Co Dusk To Dawn XL Ring in Gold</p>
+				<p class="item-price">$59.00</p>
+				
+				<div class="shoplook_add">
+				
+				
+				<div class="add_bag_btn css_btn">
+				<a onclick="addToBag('WANR-WL66')" id="ajax-link">Add to bag</a>
+				</div><!-- add_bag_btn -->
+				<div id="WANR-WL66" class="co_input_box">
+					<div class="select_style_size">
+						<select id="size_WANR-WL66" name="select" class="selectbox">
+						  	 <option value="-1">Size</option>
+            
+                    <option value="all" >all</option>
+            
+						 			
+								
+						</select> 
+					</div><!-- select_style_size -->
+				</div><!-- shoplook_add -->
+				
+				
+				</div><!-- co_input_box -->
+			</div><!--citem-->
+	
+
+	<div class="citem">
+	<div style="display:block;" class="fav_btn">	 
+		<a href='#' onclick="heartProductM(this, 'MIMR-WL41','');return false;">
+			<span class="fav_heart " style='z-index: 10'></span>
+
+	    </a>
+	</div>
+        <a href="/mobile/mimi-lu-zane-ring-in-clear/dp/MIMR-WL41/?d=F" rel="external"><img src="http://is4.revolveclothing.com/images/p4/ip2/pl2/MIMR-WL41_V1.jpg" /></a>
+				<p class="c-brand-name">Mimi & Lu</p>
+				<p class="c-prod-desc">Mimi & Lu Zane Ring in Clear</p>
+				<p class="item-price">$52.00</p>
+				
+				<div class="shoplook_add">
+				
+				
+				<div class="add_bag_btn css_btn">
+				<a onclick="addToBag('MIMR-WL41')" id="ajax-link">Add to bag</a>
+				</div><!-- add_bag_btn -->
+				<div id="MIMR-WL41" class="co_input_box">
+					<div class="select_style_size">
+						<select id="size_MIMR-WL41" name="select" class="selectbox">
+						  	 <option value="-1">Size</option>
+            
+                    <option value="6" >6</option>
+            
+                    <option value="7" >7</option>
+            
+						 			
+								
+						</select> 
+					</div><!-- select_style_size -->
+				</div><!-- shoplook_add -->
+				
+				
+				</div><!-- co_input_box -->
+			</div><!--citem-->
+	
+
+	<div class="citem">
+	<div style="display:block;" class="fav_btn">	 
+		<a href='#' onclick="heartProductM(this, 'EAND-WL107','');return false;">
+			<span class="fav_heart " style='z-index: 10'></span>
+
+	    </a>
+	</div>
+        <a href="/mobile/elizabeth-and-james-luna-ring-in-yellow-gold/dp/EAND-WL107/?d=F" rel="external"><img src="http://is4.revolveclothing.com/images/p4/ip2/pl2/EAND-WL107_V1.jpg" /></a>
+				<p class="c-brand-name">Elizabeth and James</p>
+				<p class="c-prod-desc">Elizabeth and James Luna RIng in Yellow Gold</p>
+				<p class="item-price">$95.00</p>
+				
+				<div class="shoplook_add">
+				
+				
+				<div class="add_bag_btn css_btn">
+				<a onclick="addToBag('EAND-WL107')" id="ajax-link">Add to bag</a>
+				</div><!-- add_bag_btn -->
+				<div id="EAND-WL107" class="co_input_box">
+					<div class="select_style_size">
+						<select id="size_EAND-WL107" name="select" class="selectbox">
+						  	 <option value="-1">Size</option>
+            
+                    <option value="6" >6</option>
+            
+                    <option value="7" >7</option>
+            
+						 			
+								
+						</select> 
+					</div><!-- select_style_size -->
+				</div><!-- shoplook_add -->
+				
+				
+				</div><!-- co_input_box -->
+			</div><!--citem-->
+	
+
+	<div class="citem">
+	<div style="display:block;" class="fav_btn">	 
+		<a href='#' onclick="heartProductM(this, 'GORJ-WL636','');return false;">
+			<span class="fav_heart " style='z-index: 10'></span>
+
+	    </a>
+	</div>
+        <a href="/mobile/gorjana-vivienne-ring-set-in-gold/dp/GORJ-WL636/?d=F" rel="external"><img src="http://is4.revolveclothing.com/images/p4/ip2/pl2/GORJ-WL636_V1.jpg" /></a>
+				<p class="c-brand-name">gorjana</p>
+				<p class="c-prod-desc">gorjana Vivienne Ring Set in Gold</p>
+				<p class="item-price">$58.00</p>
+				
+				<div class="shoplook_add">
+				
+				
+				<div class="add_bag_btn css_btn">
+				<a onclick="addToBag('GORJ-WL636')" id="ajax-link">Add to bag</a>
+				</div><!-- add_bag_btn -->
+				<div id="GORJ-WL636" class="co_input_box">
+					<div class="select_style_size">
+						<select id="size_GORJ-WL636" name="select" class="selectbox">
+						  	 <option value="-1">Size</option>
+            
+                    <option value="6" >6</option>
+            
+                    <option value="7" >7</option>
+            
+						 			
+								
+						</select> 
+					</div><!-- select_style_size -->
+				</div><!-- shoplook_add -->
+				
+				
+				</div><!-- co_input_box -->
+			</div><!--citem-->
+	
+
+	<div class="citem">
+	<div style="display:block;" class="fav_btn">	 
+		<a href='#' onclick="heartProductM(this, 'GORJ-WL613','');return false;">
+			<span class="fav_heart " style='z-index: 10'></span>
+
+	    </a>
+	</div>
+        <a href="/mobile/gorjana-petra-shimmer-cuff-in-gold/dp/GORJ-WL613/?d=F" rel="external"><img src="http://is4.revolveclothing.com/images/p4/ip2/pl2/GORJ-WL613_V1.jpg" /></a>
+				<p class="c-brand-name">gorjana</p>
+				<p class="c-prod-desc">gorjana Petra Shimmer Cuff in Gold</p>
+				<p class="item-price">$58.00</p>
+				
+				<div class="shoplook_add">
+				
+				
+				<div class="add_bag_btn css_btn">
+				<a onclick="addToBag('GORJ-WL613')" id="ajax-link">Add to bag</a>
+				</div><!-- add_bag_btn -->
+				<div id="GORJ-WL613" class="co_input_box">
+					<div class="select_style_size">
+						<select id="size_GORJ-WL613" name="select" class="selectbox">
+						  	 <option value="-1">Size</option>
+            
+                    <option value="all" >all</option>
+            
+						 			
+								
+						</select> 
+					</div><!-- select_style_size -->
+				</div><!-- shoplook_add -->
+				
+				
+				</div><!-- co_input_box -->
+			</div><!--citem-->
+	
+
+	<div class="citem">
+	<div style="display:block;" class="fav_btn">	 
+		<a href='#' onclick="heartProductM(this, 'MKOR-WL81','');return false;">
+			<span class="fav_heart " style='z-index: 10'></span>
+
+	    </a>
+	</div>
+        <a href="/mobile/michael-kors-pave-skinny-hinged-bracelet-in-gold-clear/dp/MKOR-WL81/?d=F" rel="external"><img src="http://is4.revolveclothing.com/images/p4/ip2/pl2/MKOR-WL81_V1.jpg" /></a>
+				<p class="c-brand-name">Michael Kors</p>
+				<p class="c-prod-desc">Michael Kors Pave Skinny Hinged Bracelet in Gold & Clear</p>
+				<p class="item-price">$125.00</p>
+				
+				<div class="shoplook_add">
+				
+				
+				<div class="add_bag_btn css_btn">
+				<a onclick="addToBag('MKOR-WL81')" id="ajax-link">Add to bag</a>
+				</div><!-- add_bag_btn -->
+				<div id="MKOR-WL81" class="co_input_box">
+					<div class="select_style_size">
+						<select id="size_MKOR-WL81" name="select" class="selectbox">
+						  	 <option value="-1">Size</option>
+            
+                    <option value="all" >all</option>
+            
+						 			
+								
+						</select> 
+					</div><!-- select_style_size -->
+				</div><!-- shoplook_add -->
+				
+				
+				</div><!-- co_input_box -->
+			</div><!--citem-->
+	
+
+		</div><!--mcp shoplook_grid -->
+		<div class="clear"></div>
+		<div class="shoplook_cta outofstock" style="display: none">
+			<a onclick="addAllToBag();">Add entire outfit to your bag</a>
+		</div><!-- shoplook_cta -->
+	</div><!-- shoplook_grid -->    	
+    </div><!-- mr_acct_settings -->
+</div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+
+    function loadJSFile(filename, async) {
+        var fileref=document.createElement('script');
+        fileref.setAttribute("type","text/javascript");
+        fileref.setAttribute("src", filename);
+        if (async) {
+            fileref.setAttribute("async", "async");
+        }
+        if (typeof fileref!="undefined") {
+            document.getElementsByTagName("head")[0].appendChild(fileref);
+        }
+    }
+
+    
+    function doOnLoad() {
+        insertGoogleAnalytics();
+        
+        
+        
+        insertCriteo();
+    }
+
+    $(window).load(function() {
+        doOnLoad();
+        if(typeof donOnLoad2 == 'function')
+        { donOnLoad2(); }
+    });
+
+    
+    function getViewportInfo(){
+        var width = window.innerWidth ||
+                document.documentElement.clientWidth ||
+                document.body.clientWidth;
+        var height = window.innerHeight ||
+                document.documentElement.clientHeight ||
+                document.body.clientHeight;
+        if (width != undefined && height != undefined){
+            return '&w='+width+'&h='+height;
+        } else {
+            return '';
+        }
+    }
+
+    // footerAllPages.jsp
+    function insertPageTrackForMobile(addToCartFlag, productCode) {
+        var cartAmount = '0.0';
+        var cartContent = 'null';
+        var referrer = 'http://www.revolveclothing.com/content/mobile/lookbook/Looks+We+Love+Best+Sellers+11.19';
+        var uri = '/r/mobile/ShopTheLook.jsp' + '?product=MICH-WR39&product=CALK-WZ4&product=LINE-WB136&product=NATA-WL181&product=WANR-WL66&product=MIMR-WL41&product=EAND-WL107&product=GORJ-WL636&product=GORJ-WL613&product=MKOR-WL81';
+
+        if (uri.indexOf("EditorialList.jsp") != -1 || uri.indexOf("HotList.jsp") != -1 || uri.indexOf("HotListMobile.jsp") != -1
+                || uri.indexOf("LookBook.jsp") != -1 || uri.indexOf("LookBookMobile.jsp") != -1) {
+            uri = window.location.href
+        }
+
+        if(typeof(productCode) != 'undefined' && productCode != null) {
+            uri = uri.replace("code=", "code_original=");
+            if(uri.indexOf("?") != -1) {
+                uri = uri + "&code=" + productCode;
+            } else {
+                uri = uri + "?code=" + productCode;
+            }
+        }
+
+
+        var challengeVar = 3 - 1 % 4 / 1 + 5 * 9 + 2 - (6 - 5) + 3 * 5 + (8 - 9) * 7 - 9  - (3 + 2);
+
+        var smsParams = '&dep=F'+'&boutique=&newFlag=&section=ShopTheLook&cat=&subcat=&subsubcat=&pageNum=1&prevInstockInvoice=null&prevPreorderInvoice=null&challenge=' + challengeVar;
+
+        var dataToSend = "cC="+escape(cartContent)+"&cT="+escape(cartAmount)+"&r="+escape(referrer)+"&u="+escape(uri)+smsParams+getViewportInfo();
+
+
+
+        if(typeof(addToCartFlag) != 'undefined' && addToCartFlag) {
+            dataToSend += '&addToCart=true';
+        }
+
+        var submissionType = 'GET';
+        if(dataToSend.length > 4700) {
+            submissionType = 'POST';
+        }
+
+        $.ajax({
+            type: submissionType,
+            url:'/r/mobile/PageTrack.jsp',
+            data: dataToSend,
+            cache: false,
+            success: function(msg) { }
+        });
+    }
+
+    
+    insertPageTrackForMobile();
+
+    function insertGoogleAnalytics() {
+        
+        
+        
+
+        var _gaq = _gaq || [];
+        if (typeof window.jQuery !== "function")
+        { _gaq.push(['_setCustomVar', 2, 'jqueryNotInitialized', 'Yes']); }
+        else if (typeof window.optimizely !== "object")
+        { _gaq.push(['_setCustomVar', 4, 'optimizelyNotInitialized', 'Yes']); }
+        console.log("debug code after optimizely");
+
+        
+
+        var GA_JS_filename = '/r/js/google_analytics.js';
+        loadJSFile(GA_JS_filename, true);
+        console.log("load GA after optimizely");
+        
+    }
+
+    function setPixelCookie(c_name, value, exdays) {
+        var exdate = new Date();
+        exdate.setTime(exdate.getTime() + exdays*24*60*60*1000);
+        var c_value = escape(value) + ((exdays == null) ? "" : "; expires=" + exdate.toUTCString());
+        document.cookie = c_name + "=" + c_value+ "; path=/";
+    }
+
+    function insertCriteo() {
+        
+    }
+
+
+    
+
+</script>
+
+
+
+<script type="text/javascript">
+$(document).ready(function(){
+	$('.backbtn a').click(function(){
+		parent.history.back();
+		return false;
+	});
+});
+
+function addToBag(code){
+	var size = $('#size_'+code).val();
+	var container = $('#'+code);
+	if(size=="-1"){
+		$('.select_style_size', container).addClass('errorselect');
+		return;
+	}else{
+		var datastring = 'code=' + code + '&size=' + size+ '&qty=1&csrfHash=DJ0MKA9WESVJ2vbxD5kHRd1HKKgHMIlC&sectionURL=http%3A%2F%2Fwww.revolveclothing.com%2Fr%2Fmobile%2FShopTheLook.jsp';
+		$.ajax({  
+		  type: "POST",  
+		  url: "/r/mobile/AddToCart.jsp?"+datastring,		
+		  success: function() {  
+		    $("#showBagPopUp").css("display", "block");
+            insertPageTrackForMobile(true, code);
+             $.ajax({
+                 type: "POST",
+                 url: "/r/mobile/AjaxUserShoppingBag.jsp",
+                 success: function(response) {
+                    var responseObj = eval('(' + response + ')');
+                    $("#shopping_bag_count").html(responseObj);
+                 }
+             });
+		  }  
+		});
+	}
+}
+
+function addAllToBag(){
+	var codes=new Array(10);	
+	var sizes=new Array(10);	
+
+	var myArray = ["NATA-WL181","GORJ-WL613","MKOR-WL81","WANR-WL66","LINE-WB136","EAND-WL107","CALK-WZ4","MIMR-WL41","MICH-WR39","GORJ-WL636"];
+	for(i=0;i<myArray.length;i++){
+		var container = $('#'+myArray[i]);
+		var size = $('#size_'+myArray[i]).val();
+		if(size=="-1"){
+			$('.select_style_size', container).addClass('errorselect');
+			return;
+	    }else{
+	    	sizes[i] = size;
+	    }
+	}
+	var codeString = '';
+	var sizeString = '';
+	for(i=0;i<myArray.length;i++){
+		if(i==0){
+			codeString+='codes='+myArray[i];
+			
+		}else{
+			codeString+='&codes='+myArray[i];
+			//sizeString+='&sizes='+sizes[i];
+		}
+		sizeString+='&sizes='+sizes[i];
+	}
+	//var datastring = 'code=' + myArray[i] + '&size=' + sizes[i]+ '&qty=1';	
+	var success = false;
+		$.ajax({  
+		  type: "POST",  
+		  url: "/r/mobile/AddToCart.jsp?"+codeString+sizeString+'&qty=1&cond=custom&csrfHash=DJ0MKA9WESVJ2vbxD5kHRd1HKKgHMIlC',		
+		  success: function() {	
+			  success = true;
+			  $.ajax({  
+				  type: "POST",  
+				  url: "/r/mobile/AjaxUserShoppingBag.jsp",	
+				  success: function(response) {  
+		 	 			var responseObj = eval('(' + response + ')');
+				 		$("#shopping_bag_count").html(responseObj);	
+				 		$("#bagCount").text(myArray.length+' Items Added to the bag');
+						$("#showBagPopUp").css("display", "block");
+				  }  
+				}); 
+		  }  
+		});
+		
+	
+	
+}	
+	
+function hideDiv(){
+	$('#showBagPopUp').fadeOut();
+}	
+
+
+function isValidSize(size){
+    return !size || $.trim(size) == 0 || size != "-1";
+}
+</script>
+</body>
+</html>
+
+
+
+

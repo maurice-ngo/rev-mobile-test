@@ -1,0 +1,12 @@
+<div class="menu-section">
+  <ul>
+    <% items.forEach(function(item) { %>
+      <li>
+        <a class="menu-section__item" data-menu-level="<%= item.level %>" href="#menu-section/<%= item.level %>">
+          <span class="icon-left-gray-arrow"></span>
+          <%= item.name %>
+        </a>
+      </li>
+    <% }); %>
+  </ul>
+</div>

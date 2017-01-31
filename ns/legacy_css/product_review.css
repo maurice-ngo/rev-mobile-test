@@ -1,0 +1,721 @@
+.product_review_inner {
+  font-family: "Karla", Arial, sans-serif;
+  letter-spacing: 0.02em;
+}
+.product_review_inner h2 {
+  text-align: center;
+  font-family: "ProximaNovaBold", "Helvetica Neue", Arial, sans-serif;
+    font-weight: normal;
+    font-size: 14px;
+    color: black;
+    letter-spacing: .120em;
+  text-transform: uppercase;
+  margin: 5px 0 25px;
+}
+
+.product_review_inner .css_btn_login {
+  margin: 30px auto 0;
+    width: 40%;
+}
+.text_box_wrap h2 {
+  text-align: center;
+  font-family: "ProximaNovaBold", "Helvetica Neue", Arial, sans-serif;
+    font-weight: normal;
+    font-size: 14px;
+    color: black;
+    letter-spacing: .120em;
+  text-transform: uppercase;
+  margin: 15px 0 10px;
+}
+.text_box_wrap h2.header_line {
+  margin-bottom: 17px;
+}
+.product_review_inner h2.header_line:after {
+    border-bottom: 1px solid #000;
+    content: "";
+    display: block;
+    height: 12px;
+    margin-bottom: 5px;
+    width: 51px;
+    margin: 0 auto;
+}
+.hover-test {
+  color: #000;
+  text-align: center;
+  display: block;
+  margin-bottom: 10px;
+  font: 14px "ProximaNovaBold", "Helvetica Neue", Arial, sans-serif;
+  letter-spacing: .120em;
+}
+
+.product_review_wrap {
+  background-color: white;
+  width: 100%;
+  margin: 0 auto;
+  padding-top: 28px;
+  color: black;
+}
+.review_header {
+  text-align: center;
+  margin:  0 auto;
+  width: 229px;
+  display:  block;
+}
+.review_header_txt {
+  text-align: center;
+  color: black;
+  margin-bottom: 22px;
+  margin-top: 5px;
+  padding: 0 13px;
+}
+.product_wrap {
+  width: 182px;
+  display: block;
+  height: auto;
+  margin: 16px auto 0;
+}
+.product_wrap img {
+  margin: 0 auto;
+  display: block;
+}
+.product_wrap p {
+  color: black;
+  line-height: 16px;
+  padding-bottom: 23px;
+  padding-top: 7px;
+  margin: 0;
+}
+.rating_wrap {
+  display: block;
+  height: 100px;
+  overflow: hidden;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 23px;
+}
+.text_box_wrap form {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+.product_review_inner {
+  width: 100%;
+}
+.size_recommend {
+  display: block;
+  clear: left;
+  padding: 23px 0 35px;
+  border-top: 1px solid #e1e1e1;
+  border-bottom: 1px solid #e1e1e1;
+}
+.pdp_pop_header p {
+  text-align: center;
+  margin:  0 auto;
+  font-size: 12px;
+  color: #717171;
+}
+.pdp_pop_header h2 {
+  text-align: center;
+  margin:  0 auto;
+  font-size: 12px;
+}
+.pdp_pop_header p span {
+  font-weight: bold;
+  font-size: 15px;
+  text-transform: uppercase;
+}
+.size_rec_radio label {
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+.size_recommend p {
+  font-size: 14px;
+  margin: 0 0 25px;
+  padding: 0;
+  display: inline-block;
+  width: 100%;
+  line-height: 17px;
+  text-align: center;
+  text-transform: uppercase;
+}
+.size_rec_radio {
+  display: block;
+  width: 296px;
+  margin:  0 auto;
+}
+.star-rating-control {
+    display: block;
+    height: 117px;
+    overflow: hidden;
+    width: 290px;
+    margin:  0 auto;
+}
+.size_rec_radio input {
+  float: left;
+}
+.radio_list {
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  text-align: center!important;
+}
+.radio_list li {
+  float: none;
+  display: inline-block;
+  width: auto;
+  line-height: 22px;
+  margin-right: 3px;
+  margin-left: 3px;
+  margin-bottom: 3px;
+}
+
+.product_review_wrap.feedback_survey .nps_inner_wrap .nps_product_info .size_rec_radio .radio_list {
+    text-align:center;
+}
+
+
+.size_recommend2 {
+  display: block;
+  clear: both;
+  padding: 23px 0 35px;
+}
+.size_recommend2 p {
+  font-size: 14px;
+  margin: 0 0 25px;
+  padding: 0;
+  display: block;
+  line-height: 17px;
+  text-align: center;
+  text-transform: uppercase;
+}
+.radio_list2 {
+  display: block;
+  overflow: hidden;
+  width: 100%;
+}
+.radio_list2 li {
+  float: left;
+  display: block;
+  line-height: 22px;
+  width: auto;
+  margin-left: 3px;
+  margin-right: 3px;
+}
+.radio_list2 li.radio_about_label {
+  float: left;
+  display: block;
+  width: 70px;
+}
+.radio_list2 li.li_smaller {
+  float: left;
+  display: block;
+  width: auto;
+}
+
+.text_box_header {
+  width: 136px;
+  height: 26px;
+  margin: 24px auto 0;
+  display: block;
+}
+.text_box_wrap {
+  margin-left: 13.5px;
+    margin-right: 13.5px;
+    padding-top: 15px;
+}
+.text_box_wrap p {
+  font-size: 12px;
+  text-align: center;
+  margin-bottom: 20px;
+  width: 100%;
+  color: #717171;
+}
+.product_review_wrap .close_button {
+
+}
+.product_review_wrap .close_button a {
+    display: block;
+    float: right;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    width: 26px;
+    right: 10px;
+    top: -20px;
+}
+.review_text_box {
+  -moz-box-sizing: border-box;
+  text-align: left;
+  text-indent: 0;
+  white-space: normal;
+  padding: 10px;
+  color: black;
+  margin-bottom: 16px;
+  -moz-border-radius: 0px;
+  -webkit-border-radius: 0px;
+  border-radius: 0px; /* future proofing */
+  -khtml-border-radius: 7px; /* for old Konqueror browsers */
+  /*shadow*/
+  background: none repeat scroll 0 0 #EAEAEA;
+    border: 1px solid #E1E1E1;
+  resize: none;
+  height: 110px;
+  width: 100%;
+  display: block;
+  font: 10px "Karla", Arial, sans-serif;
+  letter-spacing: 0.02em;
+}
+.txt_box_header {
+  font-size: 12px;
+  text-transform: uppercase;
+  text-align: center;
+  width: 100%;
+  display: block;
+  margin-top: 28px;
+}
+.review_btn {
+  display: block;
+  background: black;
+  overflow: hidden;
+  height: 48px;
+  margin: 0 auto;
+  border-style: none;
+  cursor: hand;
+  font-weight: bold;
+  text-align: center;
+  font-size: 16px;
+  text-transform: uppercase;
+  -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+  width: 89%;
+  -webkit-appearance: none;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.review_btn:active {
+  opacity: 0.9;
+}
+.review_btn:hover {
+  opacity: 0.63;
+}
+.product_review_row {
+  display: block;
+  border-top: 1px solid #000;
+  margin:  0 auto;
+  padding: 26px 0 35px;
+}
+
+.pdp_review_input {
+  width: 205px;
+  text-align: left;
+  text-indent: 0;
+  white-space: normal;
+  border: 1px solid #c0c0c0;
+  padding: 10px 15px;
+  font: 12px Helvetica, "Helvetica Neue", Arial, Geneva, sans-serif;
+  color: #979797;
+  -moz-border-radius: 7px;
+  -webkit-border-radius: 7px;
+  border-radius: 7px; /* future proofing */
+  -khtml-border-radius: 7px; /* for old Konqueror browsers */
+  /*shadow*/
+  -moz-box-shadow:    inset 0 0 7px #cacaca;
+    -webkit-box-shadow: inset 0 0 7px #cacaca;
+    box-shadow:         inset 0 0 7px #cacaca;
+  background-color: white;
+  resize: none;
+
+}
+.pdp_review_input.full {
+  width: 100%;
+}
+.pdp_review_input {
+  float: left;
+  display: inline-block;
+  text-align: center;
+}
+.pdp_review_input_boxes.third {
+  width: 33.3333%;
+}
+.pdp_review_input_boxes_center {
+  float: left;
+  display: inline-block;
+  margin-left: 25px;
+  margin-right: 25px;
+  width: 237px;
+  margin-bottom: 36px;
+  text-align: center;
+}
+.pdp_review_input_boxes label, .pdp_review_input_boxes_center label {
+  /*margin-bottom: 16px;*/
+  display: block;
+  height: 14px;
+  padding: 0;
+}
+.pdp_review_input_boxes_center span {
+  color: #737373;
+}
+
+
+/*//----------------------//*/
+/*---- POPUP CSS START ----*/
+/*//--------------------//*/
+
+.product_review_popup {
+  width: 433px;
+  height: 225px;
+  margin:  0 auto;
+  border: 2px solid #343434;
+  background-color: white;
+  padding-top: 38px;
+  color: black;
+  font-size: 12px;
+}
+.popup_header {
+  width: 189px;
+  height: 41px;
+  display: block;
+  margin: 0 auto 17px;
+}
+.product_review_popup p {
+  text-align: center;
+  width: 334px;
+  margin:  0 auto;
+  padding: 0;
+  line-height: 16px;
+}
+.product_review_popup .txt_2 {
+  text-align: center;
+  width: 334px;
+  margin: 11px auto 23px;
+  padding: 0;
+  line-height: 16px;
+  display: block;
+}
+.popup_btn {
+  width: 288px;
+  height: 48px;
+  display: block;
+  margin: 0 auto;
+}
+
+
+/*//----------------------//*/
+/*---- NPS POPUP CSS START ----*/
+/*//--------------------//*/
+
+.product_review_wrap .nps_inner_wrap {
+  box-sizing: border-box;
+  padding: 10px;
+}
+.product_review_wrap .popup_close_btn {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    background: black;
+    font-family: "ProximaNovaBold", "Helvetica Neue", Arial, sans-serif;
+    color: white;
+    padding: 8px 13px;
+    font-size: 12px;
+}
+.product_review_wrap .nps_inner_wrap h2 {
+    font-family: "ProximaNovaBold", "Helvetica Neue", Arial, sans-serif;
+    letter-spacing: .120em;
+    font-size: 16px;
+    text-align: center;
+    font-weight: normal;
+    text-transform: uppercase;
+}
+.cs_title {text-align: center;}
+.product_review_wrap .nps_inner_wrap .nps_header_line:after {
+    border-bottom: 1px solid #000;
+    content: "";
+    display: block;
+    height: 12px;
+    margin-bottom: 5px;
+    width: 51px;
+    margin: 0 auto;
+}
+.nps_order_no1 {
+    font-family: "Karla", Arial, sans-serif;
+    color: #717171;
+    text-align: center;
+    display: block;
+}
+.nps_order_no2 {
+    font-family: "ProximaNovaBold", "Helvetica Neue", Arial, sans-serif;
+    color: black;
+    text-align: center;
+    letter-spacing: .120em;
+    text-transform: uppercase;
+    display:block;
+}
+.nps_popup_sep {
+    border-bottom: 1px solid #e1e1e1;
+    padding: 5px 0;
+}
+.product_review_wrap .nps_inner_wrap .nps_recomend_dd {
+  text-align: center;
+}
+.product_review_wrap .nps_inner_wrap .nps_cta_submit {
+  color: white;
+  background: black;
+  font-family: "ProximaNovaBold","Helvetica Neue",Arial,sans-serif;
+  padding: 15px 25px;
+  letter-spacing: .120em;
+  border: none;
+  text-align: center;
+}
+.product_review_wrap .nps_inner_wrap .nps_product_info {
+  border-bottom: 1px solid #e1e1e1;
+}
+/* Drop Down Selectors */
+.product_review_wrap .nps_inner_wrap .co_input_box {
+  width: 100%;
+  margin: 0 auto;
+}
+.product_review_wrap .nps_inner_wrap .select_style_mpdp select {
+    background: none repeat scroll 0 0 transparent;
+    border-style: none;
+    color: #000;
+    cursor: pointer;
+    float: left;
+    font-size: 12px;
+    height: 30px;
+    padding: 7px 5px 5px 10px;
+    text-overflow: ellipsis;
+    width: 100%;
+    letter-spacing: 0.2em;
+    font-family: "ProximaNovaBold", "Helvetica Neue", Arial, sans-serif;
+    text-transform: uppercase;
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box;         /* Opera/IE 8+ */
+    font-weight: normal;
+}
+.product_review_wrap .nps_inner_wrap .select_style_mpdp {
+   overflow: hidden;
+   background: #eeeeee url(//is4.revolveassets.com/r/mobile/images/select_arrows.jpg) no-repeat scroll right center;
+   background-size: 30px 27.5px;
+    height: 30px;
+    float: left;
+    margin-bottom: 13px;
+    width: 100%;
+    color: #000;
+    border: 1px solid #e1e1e1;
+    margin-top: 14px;
+}
+
+.product_review_wrap .nps_inner_wrap .select_style_mpdp.mr_boutiques_refine {
+   overflow: hidden;
+   background: #eeeeee url(//is4.revolveassets.com/r/mobile/images/select_arrows.jpg) no-repeat scroll right center;
+   background-size: 30px 27.5px;
+    height: 30px;
+    float: none;
+    width: 98%;
+    color: #000;
+    border: 1px solid #e1e1e1;
+    margin: 14px auto 13px;
+}
+
+.product_review_wrap .nps_inner_wrap .select_style_month select, .select_style_year select {
+    background: none repeat scroll 0 0 transparent;
+    border-style: none;
+    color: #000;
+    cursor: pointer;
+    float: left;
+    font-size: 12px;
+    height: 30px;
+    padding: 7px 5px 5px 10px;
+    text-overflow: ellipsis;
+    width: 100%;
+    letter-spacing: 0.2em;
+    font-family: "ProximaNovaBold", "Helvetica Neue", Arial, sans-serif;
+    text-transform: uppercase;
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box;         /* Opera/IE 8+ */
+    font-weight: normal;
+}
+.product_review_wrap .nps_inner_wrap .select_style_month, .select_style_year {
+   overflow: hidden;
+   background: #eeeeee url(//is4.revolveassets.com/r/mobile/images/select_arrows.jpg) no-repeat scroll right center;
+   background-size: 30px 27.5px;
+    border: 1px solid #E1E1E1;
+    color: #000000;
+    float: left;
+    height: 30px;
+    margin-bottom: 8px;
+    overflow: hidden;
+    width: 48.3%;
+    margin-top: 8px;
+}
+.product_review_wrap .nps_inner_wrap .nps_product_info h2 {
+  margin: 5px 0 10px;
+  text-transform: uppercase;
+  font-weight: normal;
+}
+.product_review_wrap .nps_inner_wrap .nps_product_info .size_recommend {
+  border-top: 1px solid #e1e1e1;
+  border-bottom: none;
+}
+.product_review_wrap .nps_inner_wrap .nps_product_info .size_recommend .size_rec_radio {
+  width: 315px;
+  font-family: "Karla", Arial, sans-serif;
+}
+.product_review_wrap .nps_inner_wrap .nps_product_info .radio_list li {
+  margin-left: 1px;
+}
+.product_review_wrap .nps_inner_wrap .nps_product_info .icheckbox_line,
+.product_review_wrap .nps_inner_wrap .nps_product_info .iradio_line {
+  width: 71.5px;
+}
+.product_review_wrap .nps_inner_wrap .nps_improve_us {
+  margin: 10px 0;
+  padding: 10px 0;
+  text-align: center;
+}
+.product_review_wrap .nps_inner_wrap .nps_improve_us form textarea {
+  width: 100%;
+  text-align: left;
+  background: #EAEAEA;
+  padding: 5px;
+  box-sizing:border-box;
+  border: 1px solid #e1e1e1;
+  margin: 15px 0;
+}
+
+
+
+/*//----------------------//*/
+/*- STAR RATING CSS START -*/
+/*//--------------------//*/
+
+.rating-cancel {
+  display: none;
+}
+
+div.star-rating{float: left;width: 38px;height: 36px;text-indent:-999em;cursor:pointer;display:block;background:transparent;overflow:hidden;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+div.star-rating,div.star-rating a{background: url(//is4.revolveassets.com/r/mobile/images/pdp_pop_star_mob.gif) no-repeat 0 0px; background-size:38px;}
+div.star-rating a{display:block;width: 38px;height:100%;background-position:0 0px;border:0}
+div.star-rating-on a{background-position:0 -36px!important}
+div.star-rating-hover a{background-position:0 -36px}
+/* Read Only CSS */
+div.star-rating-readonly a{cursor:default !important}
+/* Partial Star CSS */
+div.star-rating{background:transparent!important;overflow:hidden!important}
+/* END jQuery.Rating Plugin CSS */
+
+/*//--------------------//*/
+/*- STAR RATING CSS END -*/
+/*//------------------//*/
+
+
+
+
+
+
+/*packaging survey css*/
+
+
+.nps_inner_wrap.package_survey .nps_cta_submit {
+  color: white;
+  background: black;
+  font-family: "ProximaNovaBold","Helvetica Neue",Arial,sans-serif;
+  padding: 15px 25px;
+  letter-spacing: .120em;
+  border: none;
+  text-align: center;
+  width: 100%;
+}
+
+
+
+
+
+.cs_feedback.product_review_wrap.feedback_survey .nps_inner_wrap .nps_product_info .icheckbox_line, .product_review_wrap.feedback_survey .nps_inner_wrap .nps_product_info .iradio_line {
+    width: 80px;
+    font-size:11px;
+}
+
+.feedback_survey .nps_inner_wrap.package_survey .nps_product_info .size_recommend .size_rec_radio.scale .radio_list .iradio_line {
+    width: 50px;
+    font-size:11px;
+}
+.package_survey_disc {
+  font-size: 11px;
+  color: #717171;
+  margin-top: 13px;
+  margin-bottom: 5px;
+}
+
+.product_review_wrap.feedback_survey .nps_inner_wrap .nps_product_info h2 {
+    font-size: 12px;
+}
+
+.product_review_wrap.feedback_survey.package_survey {
+  background: url(//is4.revolveclothing.com/r/mobile/images/m_packaging_survey_bg.jpg
+) no-repeat right top;
+background-size: 121.5px 153.5px;
+
+}
+
+
+.package_survey.finish h2 {
+  font-size: 16px;
+    text-align: center;
+    font-weight: bold;
+    font-family: "ProximaNovaBold", "Helvetica Neue", Arial, sans-serif;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+.finish .package_survey_txt {
+  width: 100%;
+  font-size: 12px;
+  text-align: center;
+  display: block;
+}
+
+
+/*packaging survey css*/
+
+
+.package_survey_txt {
+  width: 60%;
+  font-size: 12px;
+  text-align: left;
+  display: block;
+}
+.product_review_wrap.feedback_survey {
+padding-top: 15px;
+}
+.package_survey_image {
+  text-align: center;
+  margin-top: 20px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.package_survey_code {
+
+  font-size: 11px;
+  text-transform: uppercase;
+  font-family: "ProximaNovaBold", "Helvetica Neue", Arial, sans-serif;
+  border: 1px solid #bcbcbc;
+  color: #000000;
+  padding: 17px;
+  text-align: center;
+  margin-bottom: 15px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+
+}
+
+
+

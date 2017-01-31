@@ -1,0 +1,625 @@
+/*
+|>----------------------------------------------------------------------------------------------<|
+| // Main Navigation
+|>----------------------------------------------------------------------------------------------<|
+*/
+.main_navigation {
+    background: #000;
+    padding: 0;
+    width: 100%;
+    min-width: 960px;
+    .nav_menu {
+        @include width-960;
+        margin: 0 auto;
+        height: 44px;
+    }
+    ul {
+        text-indent: 0;
+        margin: 0 auto;
+        padding: 0;
+        li > ul {
+        display: none;
+        @include nav-first-last;
+        }
+    }
+    li {
+        text-decoration: none;
+        @include inline-block;
+        &:hover > ul {
+            display: block;
+        }
+        &.page_item {
+            padding: 0 2.47%;
+            padding: 0 2.45%\9; // ie7 ie8
+        }
+        a {
+            font-family: $header-font-family;
+            color: #FFF;
+            line-height: 3.7;
+            letter-spacing: 0.125em;
+            text-transform: uppercase;
+            white-space: nowrap;
+            text-decoration: none;
+            padding: 0;
+            &:hover {
+                @include transition;
+                color: #EEE;
+                border-bottom: 2px solid #EEE;
+            }
+        }
+        ul {  // Sub Menu : jQuery click
+            display: none;
+            position: absolute;
+            margin-top: 0;
+            left: 0;
+            z-index: 991;
+            zoom: 1;
+            li {
+                line-height: 1.5;
+                 a {
+                    font-family: $text-font-family;
+                    font-size: 14px;
+                    font-weight: normal;
+                    color: $grey-text;
+                    text-transform: none;
+                    line-height: 1.5;
+                    letter-spacing: 0;
+                    border: 0;
+                    padding: 8px 10px;
+                    @include inline-block;
+                    @include truncate;
+                    &:hover {
+                        @include transition;
+                        @include hover;
+                        border: 0;
+                    }
+                }
+                // Designers Heart
+                @include designers_heart;
+
+                // Specific for IE
+                span {
+                    float: left\9;
+                    margin-top: 7px\9;
+                }
+            }
+            .dd_main {
+                a {
+                    font-family: $header-font-family;
+                    font-size: 12px;
+                    letter-spacing: 0.125em;
+                    font-weight: normal;
+                    text-decoration: none;
+                    text-transform: uppercase;
+                    color: $grey-text;
+                    &:hover {
+                        text-decoration: none;
+                        color: $black-text;
+                    }
+                }
+                &:after {
+                    border-color: $border-color !important;
+                    @include weird-keyline;
+                }
+            }
+            ul {
+                top: 0;
+                left: 100%;
+                
+            }
+        }
+
+    }
+    @include nav-first-last;
+    ul 
+    .current-menu-item {
+        color: #FFF;
+        font-weight: normal;
+        border-bottom: 2px solid #FFF;
+    }
+
+}
+
+
+// Firefox
+@-moz-document url-prefix() { 
+    .main_navigation li.page_item {
+        padding: 0 2.45%;
+    }
+    .main_navigation li ul li span {
+        float: left;
+        margin-top: 2px;
+    }
+}
+
+.main_navigation {
+    .hide_spotlight { // added to .main_navigation .nav_menu to hide Spotlight section in Beta Launch
+        .menu_spotlight {
+            display: none; 
+        }
+        li {
+            &.page_item {
+                padding: 0 3.42%;
+            }
+            &.menu_new {
+                padding-left: 0 !important;
+            }
+            &.last {
+                padding-right: 0 !important;
+            }
+        }
+    }
+}
+
+.menu_new,
+.menu_clothing,
+.menu_shoes,
+.menu_bags,
+.menu_accessories,
+.menu_occasions,
+.menu_sale {
+    .sub_menu {
+        .dd_main {
+            a {
+                font-family: $text-font-family;
+                letter-spacing: 0em;
+                font-size: 14px;
+                text-transform: none;
+                &:hover {
+                    color: $grey-text;
+                }
+            }
+            &:after {
+                display: none;
+            }
+        }
+
+    }
+}
+
+.sub_wrap {
+    @include width-960;
+    margin: 10px auto 5px;
+    display: block;
+}
+
+	
+.sub_menu {
+    border-bottom: 1px solid #EEE;
+    background: #FFF;
+    //background: url(../i/transparent90_white.png) repeat;
+    width: 100%;
+    
+    li {
+        //padding: 0 10px;
+        border: 0 !important;
+        width: 100%;
+        ol {
+            float: left;
+            width: 20%;
+            padding: 10px 0 !important;
+            // margin: 0 !important;
+            &.dd_main_image {
+                width: 215px;
+                margin-right: 6%;
+                li {
+                    display: block;
+                    height: 155px;
+                    a { // temporary fix for drop down images.
+                        width: 215px;
+                        height: 155px;
+                        display: block;
+                    }
+                    img {
+                        width: 100%;
+                        height: auto;
+                    }
+                }
+            }
+            li {
+                width: 100%;
+                //padding: 2px 0 !important;
+                margin: 0 !important;
+                a {
+                    padding: 0 !important;
+                    color: $grey-text;
+                }
+            }
+        }
+    }
+    .sub_feature_links {
+        display: block;
+        clear:both;
+        width: 100%;
+        //min-width: 945px;
+        a {
+            margin-right: 3.45%;
+            float: left;
+            display: block;
+            padding: 0;
+            @media screen and (-webkit-min-device-pixel-ratio:0) {
+                width: 215px;
+                height: auto;
+            }
+            img {
+                width: 100%;
+                height: auto;
+                opacity: 1;
+            }
+            img:hover {
+                @include transition;
+                opacity: 0.8;
+            }
+        }
+        a:hover {}
+        a.last {
+            margin: 0 !important;
+        }
+    }
+}
+
+.menu_designers {
+    .dd_featured_designer {
+        padding-top: 10px !important;
+        a {
+        display: block;
+        overflow: hidden;
+        max-width: 150px;
+        }
+        img {
+            width: 100%;
+            height: auto;
+        }
+        h2 {
+            text-align: center;
+            text-transform: uppercase;
+            color: #FFF;
+            position: absolute;
+            z-index: 999;
+            background: rgba(0, 0, 0, 0.7); 
+            width: 150px;
+            margin: 174px 0 0 0;
+            line-height: 24px;
+        }
+    }
+    li li.dd_main a {
+        line-height: 24px /*!important*/;
+    }
+    li li a { // 2 lined designer names that are too long
+        padding: 8px 10px !important;
+        display: block !important;
+        text-align: left;
+        word-wrap: break-word;
+        width: 160px;
+        text-overflow: clip !important;
+        overflow: auto !important;
+        white-space: normal !important;
+        line-height: 1.25 !important;
+    }
+}
+
+// Women's Navigation specific
+.main_navigation {
+    .womens_nav {
+        .womens_spotlight {
+            display: none; // Beta Launch
+            ol {
+            margin-right: 3% !important;
+            width: 22.75%;
+                &:nth-child(4) {
+                    margin: 0 !important;
+                }
+                li {
+                    a {
+                        float:left;
+                    }
+                    span {
+                        line-height: 21px;
+                        text-indent: 0;
+                        float: left;
+                        width: auto;
+                        height: auto;
+                        margin-left: 10px;
+                        display: inline-block;
+                        font-family: $header-font-family;
+                        color: $black-text;
+                        text-transform: uppercase;
+                        font-size: 10px;
+                    }
+                    &.dd_main {
+                        &:after {
+                            border: 0;
+                        }
+                    }
+                }
+            }
+        }
+        .womens_clothing {
+            ol {
+                width: 17%;
+                &.dd_main_image {
+                    width: 215px;
+                }
+            }
+        }
+        .womens_occasions {
+            padding-bottom: 10px;
+            .sub_feature_links {
+                //width: 100%;
+                width: 960px;
+            }
+        }
+        .womens_designers {
+            ol {
+                width: 20%;
+                li {
+                    padding: 5px 0;
+                    line-height: 2.5;
+                }
+            }
+            li { //specific to the heart span on designers dropdown
+                //line-height: 25px;
+                span {
+                    float: left;
+                }
+            }
+        }
+    }
+}
+
+// Men's Navigation specific
+.main_navigation {
+    .mens_nav {
+        li {
+            &.page_item {
+                padding: 0 2.47%;
+                //padding: 0 3.95%;
+                padding: 0 2.47%\9; //IE specific
+            }
+        }
+        .mens_spotlight {
+             display: none; // Beta Launch        
+        }
+        .mens_spotlight
+        //.mens_new,
+        //.mens_clothing 
+        {
+            ol {
+                margin-right: 3% !important;
+                width: 22.75%;
+                 &:nth-child(4) {
+                    margin: 0 !important;
+                }
+            }
+        }
+        .mens_occasions {
+            padding-bottom: 10px;
+            .sub_feature_links {
+                //width: 100%;
+                width: 960px;
+            }
+        }
+        .mens_designers {
+            ol {
+                width: 20%;
+                li {
+                    padding: 5px 0;
+                    line-height: 2.5;
+                }
+            }
+            li { //specific to the heart span on designers dropdown
+                //line-height: 25px;
+                span {
+                    float: left;
+                }
+            }
+        }
+    }
+}
+/* Media Queries */
+
+/* Maximum width of 768 pixels. */
+@media screen and (max-width: 768px) {
+    .main_navigation {
+        width: 100%;
+        @include over-background-768;
+        .nav_menu {
+            @include width-768;
+            margin: 0 auto;
+            
+        }
+        ul {
+            @include border-box-padding;
+        }
+        .page_item {
+            //padding: 0 1.4% !important;
+            padding: 0 1.4% !important;;
+        }
+        @include nav-first-last;
+        .sub_wrap {
+            @include width-768;
+            margin: 0 auto;
+            .dd_main_image {
+				width: 24%;
+				padding-bottom: 0px !important;
+				margin-right: 1.5%;
+				li {
+					width: 150px;
+					height: auto;
+					a {
+						width: 150px;
+						height: auto;
+					}
+				}
+			}
+        }
+        .sub_menu {
+            min-width: 768px;
+            .sub_feature_links {
+                max-width: 750px;
+                a { 
+                    width: 24%;
+                    margin-right: 1%;
+                }
+            }
+
+           
+        }
+        .womens_nav {
+            .womens_spotlight {
+                li {
+                    span {
+                        margin-left: 5px !important;
+                    }
+                   
+                }
+            }
+            .womens_spotlight,
+            .womens_clothing {
+                ol {
+                    margin-right: 1.5% !important;
+                    &.dd_main_image {
+                    	margin-right: 1.5%;
+                    	width: 24%;
+                    	padding-bottom: 0px !important;
+                	} 
+                   /* li {
+                        a {
+                            width: 150px; 
+                        }
+                    }*/
+                }
+            }
+            .womens_clothing {
+                &.dd_main_image {
+                    margin-right: 1.5%;
+                    width: 24%;
+                }
+            }
+            .womens_designers {
+                ol {
+                    width: 18%;
+                }
+                .dd_main a {
+						width:  100%;
+						line-height: 18px;
+					}
+                li {
+                    line-height: 18px;
+                    
+                    &.dd_featured_designer {
+                        a { 
+                            width: 100%;
+                        }
+                    }
+                    
+                    a {
+						width: 84%;
+					}
+                }
+            }
+            .womens_accessories {
+                ol {
+                    width: 24%;
+                    &.dd_main_image {
+						margin-right: 1.5%;
+					}
+                }
+            }
+        }
+        .mens_nav {
+            .page_item {
+                padding: 0 1.4% !important;
+                &.first {
+                    padding-left: 0 !important;
+                }
+                &.last {
+                    padding-right: 0 !important;
+                }
+            }
+            .mens_clothing {
+                ol {
+                    margin-right: 1.5% !important;
+                    &.dd_main_image {
+                        width: 215px;
+                        margin-right: 30px;                  
+                    }
+                    li {
+                        a {
+                            width: 116px; 
+                        }
+                    }
+                }
+            }
+            .mens_designers {
+                ol {
+                    width: 18%
+                }
+                li {
+                    line-height: 18px;
+                    a {
+                        width: 116px; 
+                    }
+                    &.dd_featured_designer {
+                        a { 
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .menu_new .sub_menu {}
+    .menu_clothing .sub_menu {}
+    .menu_designers {
+        .sub_menu {
+            li ol {
+                width: 18%;
+                margin-right: 10px !important;
+                li {
+                @include truncate;
+                }
+            }
+        }
+        .dd_featured_designer {
+            h2 {
+                width: 138px;
+                margin: 158px 0 0 0;
+                
+            }
+        }
+    }
+
+    @-moz-document url-prefix() {
+        .main_navigation {
+            li {
+                &.page_item {
+                    padding: 0 1.2% !important;
+                }
+                @include nav-first-last;
+            }
+        }
+
+    }
+
+}
+
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px)
+and (-webkit-min-device-pixel-ratio: 1)  { /* STYLES GO HERE */
+    .main_navigation {
+        .page_item {
+            padding: 0 1.3% !important;
+        }
+    }
+}
+
+// Targeting IE10
+// @media screen and (min-width:0\0) {
+// .main_navigation {
+//     .page_item {
+//         padding: 0 2.85% !important;
+//     }
+// }
+// }

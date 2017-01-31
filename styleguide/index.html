@@ -1,0 +1,2628 @@
+<!doctype html>
+<html class="no-js eagle" lang="en">
+	<head>
+
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="chrome=1">
+		<title>Revolve | Styleguide</title>
+
+		<!-- Canonical Meta -->
+		<link rel="canonical" href="**YOUR-URL-HERE***">
+
+		<!-- Viewport Meta-->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<!-- SEO Meta -->
+		<meta name="description" content="***YOUR-CONTENT-HERE-***">
+		<meta name="keywords" content="***YOUR-CONTENT-HERE-***">
+		<meta name="robots" content="INDEX,FOLLOW">
+
+		<!-- Favicons -->
+		<link rel="shortcut icon" type="image/ico" href="/favicon.ico">
+		<link href="../dist/img/apple-touch-icon.png" rel="apple-touch-icon" />
+		<link href="../dist/img/apple-touch-icon-60x60.png" rel="apple-touch-icon" sizes="60x60" />
+		<link href="../dist/img/apple-touch-icon-76x76.png" rel="apple-touch-icon" sizes="76x76" />
+		<link href="../dist/img/apple-touch-icon-120x120.png" rel="apple-touch-icon" sizes="120x120" />
+		<link href="../dist/img/apple-touch-icon-152x152.png" rel="apple-touch-icon" sizes="152x152" />
+		<meta name="apple-mobile-web-app-title" content="***YOUR-SITE'S-NAME-HERE-***">
+
+		<!-- Facebook -->
+		<meta property="og:image" content="***YOUR-URL-HERE-***../dist/img/avatar.png">
+		<meta property="og:title" content="Revolve | Styleguide">
+		<meta property="og:site_name" content="Revolve | Styleguide">
+		<meta property=" og:url" content="***YOUR-URL-HERE-***">
+		<meta property="og:description" content="Revolve Styleguide, Framework, and Modules">
+
+		<!-- Windows 8 Pin app to start screen -->
+		<meta name="msapplication-TileColor" content="****BRAND-COLOR-HERE***">
+		<meta name="msapplication-TileImage" content="***YOUR-URL-HERE-***../dist/img/apple-touch-icon-precomposed.png">
+
+		<!-- Style Guide Stylesheet -->
+		<!--<link rel="stylesheet" href="../dist/css/style.css" /> -->
+
+		<link rel="stylesheet" href="../dist/css/style-guide-mobile.css" />
+
+		<!--[if (lt IE 9) & (!IEMobile)]>
+			<link rel="stylesheet" href="../dist/css/ie.css" />
+		<![endif]-->
+
+		<!-- Syntax highlight Stylesheet -->
+		<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/styles/solarized_dark.min.css"> -->
+
+		<!-- Header Scripts -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+		<!--[if gt IE 8]><!-->
+			<script async src="../lib/scripts/styleguide/mustache.js"></script>
+		<!--<![endif]-->
+
+		<!--[if (gte IE 6)&(lte IE 8)]>
+			<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/selectivizr/1.0.2/selectivizr-min.js"></script>
+		<![endif]-->
+
+		<!-- Inline Header Scripts -->
+		<script>
+			// Test for SVG support & Ajax SVG defs sprite
+			// Probably safest to only serve first part of conditional and include svg-defs in header instead of Ajax
+			var supportsSvg = function() {
+				var div = document.createElement('div');
+				div.innerHTML = '<svg/>';
+				return (div.firstChild && div.firstChild.namespaceURI) == 'http://www.w3.org/2000/svg';
+			};
+			if (!supportsSvg()) {
+				// Could do this and use the class name, but not needed here.
+				// document.documentElement.className += " no-svg";
+				// It duplicates the SVG test, but that's probably OK because it also tests for Data URI support and loads that stylesheet too.
+				(function(e){function t(t,n,r,o){"use strict";function a(){for(var e,n=0;u.length>n;n++)u[n].href&&u[n].href.indexOf(t)>-1&&(e=!0);e?i.media=r||"all":setTimeout(a)}var i=e.document.createElement("link"),l=n||e.document.getElementsByTagName("script")[0],u=e.document.styleSheets;return i.rel="stylesheet",i.href=t,i.media="only x",i.onload=o||null,l.parentNode.insertBefore(i,l),a(),i}var n=function(r,o){"use strict";if(r&&3===r.length){var a=e.navigator,i=e.Image,l=!(!document.createElementNS||!document.createElementNS("http://www.w3.org/2000/svg","svg").createSVGRect||!document.implementation.hasFeature("http://www.w3.org/TR/SVG11/feature#Image","1.1")||e.opera&&-1===a.userAgent.indexOf("Chrome")||-1!==a.userAgent.indexOf("Series40")),u=new i;u.onerror=function(){n.method="png",n.href=r[2],t(r[2])},u.onload=function(){var e=1===u.width&&1===u.height,a=r[e&&l?0:e?1:2];n.method=e&&l?"svg":e?"datapng":"png",n.href=a,t(a,null,null,o)},u.src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==",document.documentElement.className+=" grunticon"}};n.loadCSS=t,e.grunticon=n})(this);(function(e,t){"use strict";var n=t.document,r="grunticon:",o=function(e){if(n.attachEvent?"complete"===n.readyState:"loading"!==n.readyState)e();else{var t=!1;n.addEventListener("readystatechange",function(){t||(t=!0,e())},!1)}},a=function(e){return t.document.querySelector('link[href$="'+e+'"]')},c=function(e){var t,n,o,a,c,i,u={};if(t=e.sheet,!t)return u;n=t.cssRules?t.cssRules:t.rules;for(var l=0;n.length>l;l++)o=n[l].cssText,a=r+n[l].selectorText,c=o.split(");")[0].match(/US\-ASCII\,([^"']+)/),c&&c[1]&&(i=decodeURIComponent(c[1]),u[a]=i);return u},i=function(e){var t,o,a;o="data-grunticon-embed";for(var c in e)if(a=c.slice(r.length),t=n.querySelectorAll(a+"["+o+"]"),t.length)for(var i=0;t.length>i;i++)t[i].innerHTML=e[c],t[i].style.backgroundImage="none",t[i].removeAttribute(o);return t},u=function(t){"svg"===e.method&&o(function(){i(c(a(e.href))),"function"==typeof t&&t()})};e.embedIcons=i,e.getCSS=a,e.getIcons=c,e.ready=o,e.svgLoadedCallback=u,e.embedSVG=u})(grunticon,this);
+				// Note the empty first item in the array. Don't do anything if supported.
+				grunticon(["", "../dist/img/svg/fallbacks/icons.data.png.css", "../dist/img/svg/fallbacks/icons.fallback.css"]);
+			} else {
+				// Inline SVG is supported so Ajax for the sprite.
+				var ajax = new XMLHttpRequest();
+				ajax.open("GET", "../dist/img/svg/processed/svg-mobile-defs.svg", true);
+				ajax.send();
+				ajax.onload = function(e) {
+					var div = document.createElement("div");
+					div.innerHTML = ajax.responseText;
+					div.id = "svg-sprites";
+					document.body.insertBefore(div, document.body.childNodes[0]);
+                    populateSVGLibary();
+				}
+			}
+            function populateSVGLibary() {
+                // Couldn't get the ajax compelete option to work http://www.w3schools.com/ajax/ajax_xmlhttprequest_onreadystatechange.asp
+                // That's why I'm using window on load... my bad - maurice
+                var svgLibHTML = "";
+                var svgSymbol = $('#svg-sprites').find('symbol');
+                  svgSymbol.each( function() {
+
+                    var svgName = $(this).attr('id').replace('icon-','');
+
+                    svgLibHTML += "<div class='grid__col'><span class='sg-code--small code'>"+svgName+"</span><div class='sg-style-bg sg-text-c js-svg-clipboard u-pointer'><span class='icon icon--lg icon--"+svgName+"'><svg><use xlink:href='#icon-"+svgName+"'></use></svg></span></div></div>";
+                  } );
+                $('.js-svg-libary').html(svgLibHTML);
+            };
+		</script>
+
+
+
+
+	</head>
+
+	<body>
+
+	<div class="site  sg-page">
+
+		<header class="site-header sg-page__header" role="banner">
+			<div class="container u-clearfix">
+				<div class="flag flag--bottom">
+					<div class="flag__image">
+						<a class="branding" href="index.html">
+							<span class="icon--revolve-logo">
+								<svg class="branding__logo" aria-labelledby="title" aria-describedby="desc" role="img">
+									<title>Revolve Clothing</title>
+									<desc>Ecommerce Clothing</desc>
+									<use xlink:href="#icon-revolve-logo"></use>
+								</svg>
+							</span>
+						</a><!-- end .branding -->
+					</div>
+					<div class="flag__body">
+						<div class="sg-page__title">Mobile UI</div>
+						<nav>
+							<ul class="sg-main-nav ui-list">
+								<li class="sg-main-nav__item ui-list__item"><a href="index.html">Base</a></li>
+								<li class="sg-main-nav__item ui-list__item"><a href="modules.html">Modules</a></li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+		  </div>
+		</header>
+
+    <div class="container">
+      <div class="grid">
+        <div class="grid__col  md-2-of-12">
+          <aside class="sidebar  sg-sidebar  block--ends">
+            <nav role="navigation">
+              <ul class="ui-list">
+                <li><a href="#colors">Colors</a></li>
+                <li><a href="#icons">Icons</a></li>
+                <li><a href="#typography">Typography</a>
+                <ul>
+                  <li><a href="#headings">Headings</a></li>
+                  <li><a href="#base-typography-examples">Base Elements</a></li>
+                  <li><a href="#anchor-tag-examples">Anchors</a></li>
+                </ul>
+                </li>
+                <li><a href="#lists">Lists</a></li>
+                <li>
+                    <a href="#forms">Forms</a>
+                    <ul>
+                        <li><a href="#form-radio-example">Radio &amp; Checkbox</a></li>
+                        <li><a href="#form-dropdown-example">Select Dropdown</a></li>
+                    </ul>
+                </li>
+                <li>
+                	<a href="#helpers">Helpers</a>
+                	<ul>
+                        <li><a href="#helper-visibility">Visibility</a></li>
+                        <li><a href="#helper-visibility-breakpoints">Visibility Breakpoint</a></li>
+                        <li><a href="#helper-padding">Padding</a></li>
+                        <li><a href="#helper-margin">Margin</a></li>
+                        <li><a href="#helper-border">Border</a></li>
+                        <li><a href="#helper-bg-color">BG Color</a></li>
+                        <li><a href="#helper-color">Color</a></li>
+                        <li><a href="#helper-font-primary">Font Primary</a></li>
+                        <li><a href="#helper-font-secondary">Font Secondary</a></li>
+                        <li><a href="#helper-font-size">Font Size</a></li>
+                        <li><a href="#helper-font-weight">Font Weight</a></li>
+                        <li><a href="#helper-text-decoration">Text Decorations</a></li>
+                        <li><a href="#helper-float">Float</a></li>
+                        <li><a href="#helper-width">Width</a></li>
+                        <li><a href="#helper-letter-space">Letter Space</a></li>
+                        <li><a href="#helper-text-alignment">Text Alignment</a></li>
+                        <li><a href="#helper-text-misc">Text Misc</a></li>
+                        <li><a href="#helper-pointer">Pointer</a></li>
+                        <li><a href="#helper-display">Display</a></li>
+                        <li><a href="#helper-misc">Misc</a></li>
+                        <li><a href="#helper-invert-color">Invert Color Elements</a></li>
+                    </ul>
+                </li>
+              </ul>
+            </nav>
+          </aside>
+        </div>
+
+        <div class="grid__col  md-10-of-12">
+          <div class="page__header  sg-hero" role="banner">
+             <h1 class="sg-hero__title">Base</h1>
+             <p>Global CSS settings, fundamental HTML elements styled and enhanced with extendible classes, and an advanced grid system.</p>
+             <p>In lieu of a formal styleguide, take care to maintain the existing coding style. Be sure to use the documented section block when defining new blocks in this styleguide. Example can be found <a class="link--underline" href="styleguide-block.html"><strong>here</strong>.</a></p>
+             <blockquote class="sg-blockquote block">
+             <p>We need to develop our CSS as if it is for a third party, similar to Bootstrap and other CSS frameworks. If your project (or your team) is moderate to large size, this will begin to necessitate two important features for our CSS: it should be well documented, and it should be versioned</p>
+             <cite><a href="http://keithjgrant.com/posts/css-first.html">— Keith Grant (@keithjgrant) </a></cite>
+             </blockquote>
+             <mark>TO-DO: Restructure style guide and side nav into base, layout, module format. Maybe have sub sub categories in side nav for clarity when more modules and elements are eventually added, e.g., bits>typography>headdings,anchors,etc.</mark>
+          </div>
+        </div><!-- end grid__col -->
+      </div><!-- end grid -->
+    </div><!-- end container -->
+
+		<main class="site-main  page" role="main">
+
+			<div class="container">
+
+				<div class="grid">
+
+					<div class="grid__col  md-2-of-12">
+						&nbsp; <!-- hack for now -->
+					</div><!-- end .grid__col -->
+
+					<div class="grid__col md-10-of-12">
+
+						<!-- COLORS -->
+						<section id="colors" class="block--ends  sg-section">
+
+							<header class="sg-section__header">
+								<h2 class="h2">Colors</h2>
+								<h3 class="sg-section__sub-title">Primary Colors</h3>
+							</header>
+
+							<article class="block">
+								<p>These are the primary site colors, you can see more alternate variable names and more featured colors in <code>scss/utils/_vars.scss</code></p>
+							</article>
+
+							<div id="colors-example" class="block  sg-section">
+
+								<div class="grid  sm-block-grid--5  md-block-grid--5">
+
+									<div class="grid__col  sg-color">
+										<span class="sg-code--small code js-copy-next">SCSS var</span><code class="u-hide-visible">$color__black</code>
+										<span class="sg-code--small code js-copy-next">CSS bg classes</span><code class="u-hide-visible"> u-bg-color--black</code>
+										<div class="callout sg-style-bg">
+											<div class="callout__media   u-bg-color--black  sg-color__pick"></div>
+											<div class="callout__title  h3  sg-color__hex">#000000</div>
+										</div>
+									</div>
+									<div class="grid__col  sg-color">
+										<span class="sg-code--small code js-copy-next">SCSS var</span><code class="u-hide-visible">$color__grey</code>
+										<span class="sg-code--small code js-copy-next">CSS bg classes</span><code class="u-hide-visible"> u-bg-color--grey</code>
+										<div class="callout sg-style-bg">
+											<div class="callout__media   u-bg-color--grey  sg-color__pick"></div>
+											<h3 class="callout__title   sg-color__hex">#717171</h3>
+										</div>
+									</div>
+									<div class="grid__col  sg-color">
+										<span class="sg-code--small code js-copy-next">SCSS var</span><code class="u-hide-visible">$color__grey--light</code>
+										<span class="sg-code--small code js-copy-next">CSS bg classes</span><code class="u-hide-visible"> u-bg-color--grey-light</code>
+										<div class="callout sg-style-bg">
+											<div class="callout__media   u-bg-color--grey-light  sg-color__pick"></div>
+											<h3 class="callout__title   sg-color__hex">#949494</h3>
+										</div>
+									</div>
+									<div class="grid__col  sg-color">
+										<span class="sg-code--small code js-copy-next">SCSS var</span><code class="u-hide-visible">$color__grey--lighter</code>
+										<span class="sg-code--small code js-copy-next">CSS bg classes</span><code class="u-hide-visible"> u-bg-color--grey-lighter</code>
+										<div class="callout sg-style-bg">
+											<div class="callout__media   u-bg-color--grey-lighter  sg-color__pick"></div>
+											<h3 class="callout__title   sg-color__hex">#cccccc</h3>
+										</div>
+									</div>
+									<div class="grid__col  sg-color">
+										<span class="sg-code--small code js-copy-next">SCSS var</span><code class="u-hide-visible">$color__offwhite</code>
+										<span class="sg-code--small code js-copy-next">CSS bg classes</span><code class="u-hide-visible"> u-bg-color--offwhite</code>
+										<div class="callout sg-style-bg">
+											<div class="callout__media   u-bg-color--offwhite  sg-color__pick"></div>
+											<h3 class="callout__title   sg-color__hex">#f4f4f4</h3>
+										</div>
+									</div>
+									<div class="grid__col  sg-color">
+										<span class="sg-code--small code js-copy-next">SCSS var</span><code class="u-hide-visible">$color__pink</code>
+										<span class="sg-code--small code js-copy-next">CSS bg classes</span><code class="u-hide-visible"> u-bg-color--pink</code>
+										<div class="callout sg-style-bg">
+											<div class="callout__media   u-bg-color--pink  sg-color__pick"></div>
+											<h3 class="callout__title   sg-color__hex">#fdcdca</h3>
+										</div>
+									</div>
+									<div class="grid__col  sg-color">
+										<span class="sg-code--small code js-copy-next">SCSS var</span><code class="u-hide-visible">$color__blue</code>
+										<span class="sg-code--small code js-copy-next">CSS bg classes</span><code class="u-hide-visible"> u-bg-color--blue</code>
+										<div class="callout sg-style-bg">
+											<div class="callout__media   u-bg-color--blue  sg-color__pick"></div>
+											<h3 class="callout__title   sg-color__hex">#c8ddea</h3>
+										</div>
+									</div>
+									<div class="grid__col  sg-color">
+										<span class="sg-code--small code js-copy-next">SCSS var</span><code class="u-hide-visible">$color__error</code>
+										<span class="sg-code--small code js-copy-next">CSS bg classes</span><code class="u-hide-visible"> u-bg-color--error</code>
+										<div class="callout sg-style-bg">
+											<div class="callout__media   u-bg-color--error  sg-color__pick"></div>
+											<h3 class="callout__title   sg-color__hex">#961c1c</h3>
+										</div>
+									</div>
+									<div class="grid__col  sg-color">
+										<span class="sg-code--small code js-copy-next">SCSS var</span><code class="u-hide-visible">$color__pink--light</code>
+										<span class="sg-code--small code js-copy-next">CSS bg classes</span><code class="u-hide-visible"> u-bg-color--pink--light</code>
+										<div class="callout sg-style-bg">
+											<div class="callout__media   u-bg-color--pink--light  sg-color__pick"></div>
+											<h3 class="callout__title   sg-color__hex">#f4e8e8</h3>
+										</div>
+									</div>
+									<div class="grid__col  sg-color">
+										<span class="sg-code--small code js-copy-next">SCSS var</span><code class="u-hide-visible">$color__white</code>
+										<span class="sg-code--small code js-copy-next">CSS bg classes</span><code class="u-hide-visible"> u-bg-color--white</code>
+										<div class="callout sg-style-bg">
+											<div class="callout__media   u-bg-color--white  sg-color__pick"></div>
+											<h3 class="callout__title   sg-color__hex">#ffffff</h3>
+										</div>
+									</div>
+
+								</div><!-- end .grid -->
+
+<!--                   <header class="sg-section__header">
+										<h3 class="sg-section__sub-title">Feature Colors</h3>
+									</header>
+									<div class="grid  sm-block-grid--3  md-block-grid--5">
+										<div class="grid__col  sg-color">
+											<article class="callout">
+												<div class="callout__media  bg-mens-color  sg-color__pick"></div>
+												<h3 class="callout__title   sg-color__hex">#c8ddea</h3>
+												<div class="sg-code__label">Sass Variable:</div>
+												<code class="sg-code--large">$mens-color</code>
+											</article>
+										</div>
+										<div class="grid__col  sg-color">
+											<article class="callout">
+												<div class="callout__media  bg-womens-color  sg-color__pick"></div>
+												<h3 class="callout__title   sg-color__hex">#fdcdca</h3>
+												<div class="sg-code__label">Sass Variable:</div>
+												<code class="sg-code--large">$womens-color</code>
+											</article>
+										</div>
+										<div class="grid__col  sg-color">
+											<article class="callout">
+												<div class="callout__media  bg-wedding-shop-color  sg-color__pick"></div>
+												<h3 class="callout__title   sg-color__hex">#F9C5B0</h3>
+												<div class="sg-code__label">Sass Variable:</div>
+												<code class="sg-code--large">$wedding-shop-color</code>
+											</article>
+										</div>
+									</div> -->
+
+<!--                   <header class="sg-section__header">
+										<h3 class="sg-section__sub-title">Input Colors</h3>
+									</header>
+									<div class="grid  sm-block-grid--3  md-block-grid--5">
+										<div class="grid__col  sg-color">
+											<article class="callout">
+												<div class="callout__media  bg-input-background-color  sg-color__pick  sg-color__pick--border"></div>
+												<h3 class="callout__title   sg-color__hex">#ffffff</h3>
+												<div class="sg-code__label">Sass Variable:</div>
+												<code class="sg-code--large">$input-background-color</code>
+											</article>
+										</div>
+										<div class="grid__col  sg-color">
+											<article class="callout">
+												<div class="callout__media  bg-input-border-color  sg-color__pick"></div>
+												<h3 class="callout__title   sg-color__hex">#EEEEEE</h3>
+												<div class="sg-code__label">Sass Variable:</div>
+												<code class="sg-code--large">$input-border-color</code>
+											</article>
+										</div>
+										<div class="grid__col  sg-color">
+											<article class="callout">
+												<div class="callout__media  bg-error-text-color  sg-color__pick"></div>
+												<h3 class="callout__title   sg-color__hex">#961C1C</h3>
+												<div class="sg-code__label">Sass Variable:</div>
+												<code class="sg-code--large">$error-text-color</code>
+											</article>
+										</div>
+										<div class="grid__col  sg-color">
+											<article class="callout">
+												<div class="callout__media  bg-input-error-text-color  sg-color__pick"></div>
+												<h3 class="callout__title   sg-color__hex">#961C1C</h3>
+												<div class="sg-code__label">Sass Variable:</div>
+												<code class="sg-code--large">$input-error-text-color</code>
+											</article>
+										</div>
+										<div class="grid__col  sg-color">
+											<article class="callout">
+												<div class="callout__media  bg-input-error-border-color  sg-color__pick"></div>
+												<h3 class="callout__title   sg-color__hex">#961C1C</h3>
+												<div class="sg-code__label">Sass Variable:</div>
+												<code class="sg-code--large">$input-error-border-color</code>
+											</article>
+										</div>
+										<div class="grid__col  sg-color">
+											<article class="callout">
+												<div class="callout__media  bg-input-error-background-color  sg-color__pick"></div>
+												<h3 class="callout__title   sg-color__hex">#f4e8e8</h3>
+												<div class="sg-code__label">Sass Variable:</div>
+												<code class="sg-code--large">$input-error-background-color</code>
+											</article>
+										</div>
+									</div> -->
+
+<!--                   <div class="sg-section__header">
+										<h3 class="sg-section__sub-title">Navigation Colors</h3>
+									</div>
+									<div class="grid  sm-block-grid--3  md-block-grid--5">
+										<div class="grid__col  sg-color">
+											<article class="callout">
+												<div class="callout__media  u-bg-color--white  sg-color__pick  sg-color__pick--border"></div>
+												<h3 class="callout__title   sg-color__hex">#ffffff</h3>
+												<div class="sg-code__label">Sass Variable:</div>
+												<code class="sg-code--large">$main-nav-link-color</code>
+											</article>
+										</div>
+										<div class="grid__col  sg-color">
+											<article class="callout">
+												<div class="callout__media  u-bg-color--white  sg-color__pick  sg-color__pick--border"></div>
+												<h3 class="callout__title   sg-color__hex">#ffffff</h3>
+												<div class="sg-code__label">Sass Variable:</div>
+												<code class="sg-code--large">$main-nav-link-hover-color</code>
+											</article>
+										</div>
+										<div class="grid__col  sg-color">
+											<article class="callout">
+												<div class="callout__media  u-bg-color--grey  sg-color__pick"></div>
+												<h3 class="callout__title   sg-color__hex">#717171</h3>
+												<div class="sg-code__label">Sass Variable:</div>
+												<code class="sg-code--large">$main-nav-dropdown-link-color</code>
+											</article>
+										</div>
+										<div class="grid__col  sg-color">
+											<article class="callout">
+												<div class="callout__media  u-bg-color--black  sg-color__pick"></div>
+												<h3 class="callout__title   sg-color__hex">#000000</h3>
+												<div class="sg-code__label">Sass Variable:</div>
+												<code class="sg-code--large">$main-nav-dropdown-link-hover-color</code>
+											</article>
+										</div>
+									</div> -->
+
+							</div><!-- end #colors-example -->
+
+						</section>
+						<!-- END COLORS -->
+
+						<hr>
+
+						<!-- ICONS -->
+						<section id="icons" class="block  sg-section">
+							<header class="sg-section__header">
+								<h2 class="h2">Icons</h2>
+								<h3 class="sg-section__sub-title">Icons and icon styling</h3>
+							</header>
+
+
+							<div id="icons-example" class="block  sg-section">
+								<div class="grid  sm-block-grid--6 js-svg-libary">
+
+								</div>
+							</div><!-- #icons-example -->
+
+							<div id="icon-usage-example" class="block  sg-section">
+								<h4 class="sg-section__ex-title">Basic Icon Usage</h4>
+								<p>A majority if not all icons are displayed using inline <code>&lt;svg&gt;</code> with a wrapping <code>&lt;span&gt;</code> tag with the <code>.icon</code> class, the <code>.icon--{{icon-name}}</code> class (as a data URI fallback for lame browsers), and an optional size modifier classes.</p>
+								<div class="sg-ex-block">
+									<h5 class="sg-ex-block__title">Code Example</h5>
+									<pre>
+										<code class="xml hljs sg-html">
+	&lt;span class="icon icon--check-mark"&gt;&lt;svg&gt;&lt;use xlink:href="#icon-check-mark"&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/span&gt;
+										</code>
+									</pre>
+								</div><!-- sg-ex-block -->
+							</div><!-- #icon-usage-example -->
+
+							<div id="icons-modifier-example" class="block  sg-section">
+								<h4 class="sg-section__ex-title">Icon Sizes </h4>
+								<p>Use an alternative icon size modifier class to choose a size other than the base <code>.icon</code> size. Sizes range from xs-xxl. When using an icon size modifier be sure to order classes like so: <code>.icon</code>, <code>.icon--{{icon-size}}</code>, <code>.icon--{{icon-name}}</code></p>
+								<div class="sg-ex-block">
+									<h5 class="sg-ex-block__title">Code Example</h5>
+									<pre>
+									 <code class="xml hljs sg-html">
+&lt;span class="icon icon--diamond"&gt;&lt;svg&gt;&lt;use xlink:href="#icon-diamond"&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/span&gt;
+&lt;span class="icon icon--xs icon--diamond"&gt;&lt;svg&gt;&lt;use xlink:href="#icon-diamond"&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/span&gt;
+&lt;span class="icon icon--sm icon--diamond"&gt;&lt;svg&gt;&lt;use xlink:href="#icon-diamond"&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/span&gt;
+&lt;span class="icon icon--md icon--diamond"&gt;&lt;svg&gt;&lt;use xlink:href="#icon-diamond"&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/span&gt;
+&lt;span class="icon icon--lg icon--diamond"&gt;&lt;svg&gt;&lt;use xlink:href="#icon-diamond"&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/span&gt;
+&lt;span class="icon icon--xl icon--diamond"&gt;&lt;svg&gt;&lt;use xlink:href="#icon-diamond"&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/span&gt;
+&lt;span class="icon icon--xxl icon--diamond"&gt;&lt;svg&gt;&lt;use xlink:href="#icon-diamond"&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/span&gt;
+										</code>
+									</pre>
+									<div class="sg-ex-block__sample">
+										<div class="grid  sm-block-grid--7">
+											<div class="grid__col">
+												<code class="sg-code--small">.icon</code>
+												<div class="sg-style-bg sg-text-c">
+													<span class="icon icon--diamond"><svg><use xlink:href="#icon-diamond"></use></svg></span>
+												</div>
+											</div>
+											<div class="grid__col">
+												<code class="sg-code--small">.icon.icon--xs</code>
+												<div class="sg-style-bg sg-text-c">
+													<span class="icon icon--xs icon--diamond"><svg><use xlink:href="#icon-diamond"></use></svg></span>
+												</div>
+											</div>
+											<div class="grid__col">
+												<code class="sg-code--small">.icon.icon--sm</code>
+												<div class="sg-style-bg sg-text-c">
+													<span class="icon icon--sm icon--diamond"><svg><use xlink:href="#icon-diamond"></use></svg></span>
+												</div>
+											</div>
+											<div class="grid__col">
+												<code class="sg-code--small">.icon.icon--md</code>
+												<div class="sg-style-bg sg-text-c">
+													<span class="icon icon--md icon--diamond"><svg><use xlink:href="#icon-diamond"></use></svg></span>
+												</div>
+											</div>
+											<div class="grid__col">
+												<code class="sg-code--small">.icon.icon--lg</code>
+												<div class="sg-style-bg sg-text-c">
+													<span class="icon icon--lg icon--diamond"><svg><use xlink:href="#icon-diamond"></use></svg></span>
+												</div>
+											</div>
+											<div class="grid__col">
+												<code class="sg-code--small">.icon.icon--xl</code>
+												<div class="sg-style-bg sg-text-c">
+													<span class="icon icon--xl icon--diamond"><svg><use xlink:href="#icon-diamond"></use></svg></span>
+												</div>
+											</div>
+											<div class="grid__col">
+												<code class="sg-code--small">.icon.icon--xxl</code>
+												<div class="sg-style-bg sg-text-c">
+													<span class="icon icon--xxl icon--diamond"><svg><use xlink:href="#icon-diamond"></use></svg></span>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div><!-- sg-ex-block -->
+
+							</div><!-- #icons-modifier-example -->
+
+						</section>
+						<!-- END ICONS -->
+
+						<hr>
+
+						<!-- TYPOGRAPHY -->
+						<section id="typography" class="block  sg-section">
+							<header class="sg-section__header">
+								<h2 class="h2">Typography</h2>
+								<h3 class="sg-section__sub-title">Site Wide Fonts and Type</h3>
+							</header>
+
+              <article class="block">
+                <p>We have bold and regular fonts available for use. Use font-weights within our CSS to apply a bolder version of a font. </p>
+              </article>
+
+							<!-- Typography Template Logic -->
+							<!--[if gt IE 8]><!-->
+							<script type="text/template" id="js-typography-variables">
+								{{ #typography }}
+                <div id="{{VAR}}" class="{{FULL}}">
+								<span class="sg-code--small code js-copy-next">SCSS var</span><code class="is-hidden">${{VAR}}</code>
+								<span class="sg-code--small code js-copy-next">SCSS placeholder</span><code class="is-hidden">%{{PLACE}}</code>
+								<div class="block sg-style-bg">
+									<div class="sg-font  sg-{{PLACE}}">
+											<div class="js-font-family"></div>
+											ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>
+											abcdefghijklmnopqrstuvwxyz<br>
+											1234567890
+									</div>
+								</div>
+                </div>
+								{{ /typography }}
+							</script>
+							<!--<![endif]-->
+
+							<!-- Typography Template Logic -->
+							<!--[if gt IE 8]><!-->
+							<script>
+									$(document).ready(function()
+									{
+											var typographyData, typographyHTML;
+
+											typographyData = {
+													typography:[
+															{
+																	VAR : "font-primary",
+																	PLACE : "font-primary"
+															},
+															{
+																	VAR : "font-primary",
+																	PLACE : "font-primary--bold"
+															},
+															{
+																	VAR : "font-secondary",
+																	PLACE : "font-secondary--lighter"
+															},
+															{
+																	VAR : "font-secondary",
+																	PLACE : "font-secondary"
+															},
+															{
+																	VAR : "font-secondary",
+																	PLACE : "font-secondary--bold"
+															},
+															{
+																	VAR : "font-korean",
+																	PLACE : "font-korean"
+															},
+															{
+																	VAR : "font-korean",
+																	PLACE : "font-korean--bold"
+															},
+															{
+																	VAR : "font-japanese",
+																	PLACE : "font-japanese",
+                                  FULL: "full-width"
+															}
+													]
+											};
+
+											typographyHTML = Mustache.render( $("#js-typography-variables").html(), typographyData );
+
+											$( ".js-fonts" ).append(typographyHTML);
+
+											var type = $(".sg-style-bg");
+											type.each(function()
+											{
+													var e = $(this);
+													var fontFamily = e.find(".js-font-family");
+													fontFamily.text(e.find(".sg-font").css("font-family"));
+											});
+
+									});
+							</script>
+							<!--<![endif]-->
+
+							<div id="typography-examples" class="block  sg-section">
+								<div class="js-fonts">
+									<!-- Typography Template Renders Here -->
+								</div>
+							</div><!-- end #typography-examples -->
+
+
+							<div id="headings" class="block  sg-section">
+
+								<h4 class="sg-section__ex-title">Default Headings</h4>
+
+									<div class="grid  sm-block-grid--2">
+
+										<div class="grid__col">
+											<div class="sg-style-bg">
+												<h1>Heading 1 Heading 1 Heading 1 Heading 1 Heading 1 Heading 1 Heading 1 Heading 1 Heading 1 <span class="sg-heading-size">24px</span></h1>
+												<h2>Heading 2 Heading 2 Heading 2 Heading 2 Heading 2 Heading 2 Heading 2 Heading 2 Heading 2 Heading 2 <span class="sg-heading-size">18px</span></h2>
+												<h3>Heading 3 Heading 3 Heading 3 Heading 3 Heading 3 Heading 3 Heading 3 Heading 3 Heading 3 Heading 3 <span class="sg-heading-size">14px</span></h3>
+												<h4>Heading 4 Heading 4 Heading 4 Heading 4 Heading 4 Heading 4 Heading 4 Heading 4 Heading 4 Heading 4 <span class="sg-heading-size">12px</span></h4>
+												<h5>Heading 5 Heading 5 Heading 5 Heading 5 Heading 5 Heading 5 Heading 5 Heading 5 Heading 5 Heading 5 <span class="sg-heading-size">10px</span></h5>
+												<h6>Heading 6 Heading 6 Heading 6 Heading 6 Heading 6 Heading 6 Heading 6 Heading 6 Heading 6 Heading 6 <span class="sg-heading-size">10px</span></h6>
+											</div>
+										</div>
+
+										<div class="grid__col">
+											<div class="sg-style-bg">
+												<h1 class="h6">h1 with <code>.h6</code> class</h1>
+												<h2 class="h5">h2 with <code>.h5</code> class</h2>
+												<h3 class="h4">h3 with <code>.h4</code> class</h3>
+												<h4 class="h3">h4 with <code>.h3</code> class</h4>
+												<h5 class="h2">h5 with <code>.h2</code> class</h5>
+												<h6 class="h1">h6 with <code>.h1</code> class</h6>
+											</div>
+										</div>
+
+									</div><!-- grid -->
+
+							</div><!-- end #heading-examples -->
+
+
+							<div id="alt-heading-examples" class="block  sg-section">
+								<h4 class="sg-section__ex-title">Alternative Headings</h4>
+
+									<div class="grid  sm-block-grid--1">
+										<div class="grid__col">
+
+												<h1 class="h2 heading heading--left">Heading Page Header</h1>
+
+												<h1 class="h4 heading heading--sub">Heading Sub title</h1>
+
+												<h1 class="h3 heading heading--center">Heading #Header Center</h1>
+
+										 <!--  <div class="h5--subtitle_grey">Heading Sub title grey</div>
+
+											<div class="black_wrapper">
+												<div class="h5--white">Heading Sub title</div>
+											</div>
+ -->
+										</div>
+									</div>
+							</div><!-- end #heading-examples -->
+
+
+							<div id="base-typography-examples" class="block  sg-section">
+								<h4 class="sg-section__ex-title">Default Inline typographic elements</h4>
+								<article class="block">
+									<p>For a majority of typographic elements you can use their class name counterpart which uses the same name as the actual element itself. Most times it's best to use the class instead of the element itself since all HTML5 elements hold some sort of semantic value.</p>
+								</article>
+
+								<div class="grid  sm-block-grid--3">
+									<div class="grid__col">
+										<code class="sg-code--small">&lt;strong&gt;</code> <code class="sg-code--small">.strong</code>
+										<div class="sg-style-bg"><strong>Strong is used to indicate strong importance</strong></div>
+									</div>
+									<div class="grid__col">
+										<code class="sg-code--small">&lt;em&gt;</code> <code class="sg-code--small">.em</code>
+										<div class="sg-style-bg"><em>This text has added emphasis</em></div>
+									</div>
+									<div class="grid__col">
+										<code class="sg-code--small">&lt;small&gt;</code> <code class="sg-code--small">.small</code>
+										<div class="sg-style-bg"><small>This small text is small for for fine print, etc.</small></div>
+									</div>
+									<div class="grid__col">
+										<code class="sg-code--small">&lt;u&gt;</code>
+										<div class="sg-style-bg">The <u>u element</u> is for non-textual annotation</div>
+									</div>
+									<div class="grid__col">
+										<code class="sg-code--small">&lt;del&gt;</code>
+										<div class="sg-style-bg"><del>This text is deleted</del></div>
+									</div>
+									<div class="grid__col">
+										<code class="sg-code--small">&lt;ins&gt;</code>
+										<div class="sg-style-bg"><ins>This text is inserted</ins></div>
+									</div>
+									<div class="grid__col">
+										<code class="sg-code--small">&lt;s&gt;</code>
+										<div class="sg-style-bg"><s>This text has a strikethrough</s></div>
+									</div>
+									<div class="grid__col">
+										<code class="sg-code--small">&lt;sup&gt;</code>
+										<div class="sg-style-bg">Superscript<sup>®</sup></div>
+									</div>
+									<div class="grid__col">
+										<code class="sg-code--small">&lt;sub&gt;</code>
+										<div class="sg-style-bg">Subscript for things like H<sub>2</sub>O</div>
+									</div>
+									<div class="grid__col">
+										<code class="sg-code--small">&lt;abbr&gt;</code>
+										<div class="sg-style-bg">Abbreviation: <abbr title="HyperText Markup Language">HTML</abbr></div>
+									</div>
+									<div class="grid__col">
+										<code class="sg-code--small">&lt;q&gt;</code>
+										<div class="sg-style-bg"><q cite="https://developer.mozilla.org/en-US/docs/HTML/Element/q">This text is a short inlindiv quotation</q></div>
+									</div>
+									<div class="grid__col">
+										<code class="sg-code--small">&lt;cite&gt;</code>
+										<div class="sg-style-bg"><cite>This is a citation</cite></div>
+									</div>
+									<div class="grid__col">
+										<code class="sg-code--small">&lt;dfn&gt;</code>
+										<div class="sg-style-bg">The <dfn>dfn element</dfn> indicates a definition.</div>
+									</div>
+									<div class="grid__col">
+										<code class="sg-code--small">&lt;mark&gt;</code>
+										<div class="sg-style-bg">The <mark>mark element</mark> indicates a highlight</div>
+									</div>
+
+								</div>
+
+							</div><!-- end #base-typorgraphy-examples -->
+
+
+
+<!--
+							<div id="type-examples" class="block  sg-section">
+
+									<div class="grid  sm-block-grid--2">
+
+										<div class="grid__col">
+											<h2 class="h2">Paragraph</h2>
+
+											<p>
+												Lorizzle fizzle cool fo shizzle my nizzle amizzle, izzle adipiscing own yo'. Nullizzle bizzle velizzle, cool volutpizzle, crackalackin dope, shizzlin dizzle vizzle, fo shizzle my nizzle. Pellentesque nizzle gangsta. Sizzle fo shizzle. Shizzlin dizzle izzle dolizzle dapibus break yo neck, yall crunk i'm in the shizzle. Brizzle shizzlin dizzle gangsta uhuh ... yih! funky fresh. Check out this in doggy.
+											</p>
+
+											<br />
+											<br />
+
+											<h2 class="h2">Paragraph 2</h2>
+
+											<p class="p__small">
+												Lorizzle fizzle cool fo shizzle my nizzle amizzle, izzle adipiscing own yo'. Nullizzle bizzle velizzle, cool volutpizzle, crackalackin dope, shizzlin dizzle vizzle, fo shizzle my nizzle. Pellentesque nizzle gangsta. Sizzle fo shizzle. Shizzlin dizzle izzle dolizzle dapibus break yo neck, yall crunk i'm in the shizzle. Brizzle shizzlin dizzle gangsta uhuh ... yih! funky fresh. Check out this in doggy.
+											</p>
+
+										</div>
+
+
+										<div class="grid__col">
+
+											<h2 class="h2">Paragraph wide</h2>
+
+											<p class="p__wide">
+												Lorizzle fizzle cool fo shizzle my nizzle amizzle, izzle adipiscing own yo'. Nullizzle bizzle velizzle, cool volutpizzle, crackalackin dope, shizzlin dizzle vizzle, fo shizzle my nizzle. Pellentesque nizzle gangsta. Sizzle fo shizzle. Shizzlin dizzle izzle dolizzle dapibus break yo neck, yall crunk i'm in the shizzle. Brizzle shizzlin dizzle gangsta uhuh ... yih! funky fresh. Check out this in doggy.
+											</p>
+
+
+											<br />
+											<br />
+
+											<h2 class="h2">Paragraph 2 wide</h2>
+
+											<p class="p__small__wide">
+												Lorizzle fizzle cool fo shizzle my nizzle amizzle, izzle adipiscing own yo'. Nullizzle bizzle velizzle, cool volutpizzle, crackalackin dope, shizzlin dizzle vizzle, fo shizzle my nizzle. Pellentesque nizzle gangsta. Sizzle fo shizzle. Shizzlin dizzle izzle dolizzle dapibus break yo neck, yall crunk i'm in the shizzle. Brizzle shizzlin dizzle gangsta uhuh ... yih! funky fresh. Check out this in doggy.
+											</p>
+
+										</div>
+
+
+
+									</div>
+
+									<pre>
+										<code class="xml hljs sg-html">
+	<span class="hljs-tag">&lt;<span class="hljs-title">p class="p__small__wide"</span>&gt;</span>
+		Text here
+	<span class="hljs-tag">&lt;<span class="hljs-title">/p</span>&gt;</span>
+										</code>
+									</pre>
+
+							</div><!-- end #type-examples -->
+
+
+
+
+							<div id="anchor-tag-examples" class="block  sg-section">
+
+								<h4 class="sg-section__ex-title">Anchor Tags</h4>
+								<article class="block">
+									<p>Anchors have a default style but you can use the <code>.link</code> class alone or in conjunction with its modifier classes. You can also use the counterpart type classes that were mentioned above here too. </p>
+								</article>
+
+								<div class="grid sm-block-grid--3">
+									<div class="grid__col">
+										<code class="sg-code--small">&lt;a&gt;</code>
+										<div class="sg-style-bg"><a href="#">Standard Anchor Link</a></div>
+									</div>
+									<div class="grid__col">
+										<code class="sg-code--small">.link</code>
+										<div class="sg-style-bg"><a href="#" class="link">Alternative Inline Link</a></div>
+									</div>
+									<div class="grid__col">
+										<code class="sg-code--small">.link .link--underline</code>
+										<div class="sg-style-bg"><a href="#" class="link link--underline">Underline Anchor Link</a></div>
+									</div>
+									<div class="grid__col">
+										<code class="sg-code--small">.link .link--noline</code>
+										<div class="sg-style-bg"><a href="#" class="link link--noline">No-line Anchor Link</a></div>
+									</div>
+									<div class="grid__col">
+										<code class="sg-code--small">.link .link--bold</code>
+										<div class="sg-style-bg"><a href="#" class="link link--bold">Bold Anchor Link</a></div>
+									</div>
+									<div class="grid__col">
+										<code class="sg-code--small">.link .link--bold .small</code>
+										<div class="sg-style-bg"><a href="#" class="link link--bold small">Small Bold Anchor Link</a></div>
+									</div>
+									<div class="grid__col">
+										<code class="sg-code--small">.link .link--light</code>
+										<div class="sg-style-bg"><a href="#" class="link link--light">Light Anchor Link</a></div>
+									</div>
+									<div class="grid__col">
+										<code class="sg-code--small">.link .link--light-bold</code>
+										<div class="sg-style-bg"><a href="#" class="link link--light-bold">Light Bold Anchor Link</a></div>
+									</div>
+									<div class="grid__col">
+										<code class="sg-code--small">.link .link--hover-bold</code>
+										<div class="sg-style-bg"><a href="#" class="link link--hover-bold">Bold Underline Hover Link</a></div>
+									</div>
+
+								</div>
+
+							</div><!-- end #anchor-tag-examples -->
+
+<!--
+								<div class="grid  sm-grid-up--2">
+									<div class="grid__col">
+										<a href="#">Standard Anchor Link</a><span> - Using: <code>&lt;a&gt;</code> tag</span>
+										<br>
+										<br>
+										<a href="#" class="link">Alternative Inline Link</a><span> - Using: <code>.link</code> class</span>
+										<br>
+										<br>
+										<a href="#" class="link link--underline">Underline Anchor Link</a><span> - Using: <code>.link</code> &amp; <code>.link--underline</code> classes</span>
+										<br>
+										<br>
+										<a href="#" class="link link--noline">No-line Anchor Link</a><span> - Using: <code>.link</code> &amp; <code>.link--noline</code> classes</span>
+										<br>
+										<br>
+										<a href="#" class="link link--bold">Bold Anchor Link</a><span> - Using: <code>.link</code> &amp; <code>.link--bold</code> classes</span>
+										<br>
+										<br>
+										<a href="#" class="link link--bold small">Small Bold Anchor Link</a><span> - Using: <code>.link</code> &amp; <code>.link--bold</code> &amp; <code>.small</code> classes</span>
+										<br>
+										<br>
+										<a href="#" class="link link--light">Light Anchor Link</a><span> - Using: <code>.link</code> &amp; <code>.link--light</code> classes</span>
+									</div>
+								</div>
+ -->
+
+
+
+					 <!--    <div id="list-examples" class="block  sg-section">
+								<h2 class="h2">Lists</h2>
+
+								<div class="grid  sm-grid-up--two">
+									<div class="grid__col">
+
+										<ul class="ui-list">
+											<li><a href="#">List Item 1</a></li>
+											<li><a href="#">List Item 2</a></li>
+											<li><a href="#">List Item 3</a></li>
+										</ul>
+
+										<pre>
+											<code class="xml hljs sg-html">
+	<span class="hljs-tag">&lt;<span class="hljs-title">ul class="ui-list"</span>&gt;</span>
+		<span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">/li</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-title">/ul</span>&gt;</span>
+											</code>
+										</pre>
+
+
+										<br />
+										<br />
+
+										<ul class="list__vertical">
+											<li><a href="#">List Item 1</a></li>
+											<li><a href="#">List Item 2</a></li>
+											<li><a href="#">List Item 3</a></li>
+										</ul>
+
+										<pre>
+											<code class="xml hljs sg-html">
+	<span class="hljs-tag">&lt;<span class="hljs-title">ul class="list__vertical"</span>&gt;</span>
+		<span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">/li</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-title">/ul</span>&gt;</span>
+											</code>
+										</pre>
+
+										<br />
+										<br />
+
+										<ul class="list__vertical__sub">
+											<li><a href="#">List Item 1</a></li>
+											<li><a href="#">List Item 2</a></li>
+											<li><a href="#">List Item 3</a></li>
+										</ul>
+
+										<pre>
+											<code class="xml hljs sg-html">
+	<span class="hljs-tag">&lt;<span class="hljs-title">ul class="list__vertical__sub"</span>&gt;</span>
+		<span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">/li</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-title">/ul</span>&gt;</span>
+											</code>
+										</pre>
+
+
+										<br />
+										<br />
+
+										<ul class="list__horizontal">
+											<li><a href="#">List Item 1</a></li>
+											<li><a href="#">List Item 2</a></li>
+											<li><a href="#">List Item 3</a></li>
+										</ul>
+
+										<pre>
+											<code class="xml hljs sg-html">
+	<span class="hljs-tag">&lt;<span class="hljs-title">ul class="list__horizontal"</span>&gt;</span>
+		<span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">/li</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-title">/ul</span>&gt;</span>
+											</code>
+										</pre>
+
+										<br />
+										<br />
+
+										<ul class="list__horizontal__u-letter-space">
+											<li><a href="#">List Item 1 u-letter-space-u-letter-space-u-letter-space-u-letter-space-u-letter-space-u-letter-space</a></li>
+											<li><a href="#">List Item 2 u-letter-space-u-letter-space-u-letter-space-u-letter-space-u-letter-space-u-letter-space</a></li>
+											<li><a href="#">List Item 3 u-letter-space-u-letter-space-u-letter-space-u-letter-space-u-letter-space-u-letter-space</a></li>
+										</ul>
+
+										<pre>
+											<code class="xml hljs sg-html">
+	<span class="hljs-tag">&lt;<span class="hljs-title">ul class="list__horizontal__u-letter-space"</span>&gt;</span>
+		<span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">/li</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-title">/ul</span>&gt;</span>
+											</code>
+										</pre>
+
+									</div>
+
+								</div>
+							</div><!-- end #anchor-tag-examples -->
+
+						</section>
+						<!-- END TYPOGRAPHY -->
+
+						<hr>
+
+						<!-- LISTS -->
+						<section id="lists" class="block  sg-section">
+							<header class="sg-section__header">
+								<h2 class="h2">Lists</h2>
+								<h3 class="sg-section__sub-title">Default &amp; UI-Lists</h3>
+							</header>
+
+							<article class="block">
+								<p>Below you'll see the styling for the default <code>&lt;ul&gt;</code> &amp; <code>&lt;ol&gt;</code> lists along with UI-List styles, which which can modify the default styles of lists.</p>
+							</article>
+
+							<div id="default-list-example" class="block  sg-section">
+								<h4 class="sg-section__ex-title">Default Lists </h4>
+								<div class="grid  sm-block-grid--2">
+									<div class="grid__col">
+										<code class="sg-code--small">&lt;ul&gt;</code>
+										<div class="sg-style-bg">
+											<ul>
+												<li>List Item</li>
+												<li>List Item
+													<ul>
+														<li>Nested List Item</li>
+														<li>Nested List Item</li>
+														<li>Nested List Item</li>
+													</ul>
+												</li>
+											</ul>
+										</div>
+									</div>
+									<div class="grid__col">
+										<code class="sg-code--small">&lt;ol&gt;</code>
+										<div class="sg-style-bg">
+											<ol>
+												<li>Ordered List Item</li>
+												<li>Ordered List Item
+													<ol>
+														<li>Nested Ordered List Item</li>
+														<li>Nested Ordered List Item</li>
+														<li>Nested Ordered List Item</li>
+													</ol>
+												</li>
+											</ol>
+										</div>
+									</div>
+								</div>
+							</div><!-- #default-list-example -->
+
+							<div id="ui-list-example" class="block  sg-section">
+								<h4 class="sg-section__ex-title">UI Lists </h4>
+								<div class="grid  sm-block-grid--2">
+									<div class="grid__col">
+										<code class="sg-code--small">.ui-list</code> <code class="sg-code--small">.ui-list__item</code>
+										<div class="sg-style-bg">
+											<ul class="ui-list">
+												<li class="ui-list__item">List Item 1</li>
+												<li class="ui-list__item">List Item 2</li>
+											</ul>
+										</div>
+									</div>
+									<div class="grid__col">
+										<code class="sg-code--small">.ui-list</code> <code class="sg-code--small">.ui-list__num</code>
+										<div class="sg-style-bg">
+											<ol class="ui-list">
+												<li class="ui-list__num">Numbered List Item 1</li>
+												<li class="ui-list__num">Numbered List Item 2</li>
+											</ol>
+										</div>
+									</div>
+								</div>
+							</div><!-- #ui-list-example -->
+
+							<div id="ui-list-example" class="block  sg-section">
+								<h4 class="sg-section__ex-title">UI List Bold </h4>
+								<div class="grid  sm-block-grid--2">
+									<div class="grid__col">
+										<code class="sg-code--small">.ui-list</code> <code class="sg-code--small">.ui-list__bold</code>
+										<div class="sg-style-bg">
+											<ul class="ui-list">
+												<li class="ui-list__bold">List Item 1</li>
+												<li class="ui-list__bold">List Item 2</li>
+											</ul>
+										</div>
+									</div>
+									<div class="grid__col">
+										<code class="sg-code--small">.ui-list</code> <code class="sg-code--small">.ui-list__bold</code> <code class="sg-code--small">.ui-list__bold--sm-line-height</code>
+										<div class="sg-style-bg">
+											<ul class="ui-list">
+												<li class="ui-list__bold ui-list__bold--sm-line-height">List Item 1</li>
+												<li class="ui-list__bold ui-list__bold--sm-line-height">List Item 2</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div><!-- #ui-list-example -->
+
+							<div id="modular-list-example" class="block  sg-section">
+								<h4 class="sg-section__ex-title">Modular List Examples</h4>
+								<p>Here we're using lists, some of the ui-list classes, some base classes, and some helper classes to form a list component. It's through this system of modularization and piecing together code that we can maintain an organized and scalable codebase. </p>
+
+								<div class="sg-ex-block">
+									<h5 class="sg-ex-block__title">Code Example</h5>
+									<pre>
+										<code class="xml hljs sg-html">
+	&lt;ul class="ui-list"&gt;
+		&lt;li&gt;&lt;a href="#"&gt;List Item Link 1&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href="#"&gt;List Item Link 2&lt;/a&gt;
+			&lt;ol&gt;
+				&lt;li class="u-letter-space"&gt;&lt;a class="link" href="#"&gt;Nested List Item with a really long string of text but not to worry, that's what the u-letter-space class is for.&lt;/a&gt;&lt;/li&gt;
+				&lt;li&gt;&lt;a class="link" href="#"&gt;Nested List Item&lt;/a&gt;&lt;/li&gt;
+			&lt;/ol&gt;
+		&lt;/li&gt;
+	&lt;/ul&gt;
+										</code>
+									</pre>
+									<div class="sg-ex-block__sample">
+										<div class="grid block-grid--2">
+											<div class="grid__col u-padding-r--lg">
+												<ul class="ui-list">
+													<li><a href="#">List Item Link 1</a></li>
+													<li><a href="#">List Item Link 2</a>
+														<ol>
+															<li class="u-letter-space"><a class="link" href="#">Nested List Item with a really long string of text but not to worry, that's what the u-letter-space class is for.</a></li>
+															<li><a class="link" href="#">Nested List Item</a></li>
+														</ol>
+													</li>
+												</ul>
+											</div>
+											<div class="grid__col"></div>
+										</div>
+									</div><!-- sg-ex-block__sample -->
+								</div><!-- sg-ex-block -->
+								<!-- 1st-ex-block -->
+
+								<div class="sg-ex-block">
+									<h5 class="sg-ex-block__title">Code Example</h5>
+									<pre>
+										<code class="xml hljs sg-html">
+	&lt;!-- Top Right List --&gt;
+	&lt;ul class="ui-list"&gt;
+		&lt;li&gt;List Item 1&lt;/li&gt;
+		&lt;li&gt;List Item 2
+			&lt;ul&gt;
+				&lt;li&gt;Sub List Item Title
+					&lt;ol&gt;
+						&lt;li class="ui-list__num"&gt;Nested Numbered List Item&lt;/li&gt;
+						&lt;li class="ui-list__num"&gt;Nested Numbered List Item&lt;/li&gt;
+					&lt;/ol&gt;
+				&lt;/li&gt;
+			&lt;/ul&gt;
+		&lt;/li&gt;
+	&lt;/ul&gt;
+										</code>
+									</pre>
+									<div class="sg-ex-block__sample">
+										<div class="grid block-grid--2">
+											<div class="grid__col">
+												<ul class="ui-list">
+													<li>List Item 1</li>
+													<li>List Item 2
+														<ul>
+															<li>Sub List Item Title
+																<ol>
+																	<li class="ui-list__num">Nested Numbered List Item</li>
+																	<li class="ui-list__num">Nested Numbered List Item</li>
+																</ol>
+															</li>
+														</ul>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</div><!-- sg-ex-block__sample -->
+								</div><!-- sg-ex-block -->
+								<!-- 2nd-ex-block -->
+
+								<div class="sg-ex-block">
+									<h5 class="sg-ex-block__title">Code Example</h5>
+									<pre>
+										<code class="xml hljs sg-html">
+	&lt;!-- Top Left List --&gt;
+	&lt;ul class="ui-list"&gt;
+		&lt;li&gt;&lt;a href="#"&gt;List Item Link 1&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href="#"&gt;List Item Link 2&lt;/a&gt;
+			&lt;ol&gt;
+				&lt;li class="u-letter-space"&gt;&lt;a class="link" href="#"&gt;Nested List Item with a really long string of text but not to worry, that's what the u-letter-space class is for.&lt;/a&gt;&lt;/li&gt;
+				&lt;li&gt;&lt;a class="link" href="#"&gt;Nested List Item&lt;/a&gt;&lt;/li&gt;
+			&lt;/ol&gt;
+		&lt;/li&gt;
+	&lt;/ul&gt;
+
+	&lt;!-- Top Right List --&gt;
+	&lt;ul class="ui-list"&gt;
+		&lt;li&gt;List Item 1&lt;/li&gt;
+		&lt;li&gt;List Item 2
+			&lt;ul&gt;
+				&lt;li&gt;Sub List Item Title
+					&lt;ol&gt;
+						&lt;li class="ui-list__num"&gt;Nested Numbered List Item&lt;/li&gt;
+						&lt;li class="ui-list__num"&gt;Nested Numbered List Item&lt;/li&gt;
+					&lt;/ol&gt;
+				&lt;/li&gt;
+			&lt;/ul&gt;
+		&lt;/li&gt;
+	&lt;/ul&gt;
+
+	&lt;!-- Bottom List --&gt;
+	&lt;ul class="ui-list table"&gt;
+		&lt;li class="ui-list__num table__cell"&gt;List Item&lt;/li&gt;
+		&lt;li class="ui-list__num table__cell"&gt;List Item&lt;/li&gt;
+		&lt;li class="ui-list__num table__cell"&gt;List Item&lt;/li&gt;
+		&lt;li class="ui-list__num table__cell"&gt;List Item&lt;/li&gt;
+	&lt;/ul&gt;
+										</code>
+									</pre>
+									<div class="sg-ex-block__sample">
+										<div class="grid block-grid--2">
+											<div class="grid__col u-shim right lg">
+												<ul class="ui-list">
+													<li><a href="#">List Item Link 1</a></li>
+													<li><a href="#">List Item Link 2</a>
+														<ol>
+															<li class="u-letter-space"><a class="link" href="#">Nested List Item with a really long string of text but not to worry, that's what the u-letter-space class is for.</a></li>
+															<li><a class="link" href="#">Nested List Item</a></li>
+														</ol>
+													</li>
+												</ul>
+											</div>
+											<div class="grid__col">
+												<ul class="ui-list">
+													<li>List Item 1</li>
+													<li>List Item 2
+														<ul>
+															<li>Sub List Item Title
+																<ol>
+																	<li class="ui-list__num">Nested Numbered List Item</li>
+																	<li class="ui-list__num">Nested Numbered List Item</li>
+																</ol>
+															</li>
+														</ul>
+													</li>
+												</ul>
+											</div>
+											<div class="grid__col u-full-width">
+												<ul class="ui-list table">
+													<li class="ui-list__num table__cell">List Item</li>
+													<li class="ui-list__num table__cell">List Item</li>
+													<li class="ui-list__num table__cell">List Item</li>
+													<li class="ui-list__num table__cell">List Item</li>
+												</ul>
+											</div>
+										</div>
+									</div><!-- sg-ex-block__sample -->
+								</div><!-- sg-ex-block -->
+							</div><!-- #modular-list-example -->
+
+						</section>
+						<!-- END LISTS -->
+
+
+						<hr>
+
+						<!-- FORMS -->
+						<section id="forms" class="block  sg-section">
+							<header class="sg-section__header">
+								<h2 class="h2">Forms</h2>
+								<h3 class="sg-section__sub-title">Basic Form Elements</h3>
+							</header>
+              <article class="block">
+                <p><em>You'll find more form examples in the comments of the modules/_forms.scss partial.</em></p>
+              </article>
+
+              <div id="form-input-example" class="block  sg-section">
+                <h4 class="sg-section__ex-title">Input Fields</h4>
+                <article class="block">
+                  <p>These are our default input text field styles. Here are some basic rules when writing markup for form inputs:</p>
+                    <ol>
+                      <li>Inputs should always be inside of a <code>&lt;form&gt;</code> element.</li>
+                      <li>All inputs should have a corresponding label element with matching <code>for</code> and <code>id</code> attributes for accessibility and proper functionality</li>
+                      <li>Each coupled <code>label</code> and <code>input</code> elements should be surrounded by the <code>.field</code> class</li>
+                    </ol>
+                   <p>The error colored background and border will be displayed in browsers that support the <code>:invalid</code> pseudo class, but we'll be using a JS validator on all forms to ensure progressive enhancement and browsers will also be receiving the <code>.is-error</code> class on the invalid input's surround <code>.field</code> block.  The invalid states below are seen when a user inputs an incorrect value for the specified input type.</p>
+                </article>
+                <div class="sg-ex-block">
+                  <h5 class="sg-ex-block__title">Code Example</h5>
+                  <pre>
+                    <code class="xml hljs sg-html">
+    // Entry Field 1
+    &lt;div class="field"&gt;
+        &lt;label for="username"&gt;Username&lt;/label&gt;
+        &lt;input type="text" id="username" placeholder="Placeholder"&gt;
+    &lt;/div&gt;
+
+    // Entry Field 2
+    &lt;div class="field"&gt;
+        &lt;label for="username-2"&gt;Username&lt;/label&gt;
+        &lt;input class="field__input--underline" type="text" id="username-2" placeholder="Placeholder"&gt;
+    &lt;/div&gt;
+
+     // Error with Feedback
+    &lt;div class="field is-error"&gt;
+        &lt;label for="username-2"&gt;Username&lt;/label&gt;
+        &lt;input type="text" id="username-2" placeholder="Placeholder"&gt;
+        &lt;span class="field__feedback">*Invalid Error Message&lt;/span>
+    &lt;/div&gt;
+                    </code>
+                  </pre>
+                  <div class="sg-ex-block__sample  u-bg-color--white">
+                    <form action="" class="form">
+                      <div class="grid  md-block-grid--3">
+                        <div class="grid__col">
+                          <p class="u-muted">Default state</p>
+                          <div class="field">
+                            <label for="username-1">Username</label>
+                            <input type="text" id="username-1" name="username" placeholder="Placeholder">
+                          </div>
+                        </div>
+                        <div class="grid__col">
+                          <p class="u-muted">Invalid state</p>
+                          <div class="field is-error">
+                            <label for="email-2">Email</label>
+                            <input type="email" id="email-2" name="username" placeholder="Placeholder" value="Placeholder">
+                          </div>
+                        </div>
+                        <div class="grid__col">
+                          <p class="u-muted">Invalid state w/ message</p>
+                          <div class="field is-error">
+                            <label for="email-3">Label</label>
+                            <input type="email" id="email-3" name="username" placeholder="Placeholder" value="Placeholder">
+                            <span class="field__feedback">*Invalid Error Message</span>
+                          </div>
+                        </div>
+                      </div>
+                    </form>
+                    <!-- modified input field -->
+                    <form action="" class="form">
+                      <div class="grid  md-block-grid--3">
+                        <div class="grid__col">
+                          <p class="u-muted">Input field modified</p>
+                          <div class="field">
+                            <label for="username-1">Username</label>
+                            <input class="field__input--underline u-center" type="text" id="username-1" name="username" placeholder="Placeholder">
+                          </div>
+                        </div>
+                        <div class="grid__col">
+                          <p class="u-muted">Modified Invalid state</p>
+                          <div class="field is-error">
+                            <label for="username-2">Email</label>
+                            <input class="field__input--underline u-center" type="email" id="username-2" name="username" placeholder="Placeholder" value="Placeholder">
+                          </div>
+                        </div>
+                        <div class="grid__col">
+                          <p class="u-muted">Modified Invalid state w/ message</p>
+                          <div class="field is-error">
+                            <label for="username-3">Label</label>
+                            <input class="field__input--underline u-center" type="email" id="username-3" name="username" placeholder="Placeholder" value="Placeholder">
+                            <span class="field__feedback">Invalid Error Message</span>
+                          </div>
+                        </div>
+                      </div>
+                    </form>
+                  </div><!-- sg-ex-block__sample -->
+
+                </div><!-- sg-ex-block -->
+
+              </div><!-- end #form-input-example -->
+
+              <div id="form-radio-example" class="block  sg-section">
+                <h4 class="sg-section__ex-title">Radio and Checkboxes</h4>
+                <article class="block">
+                  <p>Must use either <code>form__radio</code> or <code>form__checkbox</code> classes. <mark>Will change class name to .field__radio/checkbox after live push -_- my bad. -Maurice</mark></p>
+                </article>
+                <div class="sg-ex-block">
+                  <h5 class="sg-ex-block__title">Code Example</h5>
+                  <pre>
+                    <code class="xml hljs sg-html">
+    &lt;!--Radio Element -->
+    &lt;input id="radio-1" type="radio" class="form__radio"&gt;
+    &lt;label for="radio-1"&gt;Radio label&lt;/label&gt;
+
+    &lt;!--Checkbox Element -->
+    &lt;input id="checkbox-1" type="checkbox" class="form__checkbox"&gt;
+    &lt;label for="checkbox-1"&gt;Checkbox label&lt;/label&gt;
+
+    &lt;!--Error-->
+    &lt;input id="checkbox-1" type="checkbox" class="form__checkbox is-error"&gt;
+    &lt;label for="checkbox-1"&gt;Checkbox label&lt;/label&gt;
+
+    &lt;!--Multiline Label-->
+    &lt;input id="checkbox-1" type="checkbox" class="form__checkbox"&gt;
+    &lt;label for="checkbox-1"&gt;
+        &lt;div class="label__multiline"&gt;
+            Checkbox with&lt;br&gt;multiline
+        &lt;/div&gt;
+    &lt;/label&gt;
+
+    &lt;!--Vertically Center Label-->
+    &lt;input id="checkbox-1" type="checkbox"  class="form__checkbox"&gt;
+    &lt;label for="checkbox-1" class="label--middle" &gt;
+        &lt;div class="label__multiline"&gt;
+            Checkbox with&lt;br&gt;multiline
+        &lt;/div&gt;
+    &lt;/label&gt;
+
+                    </code>
+                  </pre>
+                  <div class="sg-ex-block__sample  u-bg-color--white">
+
+
+                    <div class="grid  md-block-grid--2">
+                        <div class="grid__col">
+                            <div class="h5">Radio</div>
+                            <form class="form" action="">
+                                <div class="field">
+                                    <input id="radio-1" class="form__radio" type="radio" name="radio-example">
+                                    <label for="radio-1"> Radio label</label>
+                                </div>
+                                 <div class="field">
+                                    <input id="radio-2" class="form__radio" type="radio" name="radio-example">
+                                    <label for="radio-2"> Radio label</label>
+                                </div>
+
+                            </form>
+
+                        </div>
+                        <div class="grid__col">
+                            <div class="h5">Checkbox</div>
+                            <form class="form" action="">
+                                <div class="field">
+                                    <input id="checkbox-1" class="form__checkbox" type="checkbox">
+                                    <label for="checkbox-1">Checkbox label</label>
+                                </div>
+                            </form>
+                        </div>
+
+                    </div>
+                    <div class="grid  md-block-grid--2">
+                        <div class="grid__col">
+                            <div class="u-margin-b--sm"> Error</div>
+                             <form class="form" action="">
+                                <div class="field">
+                                    <input id="radio-3" class="form__radio" type="radio" name="radio-example" class="is-error">
+                                    <label for="radio-3"> Radio label</label>
+                                </div>
+                            </form>
+
+                        </div>
+                        <div class="grid__col">
+
+                            <div class="u-margin-b--sm"> Error</div>
+                            <form class="form" action="">
+                                <div class="field">
+                                    <input id="checkbox-2" class="form__checkbox" type="checkbox" class="is-error">
+                                    <label for="checkbox-2">Checkbox label</label>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="grid  md-block-grid--2">
+                        <div class="grid__col">
+                            <div class="u-margin-b--sm"> Multiline Label</div>
+                            <form class="form" action="">
+                                <div class="field">
+                                    <input id="radio-4" class="form__radio" type="radio" name="radio-example">
+                                    <label for="radio-4"> <div class="label__multiline">Radio with<br>multiline<br>label</div></label>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="grid__col">
+                             <div class="u-margin-b--sm"> Multiline Label</div>
+                             <form class="form" action="">
+                                <div class="field">
+                                    <input id="checkbox-3" class="form__checkbox" type="checkbox">
+                                    <label for="checkbox-3"><div class="label__multiline">Checkbox with<br>multiline<br>label</div></label>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="grid  md-block-grid--2">
+                        <div class="grid__col">
+                            <div class="u-margin-b--sm"> Vertically Center Label</div>
+                            <form class="form" action="">
+                                <div class="field">
+                                    <input id="radio-5" class="form__radio" type="radio" name="radio-example">
+                                    <label for="radio-5" class="label--middle"> <div class="label__multiline">Radio with<br>multiline<br>label</div></label>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="grid__col">
+                            <div class="u-margin-b--sm"> Vertically Center Label</div>
+                            <form class="form" action="">
+                                <div class="field">
+                                    <input id="checkbox-4" class="form__checkbox" type="checkbox">
+                                    <label for="checkbox-4" class="label--middle"><div class="label__multiline">Checkbox with<br>multiline<br>label</div></label>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="grid  md-block-grid--2">
+                        <div class="grid__col">
+                            <div class="u-margin-b--sm"> Radio as Checkbox</div>
+                            <form class="form" action="">
+                                <div class="field">
+                                    <input id="radio-6" class="form__checkbox" type="radio" name="radio-example">
+                                    <label for="radio-6" class="label--middle"> <div class="label__multiline">Radio with<br>multiline<br>label</div></label>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="grid__col">
+                            <div class="u-margin-b--sm"> Checkbox as Radio</div>
+                            <form class="form" action="">
+                                <div class="field">
+                                    <input id="checkbox-5" class="form__radio" type="checkbox">
+                                    <label for="checkbox-5" class="label--middle"><div class="label__multiline">Checkbox with<br>multiline<br>label</div></label>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+
+                  </div><!-- sg-ex-block__sample -->
+                </div><!-- sg-ex-block -->
+
+              </div><!-- end #form-radio-example -->
+
+
+
+              <div id="form-dropdown-example" class="block  sg-section">
+                <h4 class="sg-section__ex-title">Select Dropdown</h4>
+                <article class="block">
+                  <p>Use this structure for select dropdowns. Add <code>.field__select--underline</code> to the select element to get the alternative apperance.<br> Add <code>.is-error</code> to the <code>.field</code> class to get error notiication.</p>
+                </article>
+                <div class="sg-ex-block">
+                  <h5 class="sg-ex-block__title">Code Example</h5>
+                  <pre>
+                    <code class="xml hljs sg-html">
+    // Dropdown 1
+    &lt;div class="field">
+        &lt;label for="select-1">Entry Title&lt;/label>
+        &lt;select id="select-1">
+            &lt;option disabled selected>Select Options&lt;/option>
+            &lt;option value="option-1">Option 1&lt;/option>
+            &lt;option value="option-2">Option 2&lt;/option>
+            &lt;option value="option-3">Option 3&lt;/option>
+        &lt;/select>
+    &lt;/div>
+
+    // Dropdown 2
+    &lt;div class="field">
+        &lt;label for="select-1">Entry Title&lt;/label>
+        &lt;select id="select-1" class="field__select--underline">
+            &lt;option disabled selected>Select Options&lt;/option>
+            &lt;option value="option-1">Option 1&lt;/option>
+            &lt;option value="option-2">Option 2&lt;/option>
+            &lt;option value="option-3">Option 3&lt;/option>
+        &lt;/select>
+    &lt;/div>
+
+    // Dropdown 2 with Error
+    &lt;div class="field is-error">
+        &lt;label for="select-1">Entry Title&lt;/label>
+        &lt;select id="select-1" class="field__select--underline is-error">
+            &lt;option disabled selected>Select Options&lt;/option>
+            &lt;option value="option-1">Option 1&lt;/option>
+            &lt;option value="option-2">Option 2&lt;/option>
+            &lt;option value="option-3">Option 3&lt;/option>
+        &lt;/select>
+    &lt;/div>
+                    </code>
+                  </pre>
+                  <div class="sg-ex-block__sample  u-bg-color--white">
+                    <div class="g sm-block-grid--2">
+                        <div class="gc">
+                            <div class="h5">Dropdown 1</div>
+                            <div class="field">
+                                <label for="select-1">Entry Title</label>
+
+                                <select id="select-1">
+                                    <option disabled selected>Select Options</option>
+                                    <option value="option-1">Option 1</option>
+                                    <option value="option-2">Option 2</option>
+                                    <option value="option-3">Option 3</option>
+                                    <option value="option-4">Option 4</option>
+                                    <option value="option-5">Option 5</option>
+                                </select>
+
+                            </div>
+                            <div class="field is-error">
+                                <label for="select-1">Entry Title</label>
+
+                                <select id="select-1" class="is-error">
+                                    <option disabled selected>Select Options</option>
+                                    <option value="option-1">Option 1</option>
+                                    <option value="option-2">Option 2</option>
+                                    <option value="option-3">Option 3</option>
+                                    <option value="option-4">Option 4</option>
+                                    <option value="option-5">Option 5</option>
+                                </select>
+
+                            </div>
+                        </div>
+                        <div class="gc">
+                            <div class="h5">Dropdown 2</div>
+                            <div class="field">
+                                <label for="select-1">Entry Title</label>
+                                <select id="select-1" class="field__select--underline">
+                                    <option disabled selected>Select Options</option>
+                                    <option value="option-1">Option 1</option>
+                                    <option value="option-2">Option 2</option>
+                                    <option value="option-3">Option 3</option>
+                                    <option value="option-4">Option 4</option>
+                                    <option value="option-5">Option 5</option>
+                                </select>
+                            </div>
+                            <div class="field is-error">
+                                <label for="select-1">Entry Title</label>
+                                <select id="select-1" class="field__select--underline is-error">
+                                    <option disabled selected>Select Options</option>
+                                    <option value="option-1">Option 1</option>
+                                    <option value="option-2">Option 2</option>
+                                    <option value="option-3">Option 3</option>
+                                    <option value="option-4">Option 4</option>
+                                    <option value="option-5">Option 5</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                  </div><!-- sg-ex-block__sample -->
+                </div><!-- sg-ex-block -->
+
+              </div><!-- end #form-dropdown-example -->
+
+
+
+
+              <div id="form-form-example" class="block  sg-section">
+                <h4 class="sg-section__ex-title">A basic form example</h4>
+                <article class="block">
+                  <p>Radio and Checkbox inputs are built with the <code>input</code> element--with their respective attributes--and the <code>label</code> element which requires a modifier class with the name of the input type e.g., <code>.label--checkbox</code>. The radio and checkbox elements need to be nested within the label element</p>
+                </article>
+                <div class="sg-ex-block">
+                  <h5 class="sg-ex-block__title">Code Example</h5>
+                  <pre>
+                    <code class="xml hljs sg-html">
+                      &lt;!--Radio Element -->
+                      &lt;label class="label--radio" for="radio-1"&gt;
+                        &lt;input id="radio-1" type="radio"&gt;Radio label
+                      &lt;/label&gt;
+
+                      &lt;!--Checkbox Element -->
+                      &lt;label class="label--checkbox" for="checkbox-1"&gt;
+                        &lt;input id="checkbox-1" type="checkbox"&gt;Checkbox label
+                      &lt;/label&gt;
+                    </code>
+                  </pre>
+                  <div class="sg-ex-block__sample  u-bg-color--white">
+                    <form class="form">
+                      <header>
+                        <h2 class="form__title">Title of this form</h2>
+                      </header>
+                      <fieldset>
+                        <legend>Personal Information</legend>
+                        <div class="field">
+                          <label class="field__label" for="exInput1">Your Name</label>
+                          <input class="field__input" id="exInputA" type="email" required="required" placeholder="Your name">
+                          <span class="field__feedback">Error text</span>
+                          <span class="field__hint">Optional field hint</span>
+                        </div>
+                        <div class="field">
+                          <label class="field__label" for="exInputB">Your Email</label>
+                          <input class="field__input" id="exInput2" type="email" required="required" placeholder="Your email">
+                          <span class="field__feedback"></span>
+                        </div>
+                      </fieldset>
+                      <fieldset>
+                        <div class="field">
+                          <label class="field__label">Choose your favorite</label>
+                          <div class="field__input-group">
+                            <label class="label--radio" for="favFood-1"><input id="favFood-1" name="favFood" type="radio" value="pizza"> Pizza</label>
+                            <label class="label--radio" for="favFood-2"><input id="favFood-2" name="favFood" type="radio" value="tacos"> Tacos</label>
+                            <label class="label--radio" for="favFood-3"><input id="favFood-3" name="favFood" type="radio" value="burgers"> Burgers</label>
+                          </div>
+                          <span class="field__feedback"></span>
+                          <span class="field__hint"></span>
+                        </div>
+                      </fieldset>
+                      <fieldset>
+                        <div class="field">
+                          <label class="field__label">Select one</label>
+                          <select name="schramburger">
+                            <option value="value-1">Option 1</option>
+                            <option value="value-2">Option 2</option>
+                            <option value="value-3">Option 3</option>
+                            <option value="value-4">Option 4</option>
+                          </select>
+                        </div>
+                      </fieldset>
+                      <fieldset>
+                        <div class="field">
+                          <label class="field__label">Your message</label>
+                          <textarea class="field__input" placeholder="Textarea placeholder"></textarea>
+                          <span class="field__feedback"></span>
+                          <span class="field__hint"></span>
+                        </div>
+                      </fieldset>
+                      <footer class="form__actions">
+                        <input type="submit" class="btn btn--block" value="Submit">
+                      </footer>
+                    </form>
+                  </div><!-- sg-ex-block__sample -->
+                </div><!-- sg-ex-block -->
+              </div><!-- end #form-form-example -->
+
+
+
+
+              <div id="form-form-example" class="block  sg-section">
+                <h4 class="sg-section__ex-title">Modified form example</h4>
+                <!-- <article class="block">
+                  <p>Radio and Checkbox inputs are built with the <code>input</code> element--with their respective attributes--and the <code>label</code> element which requires a modifier class with the name of the input type e.g., <code>.label--checkbox</code>. The radio and checkbox elements need to be nested within the label element</p>
+                </article> -->
+                <div class="sg-ex-block">
+                  <h5 class="sg-ex-block__title">Code Example</h5>
+                  <pre>
+                    <code class="xml hljs sg-html">
+  &lt;div class="field__input-group"&gt;
+
+  &lt;div class="field u-margin-r--sm"&gt;
+    &lt;label class="field__label"&gt;Label&lt;/label&gt;
+    &lt;input class="field__input" id="exInputA" type="email" required="required" placeholder="Enter Code"&gt;
+    &lt;input type="submit" class="btn" value="Apply"&gt;
+  &lt;/div&gt;
+
+
+                    </code>
+                  </pre>
+                  <div class="sg-ex-block__sample  u-bg-color--white">
+                    <form class="form">
+                      <header>
+                        <h2 class="form__title">Title of this form</h2>
+                      </header>
+
+                      <fieldset>
+
+                        <div class="field__input-group">
+
+                          <div class="field u-margin-r--sm">
+                            <label class="field__label">Label</label>
+                            <input class="field__input" id="exInputA" type="email" required="required" placeholder="Enter Code">
+                            <input type="submit" class="btn" value="Apply">
+                          </div>
+
+                        </div>
+
+                      </fieldset>
+
+                    </form>
+
+                  </div><!-- sg-ex-block__sample -->
+                </div><!-- sg-ex-block -->
+              </div><!-- end #form-form-example -->
+
+
+
+
+						</section>
+						<!-- END FORMS -->
+
+						<hr>
+
+
+
+						<!-- START HELPERS -->
+						<section id="helpers" class="block  sg-section">
+							<header class="sg-section__header">
+								<h2 class="h2">Helpers</h2>
+								<h3 class="sg-section__sub-title">Single Classes</h3>
+							</header>
+
+							<article class="block">
+								<p>Various helpers for single element quick fixes. Helper classes should be able to used anywhere at anytime with no dependencies or over specific styling e.g., <code>text-align: center;</code> with a helper class of <code>.u-text-center</code> All helper classes are prefixed with the 'u-' namespace('U' for utility) for readability purposes for developers.</p>
+							</article>
+
+
+							<div id="helper-visibility" class="block sg-section">
+								<h4 class="sg-section__ex-title">Visibility</h4>
+								<div class="grid  sm-block-grid--3">
+									<div class="grid__col">
+										<code class="sg-code--small">.u-hide</code>
+										<div class="sg-style-bg u-clearfix">
+											<div class="u-hide">Hide Element</div>
+										</div>
+									</div>
+									<div class="grid__col">
+										<code class="sg-code--small">.u-hide-visible</code>
+										<div class="sg-style-bg u-clearfix">
+											<div class="u-hide-visible">Hide Visible</div>
+										</div>
+									</div>
+								</div>
+							</div><!-- #default-list-example -->
+
+
+							<div id="helper-visibility-breakpoints" class="block sg-section">
+								<h4 class="sg-section__ex-title">Visibility Breakpoints</h4>
+								<div class="grid  sm-block-grid--3">
+									<div class="grid__col">
+										Show Below XS <code class="sg-code--small">.u-hide-xs</code>
+										<div class="sg-style-bg u-clearfix">
+											<div class="u-hide-xs">Show Below XS</div>
+										</div>
+									</div>
+									<div class="grid__col">
+										Show Below SM <code class="sg-code--small">.u-hide-sm</code>
+										<div class="sg-style-bg u-clearfix">
+											<div class="u-hide-sm">Show Below SM</div>
+										</div>
+									</div>
+									<div class="grid__col">
+										Show Below MD <code class="sg-code--small">.u-hide-md</code>
+										<div class="sg-style-bg u-clearfix">
+											<div class="u-hide-md">Show Below MD</div>
+										</div>
+									</div>
+									<div class="grid__col">
+										Show Below LG <code class="sg-code--small">.u-hide-lg</code>
+										<div class="sg-style-bg u-clearfix">
+											<div class="u-hide-lg">Show Below LG</div>
+										</div>
+									</div>
+									<div class="grid__col">
+										Show Below XL <code class="sg-code--small">.u-hide-xl</code>
+										<div class="sg-style-bg u-clearfix">
+											<div class="u-hide-xl">Show Below XL</div>
+										</div>
+									</div>
+								</div>
+							</div><!-- #default-list-example -->
+
+
+							<div id="helper-padding" class="block sg-section">
+								<h4 class="sg-section__ex-title">Padding</h4>
+								<div class="grid  sm-block-grid--3">
+									<div class="grid__col">
+										Padding Top
+										<div class="sg-style-bg u-clearfix">
+											<div class="u-padding-t--none">
+												<div><code class="sg-code--small">.u-padding-t--none</code> 0</div>
+												<div><code class="sg-code--small">.u-padding-t--xs</code>2px</div>
+												<div><code class="sg-code--small">.u-padding-t--sm</code>4px</div>
+												<div><code class="sg-code--small">.u-padding-t--md</code>5.33333px</div>
+												<div><code class="sg-code--small">.u-padding-t--lg</code>8px</div>
+												<div><code class="sg-code--small">.u-padding-t--xl</code>16px</div>
+												<div><code class="sg-code--small">.u-padding-t--xxl</code>32px</div>
+											</div>
+										</div>
+									</div>
+									<div class="grid__col">
+										Padding Right
+										<div class="sg-style-bg u-clearfix">
+											<div class="u-padding-t--none">
+												<div><code class="sg-code--small">.u-padding-r--none</code> 0</div>
+												<div><code class="sg-code--small">.u-padding-r--xs</code>2px</div>
+												<div><code class="sg-code--small">.u-padding-r--sm</code>4px</div>
+												<div><code class="sg-code--small">.u-padding-r--md</code>5.33333px</div>
+												<div><code class="sg-code--small">.u-padding-r--lg</code>8px</div>
+												<div><code class="sg-code--small">.u-padding-r--xl</code>16px</div>
+												<div><code class="sg-code--small">.u-padding-r--xxl</code>32px</div>
+											</div>
+										</div>
+									</div>
+									<div class="grid__col">
+										Padding Bottom
+										<div class="sg-style-bg u-clearfix">
+											<div class="u-padding-t--none">
+												<div><code class="sg-code--small">.u-padding-b--none</code> 0</div>
+												<div><code class="sg-code--small">.u-padding-b--xs</code>2px</div>
+												<div><code class="sg-code--small">.u-padding-b--sm</code>4px</div>
+												<div><code class="sg-code--small">.u-padding-b--md</code>5.33333px</div>
+												<div><code class="sg-code--small">.u-padding-b--lg</code>8px</div>
+												<div><code class="sg-code--small">.u-padding-b--xl</code>16px</div>
+												<div><code class="sg-code--small">.u-padding-b--xxl</code>32px</div>
+											</div>
+										</div>
+									</div>
+									<div class="grid__col">
+										Padding Left
+										<div class="sg-style-bg u-clearfix">
+											<div class="u-padding-t--none">
+												<div><code class="sg-code--small">.u-padding-l--none</code> 0</div>
+												<div><code class="sg-code--small">.u-padding-l--xs</code>2px</div>
+												<div><code class="sg-code--small">.u-padding-l--sm</code>4px</div>
+												<div><code class="sg-code--small">.u-padding-l--md</code>5.33333px</div>
+												<div><code class="sg-code--small">.u-padding-l--lg</code>8px</div>
+												<div><code class="sg-code--small">.u-padding-l--xl</code>16px</div>
+												<div><code class="sg-code--small">.u-padding-l--xxl</code>32px</div>
+											</div>
+										</div>
+									</div>
+									<div class="grid__col">
+										Padding All Around
+										<div class="sg-style-bg u-clearfix">
+											<div class="u-padding-t--none">
+												<div><code class="sg-code--small">.u-padding-a--none</code> 0</div>
+												<div><code class="sg-code--small">.u-padding-a--xs</code>2px</div>
+												<div><code class="sg-code--small">.u-padding-a--sm</code>4px</div>
+												<div><code class="sg-code--small">.u-padding-a--md</code>5.33333px</div>
+												<div><code class="sg-code--small">.u-padding-a--lg</code>8px</div>
+												<div><code class="sg-code--small">.u-padding-a--xl</code>16px</div>
+												<div><code class="sg-code--small">.u-padding-a--xxl</code>32px</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div><!-- #default-list-example -->
+
+
+
+							<div id="helper-margin" class="block sg-section">
+								<h4 class="sg-section__ex-title">Margin</h4>
+								<div class="grid  sm-block-grid--3">
+									<div class="grid__col">
+										Margin Top
+										<div class="sg-style-bg u-clearfix">
+											<div class="u-margin-t--none">
+												<div><code class="sg-code--small">.u-margin-t--none</code> 0</div>
+												<div><code class="sg-code--small">.u-margin-t--xs</code>2px</div>
+												<div><code class="sg-code--small">.u-margin-t--sm</code>4px</div>
+												<div><code class="sg-code--small">.u-margin-t--md</code>5.33333px</div>
+												<div><code class="sg-code--small">.u-margin-t--lg</code>8px</div>
+												<div><code class="sg-code--small">.u-margin-t--xl</code>16px</div>
+												<div><code class="sg-code--small">.u-margin-t--xxl</code>32px</div>
+											</div>
+										</div>
+									</div>
+									<div class="grid__col">
+										Margin Right
+										<div class="sg-style-bg u-clearfix">
+											<div class="u-margin-t--none">
+												<div><code class="sg-code--small">.u-margin-r--none</code> 0</div>
+												<div><code class="sg-code--small">.u-margin-r--xs</code>2px</div>
+												<div><code class="sg-code--small">.u-margin-r--sm</code>4px</div>
+												<div><code class="sg-code--small">.u-margin-r--md</code>5.33333px</div>
+												<div><code class="sg-code--small">.u-margin-r--lg</code>8px</div>
+												<div><code class="sg-code--small">.u-margin-r--xl</code>16px</div>
+												<div><code class="sg-code--small">.u-margin-r--xxl</code>32px</div>
+											</div>
+										</div>
+									</div>
+									<div class="grid__col">
+										Margin Bottom
+										<div class="sg-style-bg u-clearfix">
+											<div class="u-margin-t--none">
+												<div><code class="sg-code--small">.u-margin-b--none</code> 0</div>
+												<div><code class="sg-code--small">.u-margin-b--xs</code>2px</div>
+												<div><code class="sg-code--small">.u-margin-b--sm</code>4px</div>
+												<div><code class="sg-code--small">.u-margin-b--md</code>5.33333px</div>
+												<div><code class="sg-code--small">.u-margin-b--lg</code>8px</div>
+												<div><code class="sg-code--small">.u-margin-b--xl</code>16px</div>
+												<div><code class="sg-code--small">.u-margin-b--xxl</code>32px</div>
+											</div>
+										</div>
+									</div>
+									<div class="grid__col">
+										Margin Left
+										<div class="sg-style-bg u-clearfix">
+											<div class="u-margin-t--none">
+												<div><code class="sg-code--small">.u-margin-l--none</code> 0</div>
+												<div><code class="sg-code--small">.u-margin-l--xs</code>2px</div>
+												<div><code class="sg-code--small">.u-margin-l--sm</code>4px</div>
+												<div><code class="sg-code--small">.u-margin-l--md</code>5.33333px</div>
+												<div><code class="sg-code--small">.u-margin-l--lg</code>8px</div>
+												<div><code class="sg-code--small">.u-margin-l--xl</code>16px</div>
+												<div><code class="sg-code--small">.u-margin-l--xxl</code>32px</div>
+											</div>
+										</div>
+									</div>
+									<div class="grid__col">
+										Margin All Around
+										<div class="sg-style-bg u-clearfix">
+											<div class="u-margin-t--none">
+												<div><code class="sg-code--small">.u-margin-a--none</code> 0</div>
+												<div><code class="sg-code--small">.u-margin-a--xs</code>2px</div>
+												<div><code class="sg-code--small">.u-margin-a--sm</code>4px</div>
+												<div><code class="sg-code--small">.u-margin-a--md</code>5.33333px</div>
+												<div><code class="sg-code--small">.u-margin-a--lg</code>8px</div>
+												<div><code class="sg-code--small">.u-margin-a--xl</code>16px</div>
+												<div><code class="sg-code--small">.u-margin-a--xxl</code>32px</div>
+											</div>
+										</div>
+									</div>
+									<div class="grid__col">
+										Margin Center
+										<code class="sg-code--small">.u-margin--center</code>
+										<div class="sg-style-bg u-clearfix">
+											<div class="u-margin--center" style="width:80px;text-align:center;background:gray;">
+												<div>Center</div>
+											</div>
+										</div>
+									</div>
+									<div class="grid__col">
+										Negative Top Margin
+										<div class="sg-style-bg u-clearfix">
+											<div>
+												<div><code class="sg-code--small">.u-neg-margin-t--xs</code> -2px</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div><!-- #default-list-example -->
+
+
+
+							<div id="helper-border" class="block sg-section">
+								<h4 class="sg-section__ex-title">Border</h4>
+								<p>To achieve a border you will need to specify the border side, color, and thickness.</p>
+								<div class="grid  sm-block-grid--3">
+									<div class="grid__col">
+										Border Sides Options
+										<div class="sg-style-bg u-clearfix">
+											<div><code class="sg-code--small">.u-border-t</code></div>
+											<div><code class="sg-code--small">.u-border-r</code></div>
+											<div><code class="sg-code--small">.u-border-b</code></div>
+											<div><code class="sg-code--small">.u-border-l</code></div>
+											<div><code class="sg-code--small">.u-border-a</code></div>
+										</div>
+									</div>
+									<div class="grid__col">
+										Border Thickness Options
+										<div class="sg-style-bg u-clearfix">
+											<div><code class="sg-code--small">.u-border--none</code> 0</div>
+											<div><code class="sg-code--small">.u-border--xs</code> 1px</div>
+											<div><code class="sg-code--small">.u-border--sm</code> 2px</div>
+											<div><code class="sg-code--small">.u-border--md</code> 3px</div>
+											<div><code class="sg-code--small">.u-border--lg</code> 4px</div>
+											<div><code class="sg-code--small">.u-border--xl</code> 5px</div>
+
+											<div><code class="sg-code--small">.u-border-t--none</code></div>
+											<div><code class="sg-code--small">.u-border-r--none</code></div>
+											<div><code class="sg-code--small">.u-border-b--none</code></div>
+											<div><code class="sg-code--small">.u-border-l--none</code></div>
+											<div><code class="sg-code--small">.u-border-a--none</code></div>
+										</div>
+									</div>
+									<div class="grid__col">
+										Border Color Options
+										<div class="sg-style-bg u-clearfix">
+											<div><code class="sg-code--small">.u-border--color-xdark</code></div>
+											<div><code class="sg-code--small">.u-border--color-dark</code></div>
+											<div><code class="sg-code--small">.u-border--color-medium</code></div>
+											<div><code class="sg-code--small">.u-border--color-light</code></div>
+											<div><code class="sg-code--small">.u-border--color-lightest</code></div>
+											<div><code class="sg-code--small">.u-border--color-xlight</code></div>
+											<div><code class="sg-code--small">.u-border--color-xxlight</code></div>
+										</div>
+									</div>
+
+									<div class="grid__col">
+										<div>Border Example</div>
+										<code class="sg-code--small">.u-border--lg</code> <code class="sg-code--small">.u-border--color-dark</code> <code class="sg-code--small">.u-border-a</code>
+										<div class="sg-style-bg u-clearfix">
+											<div class="u-border--lg u-border--color-dark u-border-a">Border Example</div>
+										</div>
+									</div>
+
+								</div>
+							</div><!-- #default-list-example -->
+
+
+							<div id="helper-bg-color" class="block  sg-section">
+								<h4 class="sg-section__ex-title">BG Color</h4>
+								<div class="grid  sm-block-grid--3">
+									<div class="grid__col">
+										<code class="sg-code--small">.u-bg-color--black</code>
+										<div class="sg-style-bg u-clearfix">
+											<div class="u-bg-color--black">&nbsp;</div>
+										</div>
+									</div>
+									<div class="grid__col">
+										<code class="sg-code--small">.u-bg-color--grey</code>
+										<div class="sg-style-bg u-clearfix">
+											<div class="u-bg-color--grey">&nbsp;</div>
+										</div>
+									</div>
+									<div class="grid__col">
+										<code class="sg-code--small">.u-bg-color--grey-light</code>
+										<div class="sg-style-bg">
+											<div class="u-bg-color--grey-light">&nbsp;</div>
+										</div>
+									</div>
+									<div class="grid__col">
+										<code class="sg-code--small">.u-bg-color--grey-lighter</code>
+										<div class="sg-style-bg">
+											<div class="u-bg-color--grey-lighter">&nbsp;</div>
+										</div>
+									</div>
+									<div class="grid__col">
+										<code class="sg-code--small">.u-bg-color--grey-lightest</code>
+										<div class="sg-style-bg">
+											<div class="u-bg-color--grey-lightest">&nbsp;</div>
+										</div>
+									</div>
+									<div class="grid__col">
+										<code class="sg-code--small">.u-bg-color--none</code>
+										<div class="sg-style-bg">
+											<div class="u-bg-color--none">&nbsp;</div>
+										</div>
+									</div>
+									<div class="grid__col">
+										<code class="sg-code--small">.u-bg-color--offwhite</code>
+										<div class="sg-style-bg">
+											<div class="u-bg-color--offwhite">&nbsp;</div>
+										</div>
+									</div>
+									<div class="grid__col">
+										<code class="sg-code--small">.u-bg-color--white</code>
+										<div class="sg-style-bg">
+											<div class="u-bg-color--white">&nbsp;</div>
+										</div>
+									</div>
+									<div class="grid__col">
+										<code class="sg-code--small">.u-bg-color--blue</code>
+										<div class="sg-style-bg">
+											<div class="u-bg-color--blue">&nbsp;</div>
+										</div>
+									</div>
+									<div class="grid__col">
+										<code class="sg-code--small">.u-bg-color--pink</code>
+										<div class="sg-style-bg">
+											<div class="u-bg-color--pink">&nbsp;</div>
+										</div>
+									</div>
+									<div class="grid__col">
+										<code class="sg-code--small">.u-bg-color--pink-light</code>
+										<div class="sg-style-bg">
+											<div class="u-bg-color--pink-light">&nbsp;</div>
+										</div>
+									</div>
+									<div class="grid__col">
+										<code class="sg-code--small">.u-bg-color--error</code>
+										<div class="sg-style-bg">
+											<div class="u-bg-color--error">&nbsp;</div>
+										</div>
+									</div>
+								</div>
+							</div><!-- #default-list-example -->
+
+
+
+							<div id="helper-color" class="block  sg-section">
+								<h4 class="sg-section__ex-title">Color</h4>
+								<div class="grid  sm-block-grid--3">
+									<div class="grid__col">
+										<code class="sg-code--small">.u-color--black</code>
+										<div class="sg-style-bg u-clearfix">
+											<div class="u-color--black">Black</div>
+										</div>
+									</div>
+									<div class="grid__col">
+										<code class="sg-code--small">.u-color--grey</code>
+										<div class="sg-style-bg u-clearfix">
+											<div class="u-color--grey">Grey</div>
+										</div>
+									</div>
+									<div class="grid__col">
+										<code class="sg-code--small">.u-color--grey-light</code>
+										<div class="sg-style-bg">
+											<div class="u-color--grey-light">Grey Light</div>
+										</div>
+									</div>
+									<div class="grid__col">
+										<code class="sg-code--small">.u-color--grey-lighter</code>
+										<div class="sg-style-bg">
+											<div class="u-color--grey-lighter">Grey Lighter</div>
+										</div>
+									</div>
+									<div class="grid__col">
+										<code class="sg-code--small">.u-color--none</code>
+										<div class="sg-style-bg">
+											<div class="u-color--none">None</div>
+										</div>
+									</div>
+									<div class="grid__col">
+										<code class="sg-code--small">.u-color--offwhite</code>
+										<div class="sg-style-bg">
+											<div class="u-color--offwhite">Off-White</div>
+										</div>
+									</div>
+									<div class="grid__col">
+										<code class="sg-code--small">.u-color--white</code>
+										<div class="sg-style-bg">
+											<div class="u-color--white">White</div>
+										</div>
+									</div>
+									<div class="grid__col">
+										<code class="sg-code--small">.u-color--blue</code>
+										<div class="sg-style-bg">
+											<div class="u-color--blue">Blue</div>
+										</div>
+									</div>
+									<div class="grid__col">
+										<code class="sg-code--small">.u-color--pink</code>
+										<div class="sg-style-bg">
+											<div class="u-color--pink">Pink</div>
+										</div>
+									</div>
+									<div class="grid__col">
+										<code class="sg-code--small">.u-color--pink-light</code>
+										<div class="sg-style-bg">
+											<div class="u-color--pink-light">Pink Light</div>
+										</div>
+									</div>
+									<div class="grid__col">
+										<code class="sg-code--small">.u-error</code>
+										<div class="sg-style-bg">
+											<div class="u-error">Error</div>
+										</div>
+									</div>
+								</div>
+							</div><!-- #default-list-example -->
+
+
+							<div id="helper-font-primary" class="block  sg-section">
+								<h4 class="sg-section__ex-title">Font Primary &mdash; Karla</h4>
+								<div class="grid  sm-block-grid--3">
+									<div class="grid__col">
+										<code class="sg-code--small">.u-font-primary</code>
+										<div class="sg-style-bg u-clearfix">
+											<div class="u-font-primary">Karla</div>
+										</div>
+									</div>
+									<div class="grid__col">
+										<code class="sg-code--small">.u-font-primary--bold</code>
+										<div class="sg-style-bg u-clearfix">
+											<div class="u-font-primary--bold">Karla Bold</div>
+										</div>
+									</div>
+								</div>
+							</div><!-- #default-list-example -->
+
+
+							<div id="helper-font-secondary" class="block  sg-section">
+								<h4 class="sg-section__ex-title">Font secondary &mdash; Proxima</h4>
+								<div class="grid  sm-block-grid--3">
+									<div class="grid__col">
+										<code class="sg-code--small">.u-font-secondary</code>
+										<div class="sg-style-bg u-clearfix">
+											<div class="u-font-secondary">Proxima</div>
+										</div>
+									</div>
+									<div class="grid__col">
+										<code class="sg-code--small">.u-font-secondary--bold</code>
+										<div class="sg-style-bg u-clearfix">
+											<div class="u-font-secondary--bold">Proxima Bold</div>
+										</div>
+									</div>
+									<div class="grid__col">
+										<code class="sg-code--small">.u-font-secondary--bold</code>
+										<div class="sg-style-bg u-clearfix">
+											<div class="u-font-secondary--lighter">Proxima Lighter</div>
+										</div>
+									</div>
+								</div>
+							</div><!-- #default-list-example -->
+
+
+							<div id="helper-font-size" class="block  sg-section">
+								<h4 class="sg-section__ex-title">Font Size</h4>
+								<div class="grid  sm-block-grid--1">
+									<div class="grid__col">
+										<code class="sg-code--small">.u-text-xs</code>
+										<div class="sg-style-bg u-clearfix">
+											<div class="u-text-xs">Text 9px</div>
+										</div>
+									</div>
+									<div class="grid__col">
+										<code class="sg-code--small">.u-text-sm</code>
+										<div class="sg-style-bg">
+											<div class="u-text-sm">Text 10px</div>
+										</div>
+									</div>
+									<div class="grid__col">
+										<code class="sg-code--small">.u-text-md</code>
+										<div class="sg-style-bg">
+											<div class="u-text-md">Text 12px</div>
+										</div>
+									</div>
+									<div class="grid__col">
+										<code class="sg-code--small">.u-text-lg</code>
+										<div class="sg-style-bg">
+											<div class="u-text-lg">Text 14px</div>
+										</div>
+									</div>
+									<div class="grid__col">
+										<code class="sg-code--small">.u-text-xl</code>
+										<div class="sg-style-bg">
+											<div class="u-text-xl">Text 16px</div>
+										</div>
+									</div>
+									<div class="grid__col">
+										<code class="sg-code--small">.u-text-xxl</code>
+										<div class="sg-style-bg">
+											<div class="u-text-xxl">Text 18px</div>
+										</div>
+									</div>
+									<div class="grid__col">
+										<code class="sg-code--small">.u-text-inherit</code>
+										<div class="sg-style-bg">
+											<div class="u-text-inherit">Text Inherit</div>
+										</div>
+									</div>
+								</div>
+							</div><!-- #default-list-example -->
+
+
+
+
+
+
+
+
+							<div id="helper-font-weight" class="block  sg-section">
+								<h4 class="sg-section__ex-title">Font-weight</h4>
+								<div class="grid  sm-block-grid--3">
+									<div class="grid__col">
+										<code class="sg-code--small">.u-weight--normal</code>
+										<div class="sg-style-bg u-clearfix">
+											<div class="u-weight--normal">Normal</div>
+										</div>
+									</div>
+									<div class="grid__col">
+										<code class="sg-code--small">.u-weight--bold</code>
+										<div class="sg-style-bg u-clearfix">
+											<div class="u-weight--bold">Bold</div>
+										</div>
+									</div>
+								</div>
+							</div><!-- #default-list-example -->
+
+
+
+							<div id="helper-text-decoration" class="block  sg-section">
+								<h4 class="sg-section__ex-title">Text-decorations</h4>
+								<div class="grid  sm-block-grid--3">
+									<div class="grid__col">
+										<code class="sg-code--small">.u-underline</code>
+										<div class="sg-style-bg u-clearfix">
+											<div class="u-underline">Underline</div>
+										</div>
+									</div>
+									<div class="grid__col">
+										<code class="sg-code--small">.u-text-decoration-none</code>
+										<div class="sg-style-bg u-clearfix">
+											<div class="u-text-decoration-none">Text Decoration None</div>
+										</div>
+									</div>
+								</div>
+							</div><!-- #default-list-example -->
+
+
+
+							<div id="helper-float" class="block  sg-section">
+								<h4 class="sg-section__ex-title">Float</h4>
+								<div class="grid  sm-block-grid--3">
+									<div class="grid__col">
+										<code class="sg-code--small">.u-float-left</code>
+										<div class="sg-style-bg u-clearfix">
+											<div class="u-float-left">Floated Left</div>
+										</div>
+									</div>
+									<div class="grid__col">
+										<code class="sg-code--small">.u-float-right</code>
+										<div class="sg-style-bg u-clearfix">
+											<div class="u-float-right">Floated Right</div>
+										</div>
+									</div>
+									<div class="grid__col">
+										<code class="sg-code--small">.u-float-none</code>
+										<div class="sg-style-bg">
+											<div class="u-float-none">Floated None</div>
+										</div>
+									</div>
+								</div>
+							</div><!-- #default-list-example -->
+
+
+
+							<div id="helper-width" class="block  sg-section">
+								<h4 class="sg-section__ex-title">Width</h4>
+								<div class="grid  sm-block-grid--3">
+									<div class="grid__col">
+										<code class="sg-code--small">.u-full-width</code>
+										<div class="sg-style-bg u-clearfix">
+											<div class="u-full-width">Full Width</div>
+										</div>
+									</div>
+									<div class="grid__col">
+										<code class="sg-code--small">.u-width-auto</code>
+										<div class="sg-style-bg u-clearfix">
+											<div class="u-width-auto">Width Auto</div>
+										</div>
+									</div>
+								</div>
+							</div><!-- #default-list-example -->
+
+							<div id="helper-letter-space" class="block  sg-section">
+								<h4 class="sg-section__ex-title">Letter Space</h4>
+								<div class="grid  sm-block-grid--3">
+									<div class="grid__col">
+										<code class="sg-code--small">.u-letter-space</code>
+										<div class="sg-style-bg u-clearfix">
+											<div class="u-letter-space">Letter Space</div>
+										</div>
+									</div>
+									<div class="grid__col">
+										<code class="sg-code--small">.u-letter-space--sm</code>
+										<div class="sg-style-bg u-clearfix">
+											<div class="u-letter-space--sm">Letter Space Small</div>
+										</div>
+									</div>
+								</div>
+							</div><!-- #default-list-example -->
+
+
+							<div id="helper-text-alignment" class="block  sg-section">
+								<h4 class="sg-section__ex-title">Text Alignment</h4>
+								<div class="grid  sm-block-grid--3">
+									<div class="grid__col">
+										<code class="sg-code--small">.u-left</code>
+										<div class="sg-style-bg u-clearfix">
+											<div class="u-left">Left</div>
+										</div>
+									</div>
+									<div class="grid__col">
+										<code class="sg-code--small">.u-center</code>
+										<div class="sg-style-bg u-clearfix">
+											<div class="u-center">Center</div>
+										</div>
+									</div>
+									<div class="grid__col">
+										<code class="sg-code--small">.u-right</code>
+										<div class="sg-style-bg u-clearfix">
+											<div class="u-right">Right</div>
+										</div>
+									</div>
+								</div>
+							</div><!-- #default-list-example -->
+
+
+							<div id="helper-text-misc" class="block  sg-section">
+								<h4 class="sg-section__ex-title">Text Misc</h4>
+								<div class="grid  sm-block-grid--3">
+									<div class="grid__col">
+										<code class="sg-code--small">.u-line-height</code>
+										<div class="sg-style-bg u-clearfix">
+											<div class="u-line-height">Line Height Normal</div>
+										</div>
+									</div>
+									<div class="grid__col">
+										<code class="sg-code--small">.u-line-height--sm</code>
+										<div class="sg-style-bg u-clearfix">
+											<div class="u-line-height--sm">Line Height Small</div>
+										</div>
+									</div>
+									<div class="grid__col">
+										<code class="sg-code--small">.u-ellipsis</code>
+										<div class="sg-style-bg u-clearfix">
+											<div class="u-ellipsis">Aqua glow watercolor blush brush cleaning solution</div>
+										</div>
+									</div>
+									<div class="grid__col">
+										<code class="sg-code--small">.u-uppercase</code>
+										<div class="sg-style-bg u-clearfix">
+											<div class="u-uppercase">Aqua glow watercolor blush</div>
+										</div>
+									</div>
+								</div>
+							</div><!-- #default-list-example -->
+
+
+							<div id="helper-pointer" class="block  sg-section">
+								<h4 class="sg-section__ex-title">Pointer</h4>
+								<div class="grid  sm-block-grid--3">
+									<div class="grid__col">
+										<code class="sg-code--small">.u-pointer</code>
+										<div class="sg-style-bg u-clearfix">
+											<div class="u-pointer">Pointer</div>
+										</div>
+									</div>
+									<div class="grid__col">
+										<code class="sg-code--small">.u-pointer--default</code>
+										<div class="sg-style-bg u-clearfix">
+											<div class="u-pointer--default">Pointer Default</div>
+										</div>
+									</div>
+								</div>
+							</div><!-- #default-list-example -->
+
+							<div id="helper-display" class="block  sg-section">
+								<h4 class="sg-section__ex-title">Display</h4>
+								<div class="grid  sm-block-grid--3">
+									<div class="grid__col">
+										<code class="sg-code--small">.u-inline-block</code>
+										<div class="sg-style-bg u-clearfix">
+											<div class="u-inline-block">Inline Block</div>
+										</div>
+									</div>
+									<div class="grid__col">
+										<code class="sg-code--small">.u-inline-block-top</code>
+										<div class="sg-style-bg u-clearfix">
+											<div class="u-inline-block-top">Inline Block | Vertical Top</div>
+										</div>
+									</div>
+									<div class="grid__col">
+										<code class="sg-code--small">.u-inline-block-bottom</code>
+										<div class="sg-style-bg u-clearfix">
+											<div class="u-inline-block-bottom">Inline Block | Vertical Bottom</div>
+										</div>
+									</div>
+								</div>
+							</div><!-- #default-list-example -->
+
+
+							<div id="helper-misc" class="block  sg-section">
+								<h4 class="sg-section__ex-title">Misc</h4>
+								<div class="grid  sm-block-grid--3">
+									<div class="grid__col">
+										<code class="sg-code--small">.u-muted</code>
+										<div class="sg-style-bg u-clearfix">
+											<div class="u-muted">Muted</div>
+										</div>
+									</div>
+									<div class="grid__col">
+										<code class="sg-code--small">.u-clearfix</code>
+										<div class="sg-style-bg u-clearfix">
+											<div class="u-clearfix">Clearfix</div>
+										</div>
+									</div>
+									<div class="grid__col">
+										<code class="sg-code--small">.u-float-none</code>
+										<div class="sg-style-bg">
+											<div class="u-float-none">Floated None</div>
+										</div>
+									</div>
+									<div class="grid__col">
+										<code class="sg-code--small">.u-no-select</code>
+										<div class="sg-style-bg">
+											<div class="u-no-select">No Select</div>
+										</div>
+									</div>
+								</div>
+							</div><!-- #default-list-example -->
+
+
+
+                            <div id="helper-invert-color" class="block  sg-section">
+                                <h4 class="sg-section__ex-title">Invert Color for Elements</h4>
+                                <div class="grid  sm-block-grid--3">
+                                    <div class="grid__col">
+                                        <code class="sg-code--small">.u-invert--link</code>
+                                        <div class="u-bg-color--black u-padding-a--sm">
+                                            <a class="u-invert--link" href="#">
+                                                Invert To White
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="grid__col">
+                                        <code class="sg-code--small">.u-invert--svg</code>
+                                        <div class="u-bg-color--black u-padding-a--sm">
+
+                                            <span class="icon icon--check-mark"><svg class="u-invert--svg"><use xlink:href="#icon-check-mark"></use></svg></span>
+
+                                        </div>
+                                    </div>
+                                    <div class="grid__col">
+                                        <code class="sg-code--small">.u-invert--input</code>
+                                        <div class="u-bg-color--black u-padding-a--sm">
+                                          <form class="form" action="">
+                                              <div class="field">
+                                                <input type="text" id="username" name="username" placeholder="Placeholder" class="u-invert--input">
+                                              </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!-- #ui-invert-example -->
+
+
+						</section>
+						<!-- END HELPERS-->
+
+					</div><!-- end .grid__col -->
+
+				</div><!-- end .grid -->
+
+			</div><!-- end .container -->
+
+		</main><!-- end .site-main -->
+
+	</div><!-- end .site -->
+
+
+	<!-- Footer Scripts -->
+	<!--[if gt IE 8]><!-->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/highlight.min.js"></script>
+		<script src="../lib/scripts/styleguide/ZeroClipboard.js"></script>
+		<script src="../lib/scripts/styleguide/scripts.js"></script>
+	<!--<![endif]-->
+        <!-- Ready JS -->
+        <script src="http://eagle.dressbad.com/r/js/ready.js?v1.8"></script>
+
+	</body>
+</html>

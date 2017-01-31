@@ -1,0 +1,81 @@
+/******************************
+*
+*  RoyalSlider Default Skin 
+*
+*    1. Arrows 
+*    2. Bullets
+*    3. Thumbnails
+*    4. Tabs
+*    5. Fullscreen button
+*    6. Play/close video button
+*    7. Preloader
+*    
+*  Sprite: 'rs-default.png'
+*  Feel free to edit anything
+*  If you don't some part - just delete it
+* 
+******************************/
+
+
+/* Background */
+.rsDefault .rsOverflow,
+.rsDefault .rsSlide,
+.rsDefault .rsVideoFrameHolder,
+.rsDefault .rsThumbs {
+	/* background: #151515; */
+}
+
+
+
+/***************
+*
+*  2. Bullets
+*
+****************/
+
+.rsDefault .rsBullets {
+	z-index: 700;
+	left: 0;
+	width: 100%;
+	height: auto; 
+	text-align: center;
+	line-height: 18px;
+	overflow: hidden;
+	margin: 0 auto;
+
+}
+.rsDefault .rsBullet {
+	width: 9px;
+	height: 9px;
+	display: inline-block;
+	*display:inline; 
+	*zoom:1;
+	margin: 0 8px -3px; /*bottom was 1px*/
+	border-radius: 50%;
+	background: #939393;
+	/* border: 3px solid #000; */
+	z-index: 300;
+}
+.rsDefault .rsBullet.rsNavSelected  {
+	background-color: #FFF;
+	z-index: 300;
+}
+
+
+
+/***************
+*
+*  7. Preloader
+*
+****************/
+
+.rsDefault .rsPreloader {
+	width:20px;
+	height:20px;
+	background-image:url(../preloaders/preloader-white.gif);
+
+	left:50%;
+	top:50%;
+	margin-left:-10px;
+	margin-top:-10px;	
+}

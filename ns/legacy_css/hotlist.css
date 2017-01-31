@@ -1,0 +1,240 @@
+.lookbook {
+    padding: 1.25vw;
+}
+.page-container {
+	background-color: white;
+	padding: 15px;
+}
+.lookbook_landing--image {
+	width: 100%;
+	display: block;
+}
+.lookbook_landing--post_title,
+.page_header--title {
+	font-family: "ProximaNovaBold", "Helvetica Neue", Arial, sans-serif;
+	text-decoration: none;
+	letter-spacing: .120em;
+	display: block;
+	padding: 17px 0 10px 0;
+	color: black;
+	font-weight: normal;
+	font-style: normal;
+	text-transform: uppercase;
+	font-size: 3.5vw;
+}
+.lookbook_landing--post {
+	text-align: center;
+}
+.page_header--title {
+	font-size: 6vw;
+	text-align: center;
+	padding: 0;
+}
+.page_header--sub {
+  font-family: "Karla", Arial, sans-serif;
+  font-size: 3.8vw;
+  text-align: center;
+ }
+
+.lookbook-header__title,
+.lookbook-post__sticker,
+.lookbook-header__title--thin,
+.lookbook-more__right,
+.lookbook-more__title {
+	font-family: "ProximaNovaBold", "Helvetica Neue", Arial, sans-serif;
+	text-decoration: none;
+	letter-spacing: .120em;
+	display: block;
+	padding: 17px 0 10px 0;
+	color: black;
+	font-weight: normal;
+	font-style: normal;
+	text-transform: uppercase;
+	font-size: 3.5vw;
+	text-align: center;
+}
+.lookbook-post__item {
+	text-align: center;
+	margin-top: 15px;
+	position: relative;
+}
+.lookbook-header__title {
+	font-size: 6vw;
+	padding: 0;
+	letter-spacing: 0.2em;
+}
+.lookbook-header__title--thin {
+	font-family: "ProximaNovaThin";
+	padding: 5px 0 6px 0;
+	font-size: 6.5vw;
+}
+.lookbook-header__sub {
+	font-family: "Karla", Arial, sans-serif;
+	font-size: 4vw;
+	padding: .2em 3em 0 3em;
+	text-align: center;
+ }
+ .lookbook-post__sticker {
+ 	background: rgba(255, 255, 255, .9);
+	position: absolute;
+	top: 1em;
+	right: 1em;
+	padding: 1em 1.5em;
+	font-size: 2.2vw;
+ }
+ .lookbook-header {
+ 	text-transform: uppercase;
+ }
+ .lookbook-more__item:first-child {
+ 	border-top: 1px solid #dbdbdb;
+ }
+ .lookbook-more__item {
+	display: table;
+	border-bottom: 1px solid #dbdbdb;
+	padding: 15px;
+	width: 100%;
+ }
+ .lookbook-more__left,
+ .lookbook-more__right {
+	display: table-cell;
+ }
+ .lookbook-more__left {
+ 	width: 26%;
+ }
+ .lookbook-more__left img {
+ 	width: 100%;
+ 	display: block;
+ }
+ .lookbook-more__right {
+ 	vertical-align: middle;
+ 	padding-left: 2em;
+ 	text-align: left;
+ }
+ .lookbook-more__view-cta {
+ 	font-family: "ProximaNovaBold", "Helvetica Neue", Arial, sans-serif;
+ 	text-align: center;
+ 	display: inline-block;
+ 	color: black;
+ 	border-bottom: 2px solid black;
+ 	margin: 1em;
+ 	text-transform: uppercase;
+ }
+ .lookbook-cta {
+	background: black;
+	color: white;
+	display: block;
+	text-align: center;
+	padding: 0.8em 0;
+	font-family: "ProximaNovaBold", "Helvetica Neue", Arial, sans-serif;
+	text-decoration: none;
+	letter-spacing: .120em;
+	font-size: 5vw;
+	text-transform: uppercase;
+	margin-top: 10px;
+	margin-bottom: 10px;
+ }
+ .lookbook-more__wrap,
+ .lookbook-more__title {
+ 	margin-left: -15px !important;
+ 	margin-right: -15px !important;
+ }
+.lookbook-more__title {
+	font-size: 4vw;
+	border-top: 1px solid black;
+	padding: 2em;
+}
+.lookbook-post__image {
+	width: 100%;
+}
+
+/* Templates */
+.lb-posts--single  a{
+	margin: 8px 8px;
+	display: block;
+}
+.lb-posts__image {
+	width: 100%;
+	display: block;
+}
+.lb-posts-header {
+	color: black;
+	text-transform: uppercase;
+	font-size: 9vw;
+	text-align: center;
+	margin: 9px inherit;
+	display: block;
+	padding: 8px;
+}
+.lb-posts-header--black {
+	background: black;
+	color: white;
+}
+.lb-posts-header--ib {
+	display: inline-block;
+}
+.lb-posts-header__title--thin {
+	font-family: 'ProximaNovaThin', 'Helvetica', 'Arial', sans-serif;
+}
+.lb-posts-header__title--bold {
+	font-family: 'ProximaNovaBold', 'Helvetica Neue', Arial, sans-serif;
+}
+.lb-posts-header__title--xs {
+	font-size: 4vw;
+}
+.lb-posts-header__title--s {
+	font-size: 7vw;
+}
+
+
+/*
+
+Lookbook Block Grid
+===================
+
+*/
+.lookbook__block-grid {
+    display: block;
+    padding: 0;
+    margin: 0;
+    font-size: 0;
+}
+.lookbook__block-grid > * {
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+    font-size: initial;
+    padding: 0 1.25vw 1.25vw;
+    -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+/*
+
+Block Grid is set to two columns
+
+*/
+.lookbook__block-grid--col-2 > * {
+    width: 50%;
+}
+
+.lookbook__image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.lookbook__item-cta {
+    font-family: 'ProximaNovaBold', 'Helvetica', 'Arial', sans-serif;
+    font-size: 12px;
+    text-align: center;
+    padding: 10px;
+    color: black;
+    border: 1px solid #e1e1e1;
+    text-transform: uppercase;
+    display: block;
+    width: 100%;
+    margin: 5px auto;
+    -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+

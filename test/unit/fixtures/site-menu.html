@@ -1,0 +1,234 @@
+<style>
+  .menu {
+  	position: absolute;
+  	top: 0;
+  	left: 0;
+  	z-index: 1;
+  	width: 300px;
+  	height: 100%;
+  	transform: translate3d(-100%, 0, 0);
+  }
+
+  .level {
+  	position: absolute;
+  	top: 0;
+  	left: 0;
+  	width: 100%;
+  	height: 100%;
+  	background: #000;
+  	transform: translate3d(-100%, 0, 0);
+  }
+
+  .pusher::after,
+  .level::after,
+  .level::before {
+  	position: absolute;
+  	top: 0;
+  	right: 0;
+  	width: 0;
+  	height: 0;
+  	content: '';
+  	opacity: 0;
+  }
+
+  .pusher::after,
+  .level::after {
+  	background: rgba(0,0,0,0.8);
+  	transition: opacity 0.3s, width 0.1s 0.3s, height 0.1s 0.3s;
+  }
+
+  .level::after {
+  	z-index: -1;
+  }
+
+  .pusher.pushed::after,
+  .level.overlay::after {
+  	width: 100%;
+  	height: 100%;
+  	opacity: 1;
+  	transition: opacity 0.3s;
+  }
+
+  .level.overlay {
+  	cursor: pointer;
+  }
+
+  .level.overlay.level::before {
+  	width: 100%;
+  	height: 100%;
+  	background: transparent;
+  	opacity: 1;
+  }
+
+  .pusher,
+  .level {
+  	transition: all 0.5s;
+  }
+
+  /* overlap */
+  .overlap .level.open {
+  	transform: translate3d(0, 0, 0);
+  }
+
+  /* First level */
+  .menu > .level,
+  .menu > .level.open,
+  .menu.overlap > .level,
+  .menu.overlap > .level.open {
+  	transform: translate3d(0, 0, 0);
+  }
+
+  /* content style */
+  .menu ul {
+  	margin: 0;
+  	padding: 0;
+  	list-style: none;
+  }
+
+  .menu h2 {
+  	margin: 0;
+  	padding: 1em;
+  	color: rgba(0,0,0,0.4);
+  	font-weight: 300;
+  	font-size: 2em;
+  }
+
+  .menu.overlap h2::before {
+  	position: absolute;
+  	top: 0;
+  	right: 0;
+  	margin-right: 8px;
+  	font-size: 75%;
+  	line-height: 1.8;
+  	opacity: 0;
+  	transition: opacity 0.3s, transform 0.1s 0.3s;
+  	transform: translateX(-100%);
+  }
+
+  .overlap .level.overlay > h2::before {
+  	opacity: 1;
+  	transition: transform 0.3s, opacity 0.3s;
+  	transform: translateX(0);
+  }
+
+  .menu ul li > a {
+  	display: block;
+  	padding: 0.7em 1em 0.7em 1.8em;
+  	outline: none;
+  	font-size: 1.4em;
+  	transition: background 0.3s;
+  }
+
+  .menu ul li::before {
+  	position: absolute;
+  	left: 10px;
+  	z-index: -1;
+  	color: rgba(0,0,0,0.2);
+  	line-height: 3.5;
+  }
+</style>
+
+<button type="button" name="trigger" id="trigger">Trigger</button>
+
+<section id="wrapper">
+  <section id="container" class="pusher">
+    <nav id="menu" class="menu">
+      <div class="level" id="level-1">
+        <h2>Furry Things</h2>
+        <ul>
+          <li>
+            <a href="#dogs">Dogs</a>
+            <div class="level" id="level-1-1">
+              <h2>Dogs</h2>
+              <ul>
+                <li>
+                  <a href="#leland">Leland</a>
+                  <div class="level" id="level-1-1-1">
+                    <h2>Leland</h2>
+                    <ul>
+                      <li><a href="#">big dog</a></li>
+                      <li><a href="#">smells bad</a></li>
+                      <li><a href="#">eats little children</a></li>
+                      <li><a href="#">belly rubs</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li>
+                  <a href="#schatzi">Schatzi</a>
+                  <div class="level" id="level-1-1-2">
+                    <h2>Schatzi</h2>
+                    <ul>
+                      <li><a href="#">jumps high</a></li>
+                      <li><a href="#">wags his tail</a></li>
+                      <li><a href="#">eats good food</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li>
+                  <a href="#jaguar">Jaguar</a>
+                  <div class="level" id="level-1-1-3">
+                    <h2>Jaguar</h2>
+                    <ul>
+                      <li><a href="#">smells bad</a></li>
+                      <li><a href="#">sits on laps</a></li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <a href="#cats">Cats</a>
+            <div class="level" id="level-2-1">
+              <h2>Cats</h2>
+              <ul>
+                <li>
+                  <a href="#fiona">Fiona</a>
+                  <div class="level" id="level-2-1-1">
+                    <h2>Fiona</h2>
+                    <ul>
+                      <li><a href="#">beats me up in my sleep</a></li>
+                      <li><a href="#">annoying</a></li>
+                      <li><a href="#">smells bad</a></li>
+                      <li><a href="#">kills things</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li>
+                  <a href="#other-dudes">Other Dudes</a>
+                  <div class="level" id="level-2-1-2">
+                    <h2>Other Dudes</h2>
+                    <ul>
+                      <li>
+                        <a href="#by-name">By Name</a>
+                        <div class="level" id="level-2-1-2-1">
+                          <h2>By Name</h2>
+                          <ul>
+                            <li><a href="#">Black Bat</a></li>
+                            <li><a href="#">Storm</a></li>
+                            <li><a href="#">Uno</a></li>
+                          </ul>
+                        </div>
+                      </li>
+                      <li>
+                        <a href="#by-age">By Age</a>
+                        <div class="level" id="level-2-1-2-2">
+                          <h2>By Color</h2>
+                          <ul>
+                            <li><a href="#">Black (duh)</a></li>
+                            <li><a href="#">Gray</a></li>
+                            <li><a href="#">Gray</a></li>
+                          </ul>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </section>
+</section>

@@ -1,0 +1,84 @@
+/*
+|>----------------------------------------------------------------------------------------------<|
+| // Typography
+|>----------------------------------------------------------------------------------------------<|
+*/
+
+/* Header font */
+
+@font-face {
+    font-family: 'ProximaNovaBold';;
+    src: url('../font/ProximaNova-Bold-webfont.eot#') format('eot'),
+        url('../font/ProximaNova-Bold-webfont.woff') format('woff'),
+        url('../font/ProximaNova-Bold-webfont.ttf') format('truetype'),
+        url('../font/ProximaNova-Bold-webfont.svg#webfontFHzvtkso') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+@font-face {
+    font-family: 'ProximaNovaBold';
+    src: url('../font/ProximaNova-Bold-webfont.eot');
+    src: url('../font/ProximaNova-Bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/ProximaNova-Bold-webfont.svg#ProximaNovaBold') format('svg'),
+         url('../font/ProximaNova-Bold-webfont.woff') format('woff'),
+         url('../font/ProximaNova-Bold-webfont.ttf') format('truetype');
+
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'ProximaNovaBoldItalic';
+    src: url('../font/ProximaNova-BoldIt-webfont.eot');
+    src: url('../font/ProximaNova-BoldIt-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/ProximaNova-BoldIt-webfont.svg#ProximaNovaBoldItalic') format('svg'),
+         url('../font/ProximaNova-BoldIt-webfont.woff') format('woff'),
+         url('../font/ProximaNova-BoldIt-webfont.ttf') format('truetype');
+
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'ProximaNovaSemiBold';
+    src: url('../font/ProximaNova-Sbold-webfont.eot');
+    src: url('../font/ProximaNova-Sbold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/ProximaNova-Sbold-webfont.svg#proxima_nova_ltsemibold') format('svg'),
+         url('../font/ProximaNova-Sbold-webfont.woff') format('woff'),
+         url('../font/ProximaNova-Sbold-webfont.ttf') format('truetype');
+
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'ProximaNovaReg';
+    src: url('../font/ProximaNova-Reg-webfont.eot');
+    src: url('../font/ProximaNova-Reg-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/ProximaNova-Reg-webfont.svg#proxima_nova_rgregular') format('svg'),
+         url('../font/ProximaNova-Reg-webfont.woff') format('woff'),
+         url('../font/ProximaNova-Reg-webfont.ttf') format('truetype');
+
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+font-family: ‘MyWebFont’;
+src: url(‘webfont.eot’); 
+src: url(‘webfont.eot?#iefix’) format(‘embedded-opentype’),
+    url(‘webfont.svg#svgFontName’) format(‘svg’),
+    url(‘webfont.woff’) format(‘woff’),
+    url(‘webfont.ttf’)  format(‘truetype’);
+}
+
+
+/* All body copy show use this font */
+@import url(http://fonts.googleapis.com/css?family=Karla:400,700,700italic,400italic);

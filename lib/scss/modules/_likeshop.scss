@@ -1,0 +1,44 @@
+/**
+
+  @likeshop
+--------------------------------------------------------
+  modules/_likeshop.scss
+--------------------------------------------------------
+
+    Styles for carousels
+    // clean up after eagle
+    // remove unused classes
+    // add BEM SCSS style and remove all non carousel named classes
+
+------------------------------------------------------ */
+
+.ls-container .ls-photo {
+   width: 47.4% !important;
+   margin: 1.3% !important;
+}
+
+.ls-detail .ls-detail-link-box>div a span.anchor-static {
+  background-color: $color__black !important;
+}
+.ls-detail .ls-detail-link-box>div a p {
+  color: $color__black !important;
+  &:hover,
+  &:focus,
+  &:active {
+    color: $color__grey--light !important;
+  }
+}
+.ls-detail .ls-detail-caption {
+  color: $color__grey !important;
+}
+.ls-detail .ls-detail-caption a {
+  color: $color__black !important;
+  &:hover,
+  &:focus,
+  &:active {
+    color: $color__grey--light !important;
+  }
+}
+.ls-detail .ls-detail-footer {
+  display: none;
+}

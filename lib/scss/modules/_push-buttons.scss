@@ -1,0 +1,83 @@
+/**
+
+  @push-buttons
+--------------------------------------------------------
+  modules/_push-buttons.scss
+--------------------------------------------------------
+
+  Styles for the push buttons.
+
+------------------------------------------------------ */
+
+// .push__button {
+//   height: rem(50);
+//   input{
+//     display: inline-block;
+//     width: 100%;
+//     height: inherit;
+//     background-color: transparent;
+//     border: rem(1) solid $color__grey--lighter;
+//     border-radius: rem(4);
+//     outline: none;
+//     z-index: 1;
+//     cursor: pointer;
+//     &:hover,
+//     &:active {
+//       border-color: $color__black;
+//     }
+//     &:checked{
+//       border-color: $color__black;
+//       background-color: $color__black;
+//     }
+//     &:hover + label,
+//     &:active + label{
+//       color: $color__black;
+//     }
+//     &:checked + label{
+//       color: $color__white;
+//     }
+//     &:checked:hover + label{
+//       color: $color__white;
+//     }
+//   }
+//   label{
+//     transform: translateY(-220%);
+//     z-index: -1;
+//     text-align: center;
+//     pointer-events: none;
+//     color: $color__grey;
+//   }
+// }
+
+//Radio push buttons that work in Firefox
+.push__button {
+  height: auto;
+  min-height: rem(50);
+  input { // Hide input without using display none
+    opacity: 0.1;
+    position: absolute;
+    cursor: pointer;
+    height: inherit;
+  }
+  input[type="radio"] + label {
+    cursor: pointer;
+    width: 100%;
+    height: inherit;
+    padding: rem(11) 0;
+    border: rem(1) solid $color__grey--lighter;
+    border-radius: rem(4);
+    color: $color__grey;
+    text-align: center;
+
+  }
+  input[type="radio"] + label:hover,
+  input[type="radio"] + label:active {
+    border-color: $color__black;
+    color: $color__black;
+  }
+  input[type="radio"]:checked + label {
+    background-color: $color__black;
+    border-color: $color__black;
+    color: $color__white;
+  }
+}

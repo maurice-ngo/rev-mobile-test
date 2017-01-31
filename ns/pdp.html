@@ -1,0 +1,1470 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.2//EN" "http://www.openmobilealliance.org/tech/DTD/xhtml-mobile12.dtd">
+<html>
+	<head>
+		<title>Jen's Pirate Booty Atlas Mini Dress in Natural | REVOLVE</title>
+        <meta name="description" content="Shop for Jen's Pirate Booty Atlas Mini Dress in Natural at .REVOLVE Free Shipping and Returns.">
+
+
+        <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
+	    <link rel="stylesheet" href="/r/mobile/css/m_login.css" />
+        <link rel="stylesheet" href="/r/mobile/css/jqtouch.css" title="jQTouch"/>
+		<link rel="stylesheet" href="/r/mobile/css/mobile.css" title="jQTouch"/>
+		<link rel="stylesheet" href="/r/mobile/css/shoppingbag.css" title="jQTouch"/>
+        <link rel="stylesheet" href="/r/mobile/css/my_revolve.css"/>
+        <link rel="stylesheet" href="/r/mobile/css/category.css" title="jQTouch">
+		<!--web font-->
+		<link rel="stylesheet" href="/r/mobile/css/typography.css" title="jQTouch">
+	  	<link href="/r/mobile/css/jquery.autocomplete.css" rel="stylesheet">
+		<link rel="stylesheet" href="/r/mobile/css/product_detail.css" title="jQTouch">
+		<link rel="stylesheet" href="/r/mobile/css/m_checkout.css" title="jQTouch">
+		<link href="/r/mobile/css/ReviewLandingPage/product_review.css" rel="stylesheet" type="text/css" />
+		<link href="/r/mobile/css/ReviewLandingPage/line/line.css" rel="stylesheet"/>
+		<link href="/r/mobile/css/rs-default_DETAIL.css" rel="stylesheet">
+		<link href="/r/mobile/css/royalslider_prod_detail.css" rel="stylesheet">
+		<link rel="apple-touch-icon-precomposed" href="/r/mobile/images/mobile_icon.png" />
+        <link rel="canonical" href="http://www.revolveclothing.com/jens-pirate-booty-atlas-mini-dress-in-natural/dp/JENS-WD300/?d=Womens" >
+
+		<!-- slider JS files -->
+
+        <script src="/r/mobile/js/jquery-1.8.0.min.js" type="application/x-javascript" charset="utf-8"></script>
+	    <script src="/r/mobile/js/jquery.royalslider.min.js"></script>
+	    <script src="/r/mobile/js/commonmethods.js" type="text/javascript" charset="utf-8"></script>
+		<script src="/r/mobile/js/jquery.autocomplete.js"></script>
+		<script type="text/javascript" src="/r/mobile/js/jquery.rating.pack.js" charset="utf-8"></script>
+		<script type="text/javascript" src="/r/mobile/js/jquery.icheck.min.js" charset="utf-8"></script>
+	    <script src="/r/mobile/js/jquery.cycle2.min.js"></script>
+		<script src="/r/mobile/js/jquery.cycle2.carousel.min.js"></script>
+		<script src="/r/mobile/js/jquery.cycle2.swipe.min.js"></script>
+		<script type="text/javascript" src="/r/mobile/js/jquery.dotdotdot.min.js" charset="utf-8"></script>
+		<script src="/r/mobile/js/cookie.js"></script>
+		<script>
+            function showMeasurementGuide(){
+                $("#sizeguidepopup").show();
+                $("body").addClass("sizeguide_popup--isOpen");
+            }
+            function closeLightBox()
+            {
+                $("#sizeguidepopup").hide();
+                $("body").removeClass("sizeguide_popup--isOpen");
+            }
+
+            var preorderMessage = "Preorder";
+
+            function showItemSelectionMessage(event)
+            {
+                var size = $("#size").find(":selected");
+                if(size.data("showBis")){
+                	$("#size").unbind("change");
+                	$("#size").val("");
+                	showBisOrSo();
+                	return;
+                }
+                
+                //selected option is preorder. handle preorder messaging
+                if (size.text().indexOf(preorderMessage)>=0)
+                {
+                    $("#estimatedDeliveryDate").hide();
+                    //update estimated delivery date
+                    $("#preorderEstimatedDeliveryDate").text("Estimated Delivery: " + size.data("deliveryDate"));
+                    //show preorder message
+                    $("#preorderMessage").show();
+                    //show preorder button
+                    $("#ajax-link").text(preorderMessage);
+                }
+                else{
+                    //not a pre order item
+                    $("#estimatedDeliveryDate").text("Estimated Delivery: " + size.data("deliveryDate"));
+                    $("#estimatedDeliveryDate").show();
+                    //hide preorder message
+                    $("#preorderMessage").hide();
+                    //show add to bag button
+                    $("#ajax-link").text("Add To Bag");
+                }
+
+            }
+	
+            function showBisOrSo(event){
+            	if(event){
+            		event.preventDefault();
+            	}
+            	var url = "/r/mobile/BISAndSO.jsp?code=JENS-WD300";
+            	location.href = url;
+            }
+			$(function(){
+             showItemSelectionMessage();
+             $("#size").change(showItemSelectionMessage);
+             $('.showBis').click(showBisOrSo);
+			 $('.hover-star').rating({
+			  focus: function(value, link){
+			    // 'this' is the hidden form element holding the current value
+			    // 'value' is the value selected
+			    // 'element' points to the link element that received the click.
+			    var tip = $('.hover-test');
+			    tip[0].data = tip[0].data || tip.html();
+			    tip.html(link.title || 'value: '+value);
+			  }
+			 });
+
+			  $('.size_rec_radio input:radio').each(function(){
+			    var self = $(this),
+			      label = self.next(),
+			      label_text = label.text();
+				$(this).val(label_text);
+			    label.remove();
+			    self.iCheck({
+			      checkboxClass: 'icheckbox_line',
+			      radioClass: 'iradio_line',
+			      insert: '<div class="icheck_line-icon"></div>' + label_text
+			    });
+			  });
+
+
+				$(".royalSlider .rsImg").eq(0).one('load', function() {
+						$(this).closest(".royalSlider").find(".rsImg").width($(this).width()).height($(this).height());
+					$('.royalSlider').royalSlider({
+						arrowsNav: false,
+						loop: true,
+						loopRewind: true,
+						sliderDrag: true,
+						sliderTouch: true,
+						fadeinLoadedSlide: false,
+						autoHeight: false,
+						keyboardNavEnabled: true,
+						controlsInside: true,
+						imageScaleMode: 'fit',
+						arrowsNavAutoHide: false,
+						autoScaleSlider: true,
+						autoScaleSliderHeight: '932',
+						controlNavigation: 'bullets',
+						thumbsFitInViewport: false,
+						navigateByClick: false,
+						startSlideId: 0,
+						autoPlay: {
+						enabled: false,
+						delay: 5000,
+						stopAtAction: false,
+						pauseOnHover: true
+					},
+						transitionType:'move',
+						transitionSpeed: 1000
+					});
+				}).each(function() {
+					if(this.complete) $(this).load();
+				});
+
+
+	          $('#accordion .content').hide();
+		      $('#accordion h2').click(function() {
+		        if($(this).next().is(':hidden')) {
+		            $('#accordion h2').removeClass('active').next().slideUp('fast');
+		            $(this).toggleClass('active').next().slideDown('fast');
+		        }
+				else {
+					$(this).toggleClass('active').next().slideUp('fast');
+				}
+		      });
+			});
+
+			function addtobag(productcode)
+			{
+
+			    var size = $("select#size").val();
+				var color = $("select#color").val();
+
+				var trackGA = function() {
+					// tracking code for eCommera. Uses the GA event tag to see the number of products added to the cart within Google Analytics.
+					if (typeof _gaq != 'undefined') {
+						_gaq.push(['_trackEvent', 'Product', 'Add to Cart', productcode + ' | Atlas Mini Dress | 1']);
+					}
+				};
+				var trackForGoogle = function(){
+					if (typeof insertGoogleRemarketingAddToCart === 'function') {
+						insertGoogleRemarketingAddToCart();
+					}
+				};
+				var trackOptimizely = function(){
+					try {
+						window.optimizely = window.optimizely || window.parent.optimizely || window.top.optimizely || [];
+						window.optimizely.push(["trackEvent", "addtobag"]);
+					} catch(e){}
+				};
+				var proceed = function(){
+				
+					
+					$("#wish_nav_mpdp").css("display", "none");
+					$("#notification_wrap_mpdp").css("display", "block");
+					//scoll to top so that user can see the popup
+					scollToTop();
+					$.ajax({
+						type: "POST",
+						url: "/r/mobile/AjaxUserShoppingBag.jsp",
+						success: function(response) {
+							var responseObj = eval('(' + response + ')');
+							$("#shopping_bag_count").html(responseObj);
+						}
+					});
+				
+				};
+				var data = $.param({
+					colorSelect: productcode,
+					sizeSelect: size,
+					sectionURL: 'http%3A%2F%2Fwww.revolveclothing.com%2Fmobile%2Fnew%2Fall-new-items%2Fbr%2F7f5946%2F%3Fnavsrc%3Dmain_m',
+					count: 1,
+					csrfHash: 'GObpbYC4OC8VHDCrGNRxHlDEFoJlF8f3',
+					mobile: true,
+					contextReferrer: window.location.href
+				});
+				$.ajax({
+					type: 'POST',
+					url: '/r/ajax/AddItemToBag.jsp',
+					data: data,
+					success: function(data){
+						$.when(insertPageTrackForMobile(true), trackGA(), trackForGoogle(), trackOptimizely()).done(proceed);
+					}
+				});
+            }
+
+		function showRevolveMePopup(id, event){
+            $('#revolveme_content_div').load('/r/mobile/SocialEntry.jsp?id='+id+'&showImg=true&from=pdp', function(){
+                $("#product_info_div").hide();
+                $("#revolveme_popup_div").show();
+                $('#caption_'+id).dotdotdot();
+                scollToTop();
+            });
+            //end init popup
+
+            event.preventDefault();
+        }
+
+        function closeRevolveMePopup(event){
+            $("#revolveme_popup_div").hide();
+            $("#product_info_div").show();
+            event.preventDefault();
+        }
+		</script>
+
+        
+        <script src="//cdn.optimizely.com/js/2090660663.js"></script>
+        
+
+	</head>
+	<body>
+        <div id="sizeguidepopup" class="sizeguide_popup" style="display: none"></div>
+		<div id="jqt">
+			<div id="home">
+				
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+		<div class="global_market_banner global_market_banner--background-pink global_market_banner--color-black">
+    <span><a href="/r/mobile/EarlyAccess.jsp">EXCLUSIVE EARLY ACCESS &ndash; Created just for you, pre-order the newest of the new arrivals before anyone else!<br><u>SHOP NOW</u></a></span>
+</div>
+	
+
+		<!-- <div class="global_market_banner" style="background-color:#FAF7EE; color:black;">
+    REVOLVE SAYS I DO! <span><a href="http://www.revolveclothing.com/mobile/wedding/?navsrc=topglobalbnr"><u>ENTER THE WEDDING SHOP</u></a></span>
+</div> -->
+
+		<div id ="slide_menu_mhp">
+			<ul class="slide_col_mhp">
+				<li class="slide_myrevolve">
+				<a class="slide_left_myrevolve" rel="external" href="https://www.revolveclothing.com/r/mobile/myrevolve/Dashboard.jsp"><span class="mr_user">MY REVOLVE</span></a>
+				<a class="slide_left_myrevolve" rel="external" href="javascript:void(0)"><span class="mr_user"></span></a>
+				<span class="sign_inout">
+
+				
+					<a rel="external" href="#" onclick="logout();">Log Out</a>
+				
+				</span>
+				</li>
+				<li><a class="slide_left_mhp" rel="external" href="/r/mobile/index_women.jsp">Shop Womens</a></li>
+				<li><a class="slide_left_mhp" rel="external" href="/r/mobile/index_men.jsp">Shop Mens</a></li>
+			</ul>
+		</div>
+
+
+
+				<div class="toolbar_mhp">
+					
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+ <div id="logo_drop_down_mhp">
+		<a class="up_mhp" href="javascript:showRevolve()">
+			Revolve
+		</a>	
+	</div>
+	
+	
+	<div id="top_bag_mhp">
+		<a rel="external" href="https://www.revolveclothing.com/r/mobile/ShoppingBag.jsp" >
+		<span class="heartbagw" id="shopping_bag_count">
+		 0
+ 	
+			</span>
+		</a>
+	</div><!-- top_bag_mhp -->
+	
+	<div id="top_heart_mhp">
+		<a rel="external" href="/r/mobile/mr_favorites.jsp">
+		<span class="heartbagw" id="heart_total_count">
+		126
+		
+		</span>
+		</a>
+	</div><!-- top_heart_mhp -->
+	
+	<div class="top_search_btn">
+		<a rel="external" href="#" onclick="toggle_visibility('header_search_mhp');return false;">
+		<span class="search_btn_icon">
+		</span>
+		</a>
+	</div><!-- top_search_btn -->	
+					
+
+
+	<div id="logo_horz_mhp">
+		 <a rel="external" href="/r/mobile/index_women.jsp">
+
+			<img src="http://is4.revolveassets.com/r/mobile/images/m/logo_hrz.jpg"  height="30" />
+		</a>
+	</div>
+	
+	<div id="header_search_mhp">
+		<!-- 
+			<img class="header_search_lft_mhp" src="images/m/search_lft.jpg" width="3.5" height="30" />
+		 -->
+		<form class='form' method="get" id="frmSearch" name="frmSearch" action="/r/mobile/SearchResult.jsp">           
+			<fieldset class="mobile_search_bar_mhp">
+					
+			<input class="mobile_search_btn_mhp" onclick="clearSearchCookies();" value="GO" type="hidden" return false;>
+		 	<img class="mobile_search_btn_mhp" src="/r/mobile/images/m/search_right_btn.jpg" width="45px" height="30px" onclick="javascript:clearContents();if(event) event.returnValue=false;" />
+		
+			 <!--	  <input name="mobilecancel" class="mobile_search_btn_mhp" onclick="javascript:clearContents();if(event) event.returnValue=false;">         
+					  -->                      							
+			<div style="overflow: hidden; padding-right: .5em;">		     
+				<input class="search_input_mhp ac_input" autocomplete="off" id="search_term" name="search" placeholder="Search" type="text">    
+			</div>	          
+			</fieldset>          
+		</form>
+	</div>
+				</div>
+				<div class="scroll" style="background: white;">
+				<div class="free-shipping-top-banner">
+			        <div class="free-shipping-top-banner__wrapper">
+			            Get <strong>Free USPS 2-3 Day Priority Shipping</strong> On All Orders <strong>+ Free Returns!</strong> <div class="free-shipping-top-banner__close"><img src="http://is4.revolveassets.com/fw/images/mobile/m_shipping_close.jpg" width="9"></div>
+			        </div>
+			    </div>
+				<div id="product_info_div">
+
+				<!-- Add To Bag Popup -->
+				<div style="display:none;" id="notification_wrap_mpdp" class="cancel_remove_popup">
+					<div class="cancel_remove_content">
+						<div class="item_added_l">
+							<img width="90" src="https://is4.revolveassets.com/images/p4/ip2/pl2/JENS-WD300_V1.jpg">
+						</div>
+						<div class="item_added_r">
+							<h1>ITEM ADDED TO BAG</h1>
+							<p>Atlas Mini Dress in Natural</p>
+							<span>Jen's Pirate Booty</span>
+							
+							<p>$193.00</p>
+							
+							<a rel="external" href="https://www.revolveclothing.com/r/mobile/ShoppingBag.jsp">
+								<input class="co_sub_cta" type="button" value="VIEW BAG / CHECKOUT">
+							</a>
+							<a href="javascript:void(0)" onclick="closePopUp();" class="continue_shopping">Continue Shopping</a>
+						</div>
+						<div style="clear:both;"></div>
+					</div>
+				</div><!-- end .cancel_remove_popup-->
+
+				<!-- Image Slider -->
+				<div class="slider_mpdp">
+					<div class="royalSlider rsDefault product_detail_slider">
+					
+					
+						<div>
+							<div class="fav_btn">
+								<a href="javascript:void(0);" onclick="heartProductM(this, 'JENS-WD300','', undefined, 'http://www.revolveclothing.com/mobile/new/all-new-items/br/7f5946/?navsrc=main_m');heartAll(this);">
+									<span class="fav_heart " style='z-index: 10'></span>
+								</a>
+							</div>
+							<a href="#">
+								<img class="rsImg" src="https://is4.revolveassets.com/images/p4/ip2/pd2/JENS-WD300_V1.jpg"/>
+							</a>
+						</div>
+					
+						<div>
+							<div class="fav_btn">
+								<a href="javascript:void(0);" onclick="heartProductM(this, 'JENS-WD300','', undefined, 'http://www.revolveclothing.com/mobile/new/all-new-items/br/7f5946/?navsrc=main_m');heartAll(this);">
+									<span class="fav_heart " style='z-index: 10'></span>
+								</a>
+							</div>
+							<a href="#">
+								<img class="rsImg" src="https://is4.revolveassets.com/images/p4/ip2/pd2/JENS-WD300_V2.jpg"/>
+							</a>
+						</div>
+					
+						<div>
+							<div class="fav_btn">
+								<a href="javascript:void(0);" onclick="heartProductM(this, 'JENS-WD300','', undefined, 'http://www.revolveclothing.com/mobile/new/all-new-items/br/7f5946/?navsrc=main_m');heartAll(this);">
+									<span class="fav_heart " style='z-index: 10'></span>
+								</a>
+							</div>
+							<a href="#">
+								<img class="rsImg" src="https://is4.revolveassets.com/images/p4/ip2/pd2/JENS-WD300_V3.jpg"/>
+							</a>
+						</div>
+					
+						<div>
+							<div class="fav_btn">
+								<a href="javascript:void(0);" onclick="heartProductM(this, 'JENS-WD300','', undefined, 'http://www.revolveclothing.com/mobile/new/all-new-items/br/7f5946/?navsrc=main_m');heartAll(this);">
+									<span class="fav_heart " style='z-index: 10'></span>
+								</a>
+							</div>
+							<a href="#">
+								<img class="rsImg" src="https://is4.revolveassets.com/images/p4/ip2/pd2/JENS-WD300_V4.jpg"/>
+							</a>
+						</div>
+					
+					</div><!-- end  .royalSlider-->
+				</div><!-- end .slider_mpdp -->
+
+
+
+				<!-- Product detail -->
+                <div class="product_detail_info">
+                	
+				   <h1>
+					   <a href="/mobile/designers/Jens-Pirate-Booty/" style="color:black">
+					   		Jen's Pirate Booty
+					   </a>
+				   </h1>
+				   <p>Atlas Mini Dress in Natural</p>
+				   <span class="price_pdp">
+				   		<div class="detail_price_mpdp">
+				   		
+				   			$193.00
+				   		
+							
+				   		</div>
+				   </span>
+				</div><!--  end .product_detail_info -->
+				<div class="wish_form_wrap_mpdp">
+				   <form method="post" id="addtocart">
+                       <!-- showOosProductRecs -->
+				      <div class="select_style_mpdp ">
+				      	
+				         <select id="size" >
+                         
+                                    <option data-delivery-date="Nov 21 - Nov 23" value="XS/S" >XS/S</option>
+                            
+                                    <option data-delivery-date="Nov 21 - Nov 23" value="M/L" >M/L</option>
+                            
+     							<option data-show-bis="true">Can't find your size?</option>
+     						
+				         </select>
+				         
+				      </div>
+				      <div class="select_style_mpdp one_size" style="margin-left: 12px;">
+				         <select id="color" onchange="location.href=this.options[this.selectedIndex].value">
+				         	
+				            <option value="/mobile/jens-pirate-booty-atlas-mini-dress-in-natural/dp/JENS-WD300/?d=Womens">
+				               Natural
+				            </option>
+				            
+				         </select>
+				      </div>
+				      <div style="clear:both;"></div>
+				      <div style="margin: 0 auto; display: block;" class="add_bag_btn css_btn">
+				      	
+				      		<a id="ajax-link" href="javascript: addtobag('JENS-WD300');">Add to bag</a>
+                          <div id="estimatedDeliveryDate"></div>
+				      	
+				      </div>
+
+                      <div id="preorderMessage" class="pdp_po_msg" style="display:none;"><p id="preorderEstimatedDeliveryDate">Estimated Delivery:</p><span>You will not be charged until your order is shipped</span></div>
+					  	
+                       <!-- END showOosProductRecs -->
+				      <input type="hidden" id="product_code_hidden" value="JENS-WD300">
+                   </form>
+				</div>
+
+        <div class="pdp_share">
+        <ul>
+        <li class="share_fb"><a href="https://www.facebook.com/dialog/feed?app_id=163815120423335&link=http%3A%2F%2Fwww.revolveclothing.com%2Fmobile%2Fjens-pirate-booty-atlas-mini-dress-in-natural%2Fdp%2FJENS-WD300%2F%3Fd%3DWomens&cvosrc=socialnetwork-notpaid.facebook.facebookshare&picture=https://is4.revolveassets.com/images/p4/n/dt/JENS-WD300_V1.jpg&name=Jen%27s+Pirate+Booty+Atlas+Mini+Dress+in+Natural+%7C+REVOLVEclothing&caption=http%3A%2F%2Fwww.revolveclothing.com%2Fmobile%2Fjens-pirate-booty-atlas-mini-dress-in-natural%2Fdp%2FJENS-WD300%2F%3Fd%3DWomens&description=Jens+Pirate+Booty+embodies+the+true+meaning+of+gypsies%2C+free-spirited+individuals+with+nomadic+or+unconventional+lifestyles.+Founder+Jen+Rossi%2C+buyer+for+the+popular+Southern+California+boutique+Planet+Blue%2C+has+traveled+the+world+gathering+bits+and+pieces+of+different+cultures%2C+weaving+them+into+her+very+own+personal+style%3A+part+gypsy%2C+part+boho%2C+part+pirate.+The+result%3F+Carefree+pieces+that+are+as+spontaneous+and+fun+as+the+lives+we+lead.&redirect_uri=http://www.revolveclothing.com/mobile/jens-pirate-booty-atlas-mini-dress-in-natural/dp/JENS-WD300/?d=Womensdisplay=popup" target="_blank">Facebook</a></li>
+        <li class="share_twit"><a href="javascript:window.open('https://twitter.com/share?url=http%3A%2F%2Fwww.revolveclothing.com%2Fmobile%2Fjens-pirate-booty-atlas-mini-dress-in-natural%2Fdp%2FJENS-WD300%2F%3Fd%3DWomens&cvosrc=socialnetwork-notpaid.twitter.siteshare&text=Jen%27s+Pirate+Booty+Atlas+Mini+Dress+in+Natural&via=REVOLVEclothing', 'tweetDialog', 'toolbar=0,status=0,width=626,height=264')">Twitter</a></li>
+        <li class="share_pin"><a href="javascript:window.open('http://www.pinterest.com/pin/create/button/?url=http%3A%2F%2Fwww.revolveclothing.com%2Fmobile%2Fjens-pirate-booty-atlas-mini-dress-in-natural%2Fdp%2FJENS-WD300%2F%3Fd%3DWomens&cvosrc=socialnetwork-notpaid.pinterest.sitepins&media=https://is4.revolveassets.com/images/p4/n/dt/JENS-WD300_V1.jpg&description=Jen%27s+Pirate+Booty+Atlas+Mini+Dress+in+Natural+from+REVOLVEclothing+', 'pinDialog', 'toolbar=0,status=0,width=770,height=330')">Pinterest</a></li>
+        <li class="share_gg"><a href="javascript:javascript:window.open('https://plus.google.com/share?url=http://www.revolveclothing.com/mobile/jens-pirate-booty-atlas-mini-dress-in-natural/dp/JENS-WD300/?d=Womens','','menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600')">Google+</a></li>
+        </ul>
+        </div>
+
+
+                
+
+		<div id="accordion">
+	 		 <h2>Product Details</h2>
+				 <div class="content" style="display: none;">
+               		<ul>
+               			
+               			<li><div class="details_bullet_mpdp">&bull;</div><div class="details_text_mpdp">100% cotton<br></div></li>
+               			
+               			<li><div class="details_bullet_mpdp">&bull;</div><div class="details_text_mpdp">Hand wash cold</div></li>
+               			
+               			<li><div class="details_bullet_mpdp">&bull;</div><div class="details_text_mpdp">Unlined</div></li>
+               			
+               			<li><div class="details_bullet_mpdp">&bull;</div><div class="details_text_mpdp">Front tie closure</div></li>
+               			
+               			<li><div class="details_bullet_mpdp">&bull;</div><div class="details_text_mpdp">Lace trim panels throughout</div></li>
+               			
+               			<li><div class="details_bullet_mpdp">&bull;</div><div class="details_text_mpdp">Shoulder seam to hem measures approx 32" in length</div></li>
+               			
+               			<li><div class="details_bullet_mpdp">&bull;</div><div class="details_text_mpdp">Revolve Style No. JENS-WD300</div></li>
+               			
+               			<li><div class="details_bullet_mpdp">&bull;</div><div class="details_text_mpdp">Manufacturer Style No. DH15 14</div></li>
+               			
+               		</ul>
+              	 </div>
+
+		        <h2>Size & Fit</h2>
+
+				<div class="content" style="display: none;">
+                    
+                    <a class="view_size_guide" onclick="showMeasurementGuide();" href="javascript:;">View Size Guide</a>
+                    <script type="text/javascript">
+                        var url='/r/ajax/sizeguide/views/mobile/wDresses.jsp?modelIsWearing=Model+is+sized+in+XS%2FS&productMeasurements=Shoulder+Seam+to+Hem+approx++32%22+in+length&modelMeasurements=&viewtype=mobile';
+                        $("#sizeguidepopup").load(url);
+                    </script>
+                    
+                    
+                    <div class="details_bullet_mpdp">•</div>
+                    <div class="details_text_mpdp">
+                       Model is sized in XS/S<br>
+                    </div>
+                    
+                    
+                    <div class="details_bullet_mpdp">•</div>
+                    <div class="details_text_mpdp">
+                        Shoulder Seam to Hem approx  32" in length<br>
+                    </div>
+                    
+                    
+
+				</div>
+
+		    <h2>About Jen's Pirate Booty</h2>
+		    <div class="content" style="display: none;">
+                <p>
+                 	Jens Pirate Booty embodies the true meaning of gypsies, free-spirited individuals with nomadic or unconventional lifestyles. Founder Jen Rossi, buyer for the popular Southern California boutique Planet Blue, has traveled the world gathering bits and pieces of different cultures, weaving them into her very own personal style: part gypsy, part boho, part pirate. The result? Carefree pieces that are as spontaneous and fun as the lives we lead.
+                 	<br/>
+                 	Shop All <a href="/mobile/designers/Jens-Pirate-Booty/" style="color:black">Jen's Pirate Booty</a>
+                 </p>
+			</div>
+
+			<h2>Free Shipping & Returns</h2>
+			    <div class="content" style="display: none;">
+					<p><strong>Shipping & Returns (US)</strong></p>
+					<p>
+						Free USPS 2-3 Day Priority shipping on all US orders + free returns!
+					</p>
+					<a class="about_designer_link" href="/r/mobile/ShippingReturns_d.jsp">See details</a>
+
+					<br><br>
+					<p><strong>Shipping & Returns (International)</strong></p>
+					<p>
+						REVOLVE offers free worldwide shipping on orders over $100 USD! Typical transit time is between 5-10 business days.
+					</p>
+					<a class="about_designer_link" href="/r/mobile/ShippingReturns_int.jsp">See details</a>
+			    </div>
+
+            <h2>Customer Reviews</h2>
+			<div class="content" style="display: none;">
+           		<div class="product_details_mpdp">
+           			
+					<div class="reviews_wrap_mpdp">
+						<div class="review_name_mpdp">
+							<p class="review_write_link">
+								<a style="font-size:12px!important;" href="#" onclick="showReviewPopup(event)">
+								Be the first to review the product
+								</a>
+							</p>
+						</div>
+					</div>
+					
+			  	</div>
+			</div>
+			</div><!--accordion END-->
+            
+            <div class="shop_look_tab" id="shop_look_tab"> You May Also Like </div>
+            <div class="shop_the_look_products">
+                <div style="min-width: 920px" class="container">
+                    
+
+                            <div><a href="/mobile/lotus-babydoll-mini-dress/dp/INDA-WD415/?d=Womens&sectionURL=http%3A%2F%2Fwww.revolveclothing.com%2Fmobile%2Fnew%2Fall-new-items%2Fbr%2F7f5946%2F%3Fnavsrc%3Dmain_m"><img width="90" height="129" src=https://is4.revolveassets.com/images/p4/ip2/sb2/INDA-WD415_V1.jpg></a></div>
+
+                            
+
+                            <div><a href="/mobile/molly-peasant-dress/dp/TOBR-WD61/?d=Womens&sectionURL=http%3A%2F%2Fwww.revolveclothing.com%2Fmobile%2Fnew%2Fall-new-items%2Fbr%2F7f5946%2F%3Fnavsrc%3Dmain_m"><img width="90" height="129" src=https://is4.revolveassets.com/images/p4/ip2/sb2/TOBR-WD61_V1.jpg></a></div>
+
+                            
+
+                            <div><a href="/mobile/zera-maxi-dress/dp/INDA-WD416/?d=Womens&sectionURL=http%3A%2F%2Fwww.revolveclothing.com%2Fmobile%2Fnew%2Fall-new-items%2Fbr%2F7f5946%2F%3Fnavsrc%3Dmain_m"><img width="90" height="129" src=https://is4.revolveassets.com/images/p4/ip2/sb2/INDA-WD416_V1.jpg></a></div>
+
+                            
+
+                            <div><a href="/mobile/walker-alegre-print-shirt-dress/dp/FAIB-WD41/?d=Womens&sectionURL=http%3A%2F%2Fwww.revolveclothing.com%2Fmobile%2Fnew%2Fall-new-items%2Fbr%2F7f5946%2F%3Fnavsrc%3Dmain_m"><img width="90" height="129" src=https://is4.revolveassets.com/images/p4/ip2/sb2/FAIB-WD41_V1.jpg></a></div>
+
+                            
+
+                            <div><a href="/mobile/lace-front-mini-dress/dp/BANR-WD19/?d=Womens&sectionURL=http%3A%2F%2Fwww.revolveclothing.com%2Fmobile%2Fnew%2Fall-new-items%2Fbr%2F7f5946%2F%3Fnavsrc%3Dmain_m"><img width="90" height="129" src=https://is4.revolveassets.com/images/p4/ip2/sb2/BANR-WD19_V1.jpg></a></div>
+
+                            
+
+                            <div><a href="/mobile/tristen-dress/dp/TTBR-WX12/?d=Womens&sectionURL=http%3A%2F%2Fwww.revolveclothing.com%2Fmobile%2Fnew%2Fall-new-items%2Fbr%2F7f5946%2F%3Fnavsrc%3Dmain_m"><img width="90" height="129" src=https://is4.revolveassets.com/images/p4/ip2/sb2/TTBR-WX12_V1.jpg></a></div>
+
+                            
+
+                            <div><a href="/mobile/salju-printed-dress/dp/INDA-WD413/?d=Womens&sectionURL=http%3A%2F%2Fwww.revolveclothing.com%2Fmobile%2Fnew%2Fall-new-items%2Fbr%2F7f5946%2F%3Fnavsrc%3Dmain_m"><img width="90" height="129" src=https://is4.revolveassets.com/images/p4/ip2/sb2/INDA-WD413_V1.jpg></a></div>
+
+                            
+
+                            <div><a href="/mobile/bow-mini-dress/dp/INDA-WD411/?d=Womens&sectionURL=http%3A%2F%2Fwww.revolveclothing.com%2Fmobile%2Fnew%2Fall-new-items%2Fbr%2F7f5946%2F%3Fnavsrc%3Dmain_m"><img width="90" height="129" src=https://is4.revolveassets.com/images/p4/ip2/sb2/INDA-WD411_V1.jpg></a></div>
+
+                            
+
+                            <div><a href="/mobile/splendor-dress/dp/ELLI-WD72/?d=Womens&sectionURL=http%3A%2F%2Fwww.revolveclothing.com%2Fmobile%2Fnew%2Fall-new-items%2Fbr%2F7f5946%2F%3Fnavsrc%3Dmain_m"><img width="90" height="129" src=https://is4.revolveassets.com/images/p4/ip2/sb2/ELLI-WD72_V1.jpg></a></div>
+
+                            
+
+                            <div><a href="/mobile/wild-flower-dress/dp/BECA-WD167/?d=Womens&sectionURL=http%3A%2F%2Fwww.revolveclothing.com%2Fmobile%2Fnew%2Fall-new-items%2Fbr%2F7f5946%2F%3Fnavsrc%3Dmain_m"><img width="90" height="129" src=https://is4.revolveassets.com/images/p4/ip2/sb2/BECA-WD167_V1.jpg></a></div>
+
+                            
+                </div><!-- shop_the_look_products -->
+            </div><!-- shop_look_tab -->
+
+            
+                <div class="shop_look_tab" id="shop_look_tab">Styled With</div>
+                <div class="shop_the_look_products">
+                    
+                    <div class="container">
+                        <div><a href="/mobile/su2c-x-revolve-hedi-platform/dp/RAYE-WZ92/?d=Womens&sectionURL=http%3A%2F%2Fwww.revolveclothing.com%2Fmobile%2Fnew%2Fall-new-items%2Fbr%2F7f5946%2F%3Fnavsrc%3Dmain_m"><img width="90" height="129" src=https://is4.revolveassets.com/images/p4/ip2/sb2/RAYE-WZ92_V1.jpg></a></div>
+                    </div><!-- shop_the_look_products -->
+                    
+                    <div class="container">
+                        <div><a href="/mobile/the-ball-chain-ring-set/dp/LUVA-WL218/?d=Womens&sectionURL=http%3A%2F%2Fwww.revolveclothing.com%2Fmobile%2Fnew%2Fall-new-items%2Fbr%2F7f5946%2F%3Fnavsrc%3Dmain_m"><img width="90" height="129" src=https://is4.revolveassets.com/images/p4/ip2/sb2/LUVA-WL218_V1.jpg></a></div>
+                    </div><!-- shop_the_look_products -->
+                    
+                    <div class="container">
+                        <div><a href="/mobile/karen-o-ring/dp/SBOW-WL22/?d=Womens&sectionURL=http%3A%2F%2Fwww.revolveclothing.com%2Fmobile%2Fnew%2Fall-new-items%2Fbr%2F7f5946%2F%3Fnavsrc%3Dmain_m"><img width="90" height="129" src=https://is4.revolveassets.com/images/p4/ip2/sb2/SBOW-WL22_V1.jpg></a></div>
+                    </div><!-- shop_the_look_products -->
+                    
+                    <div class="container">
+                        <div><a href="/mobile/nadia-cuff/dp/MIMR-WL46/?d=Womens&sectionURL=http%3A%2F%2Fwww.revolveclothing.com%2Fmobile%2Fnew%2Fall-new-items%2Fbr%2F7f5946%2F%3Fnavsrc%3Dmain_m"><img width="90" height="129" src=https://is4.revolveassets.com/images/p4/ip2/sb2/MIMR-WL46_V1.jpg></a></div>
+                    </div><!-- shop_the_look_products -->
+                    
+                    <div class="container">
+                        <div><a href="/mobile/venice-cuff/dp/SBOW-WL19/?d=Womens&sectionURL=http%3A%2F%2Fwww.revolveclothing.com%2Fmobile%2Fnew%2Fall-new-items%2Fbr%2F7f5946%2F%3Fnavsrc%3Dmain_m"><img width="90" height="129" src=https://is4.revolveassets.com/images/p4/ip2/sb2/SBOW-WL19_V1.jpg></a></div>
+                    </div><!-- shop_the_look_products -->
+                    
+                </div><!-- shop_look_tab -->
+                
+
+			
+       		<div class="pdp_scene_spotted">
+            <h2>#REVOLVEME</h2>
+            <h2>SPOTTED: STYLE INSPIRATION FROM YOUR FRIENDS + FOLLOWERS</h2>
+            <p>Tag a photo on <span class='icon_inline'><img src='/r/mobile/images/m/revme_inst.gif'/></span> or <span class='icon_inline'><img src='/r/mobile/images/m/revme_tw.gif'/></span> for a chance to be featured.</p>
+	        
+	        </div><!-- pdp_scene_spotted -->
+			</div>
+			<!--  thank you popup -->
+		  <div class="cancel_remove_popup" id="thank_you_div" style="display:none;width:100%">
+             <div class="cancel_remove_content">
+                 <h1>THANK YOU</h1>
+                 <p>Your opinion means everything to us.</p>
+                 <p>Please wait a few days for us to review your product evaluation before seeing it online.</p>
+
+                 <br style="clear:both;"/>
+                 <a href="#" onclick="closePopUpDisplay(event)">
+                 <input class="co_sub_cta" type="button" value="CLOSE"/>
+                 </a>
+                 <br style="clear:both;"/>
+             </div><!-- cancel_remove_content -->
+           </div>
+
+			<!-- customer review popup -->
+			<div id="review_popup_div" style="display:none;width:100%">
+				<div class="product_review_wrap">
+				<a href="#" class="popup_close_btn" onclick="closeReviewPopup(event)" style="position:relative;left:90%">
+					<span>X</span>
+				</a>
+
+
+				<div class="product_review_inner">
+					<h2 class="header_line">Write a review</h2>
+
+					<!--product review row 1 START-->
+					<div class="product_review_row" style="border-top: 0px; padding-top: 0px;">
+						<div class="pdp_pop_header">
+							<!--product name  -->
+							<h2></h2>
+							<!-- brand name -->
+							<p></p>
+							<div class="product_wrap">
+							<!-- product image -->
+							<img width="90" height="129" src="" />
+							</div>
+						</div>
+						<div class="rating_wrap">
+							<span class="hover-test">RATE THIS ITEM</span>
+							<form>
+								 <input class="hover-star" type="radio" name="rating-1" value="1" title="NOT MY FAVE"/>
+							     <input class="hover-star" type="radio" name="rating-1" value="2" title="SO-SO"/>
+							     <input class="hover-star" type="radio" name="rating-1" value="3" title="SATISFIED"/>
+							     <input class="hover-star" type="radio" name="rating-1" value="4" title="LIKE IT"/>
+							     <input class="hover-star" type="radio" name="rating-1" value="5" title="OBSESSED" checked="checked"/>
+							</form>
+						</div>
+						<div class="size_recommend">
+							<h2>
+								Size Up Or Down?
+							</h2>
+							<div class="size_rec_radio">
+								<ul class="radio_list">
+									<li>
+										<input type="radio" name="size-radio">
+										<label for="size-up">size up</label>
+									</li>
+									<li>
+										<input type="radio" name="size-radio">
+										<label for="as-is">as-is</label>
+									</li>
+									<li>
+										<input type="radio" name="size-radio">
+										<label for="size-down">size down</label>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="size_recommend2">
+							<h2>
+								About My Curves
+							</h2>
+
+							<div class="size_rec_radio">
+								<ul class="radio_list2">
+									<li>
+										<input type="radio" name="size-radio2">
+										<label for="size-up">Straight Hips</label>
+									</li>
+									<li>
+										<input type="radio" name="size-radio2">
+										<label for="as-is">Some Curves</label>
+									</li>
+									<li class="li_smaller">
+										<input type="radio" name="size-radio2">
+										<label for="size-down">Curvy</label>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="size_recommend3">
+							<h2>
+								About My Height
+							</h2>
+
+							<div class="size_rec_radio">
+								<ul class="radio_list2">
+									<li>
+										<input type="radio" name="size-radio3">
+										<label for="size-up">Short</label>
+									</li>
+									<li>
+										<input type="radio" name="size-radio3">
+										<label for="as-is">Average</label>
+									</li>
+									<li class="li_smaller">
+										<input type="radio" name="size-radio3">
+										<label for="size-down">Tall</label>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="text_box_wrap">
+							<h2>
+								REAL TALK
+							</h2>
+
+							<p>
+								Give us the dish on your new items, shopping experience, or anything else you'd like to share with the REVOLVE community!
+							</p>
+
+								<form>
+									<textarea name="styled-textarea" class="review_text_box" placeholder="What do you like/dislike most about this item? Describe the fit of the item. Would you recommend this product to others? Why or why not?"></textarea>
+									<div class="co_input_box">
+										<label>Name (Optional)</label>
+										<input type="text" id="rName" class="text_field_mc no_bottom_mc" name="rName"  value=""/>
+									</div>
+									<div class="co_input_box">
+										<label>Email (Will not be displayed)</label>
+										<input type="text" id="rEmail" class="text_field_mc no_bottom_mc" name="rEmail"   value=""/>
+									</div>
+
+									<div class="co_input_box">
+										<label>City, State (Optional)</label>
+										<input type="text" id="rCityState" class="text_field_mc no_bottom_mc" name="rCityState"  value=""/>
+									</div>
+
+									<div class="css_btn_login">
+										<a rel="external" href="#" onclick="submitReview(event);">Submit</a>
+									</div>
+									<div style="clear: both;"></div>
+								</form>
+						</div>
+					</div>
+					<!--product review row 1 END-->
+				</div>
+			</div>
+			</div><!-- customer review popup ends here  -->
+
+            <div id="revolveme_popup_div" style="display:none;width:100%">
+                <div class="rev_page_header"><h1>#Revolveme</h1></div>
+                <div class="getthelook_header">
+                    <h1>Get the Look</h1>
+                    <a class="getthelook_close" onclick="closeRevolveMePopup(event)"></a>
+
+                    <div class="page_sep"></div>
+                </div>
+                <div id="revolveme_content_div"></div>
+            </div>
+
+
+
+
+				<div class="bottom_nav_mhp">
+                    
+					
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+
+    function loadJSFile(filename, async) {
+        var fileref=document.createElement('script');
+        fileref.setAttribute("type","text/javascript");
+        fileref.setAttribute("src", filename);
+        if (async) {
+            fileref.setAttribute("async", "async");
+        }
+        if (typeof fileref!="undefined") {
+            document.getElementsByTagName("head")[0].appendChild(fileref);
+        }
+    }
+
+    
+    function doOnLoad() {
+        insertGoogleAnalytics();
+        
+        
+        
+        insertCriteo();
+    }
+
+    $(window).load(function() {
+        doOnLoad();
+        if(typeof donOnLoad2 == 'function')
+        { donOnLoad2(); }
+    });
+
+    
+    function getViewportInfo(){
+        var width = window.innerWidth ||
+                document.documentElement.clientWidth ||
+                document.body.clientWidth;
+        var height = window.innerHeight ||
+                document.documentElement.clientHeight ||
+                document.body.clientHeight;
+        if (width != undefined && height != undefined){
+            return '&w='+width+'&h='+height;
+        } else {
+            return '';
+        }
+    }
+
+    // footerAllPages.jsp
+    function insertPageTrackForMobile(addToCartFlag, productCode) {
+        var cartAmount = '0.0';
+        var cartContent = '[]';
+        var referrer = 'http://www.revolveclothing.com/mobile/new/all-new-items/br/7f5946/?navsrc=main_m';
+        var uri = '/r/mobile/DisplayProduct.jsp' + '?aliasURL=mobile/atlas-mini-dress/dp/JENS-WD300&d=Womens&product=JENS-WD300';
+
+        if (uri.indexOf("EditorialList.jsp") != -1 || uri.indexOf("HotList.jsp") != -1 || uri.indexOf("HotListMobile.jsp") != -1
+                || uri.indexOf("LookBook.jsp") != -1 || uri.indexOf("LookBookMobile.jsp") != -1) {
+            uri = window.location.href
+        }
+
+        if(typeof(productCode) != 'undefined' && productCode != null) {
+            uri = uri.replace("code=", "code_original=");
+            if(uri.indexOf("?") != -1) {
+                uri = uri + "&code=" + productCode;
+            } else {
+                uri = uri + "?code=" + productCode;
+            }
+        }
+
+
+        var challengeVar = 3 - 1 % 4 / 1 + 5 * 9 + 2 - (6 - 5) + 3 * 5 + (8 - 9) * 7 - 9  - (3 + 2);
+
+        var smsParams = '&dep=F'+'&boutique=&newFlag=Date&section=Date&cat=All+New+Items&subcat=&subsubcat=&pageNum=1&prevInstockInvoice=null&prevPreorderInvoice=null&challenge=' + challengeVar;
+
+        var dataToSend = "cC="+escape(cartContent)+"&cT="+escape(cartAmount)+"&r="+escape(referrer)+"&u="+escape(uri)+smsParams+getViewportInfo();
+
+
+
+        if(typeof(addToCartFlag) != 'undefined' && addToCartFlag) {
+            dataToSend += '&addToCart=true';
+        }
+
+        var submissionType = 'GET';
+        if(dataToSend.length > 4700) {
+            submissionType = 'POST';
+        }
+
+        $.ajax({
+            type: submissionType,
+            url:'/r/mobile/PageTrack.jsp',
+            data: dataToSend,
+            cache: false,
+            success: function(msg) { }
+        });
+    }
+
+    
+    insertPageTrackForMobile();
+
+    function insertGoogleAnalytics() {
+        
+        
+        $.getScript('/r/js/google_analytics_with_userid.js', function(){
+            GA_LIBRARY.init('1539063');
+            GA_LIBRARY.universal_page();
+        });
+        
+    }
+
+    function setPixelCookie(c_name, value, exdays) {
+        var exdate = new Date();
+        exdate.setTime(exdate.getTime() + exdays*24*60*60*1000);
+        var c_value = escape(value) + ((exdays == null) ? "" : "; expires=" + exdate.toUTCString());
+        document.cookie = c_name + "=" + c_value+ "; path=/";
+    }
+
+    function insertCriteo() {
+        
+        var st = document.createElement("script");
+        st.type = "text/javascript";
+        st.src = "//static.criteo.net/js/ld/ld.js";
+        st.async = true;
+        $('head').append(st);
+
+        window.criteo_q = window.criteo_q || [];
+        
+        // criteo product page
+        window.criteo_q.push(
+                { event: "setAccount", account: 22418 },
+                { event: "setCustomerId", id: "pOqISteqUNEvWjC1A0t1UIzB55JKrJ"},
+                { event: "setHashedEmail", email: "2e5ce78c2ebb15c4661829c9b2e1adc6"},
+                { event: "setSiteType", type: "m"},
+                { event: "viewItem", product: "JENS-WD300" }
+        );
+        
+    }
+
+
+    
+
+</script>
+
+
+
+
+<script src="http://is4.revolveassets.com/r/mobile/js/tellapartTracking.js"></script>
+
+<!-- / Start loading convertro script-->
+<!-- /End  loading convertro script  -->
+<script>
+$(function(){
+    $("#email_signup_form").find("input").on('change keyup paste',function(){
+        $(this).removeClass("error");
+        $(this).attr("placeholder","");
+    });
+});
+
+</script>
+    <div class="info_bottom_nav_mhp">
+
+    <div id="footer_mhp">
+    
+        <h3>CUSTOMER CARE: <br /><a rel="external" href="tel://888-442-5830">888-442-5830</a></h3>
+        <br/>  
+     
+        <div class="footer_connect">
+            <h3>CONNECT</h3>
+            <ul>
+                <li class="r-fb"><a rel="external" href="http://www.facebook.com/REVOLVEclothing"><img src="http://is4.revolveassets.com/r/mobile/images/m/footer_fb.gif"/></a></li>
+                <li class="r-tw"><a rel="external" href="http://www.twitter.com/REVOLVEclothing"><img src="http://is4.revolveassets.com/r/mobile/images/m/footer_tw.gif"/></a></li>
+                <li class="r-pin"><a rel="external" href="http://pinterest.com/revolveclothing"><img src="http://is4.revolveassets.com/r/mobile/images/m/footer_pin.gif"/></a></li>
+                <li class="r-ins"><a rel="external" href="http://instagram.com/revolveclothing"><img src="http://is4.revolveassets.com/r/mobile/images/m/footer_ins.gif"/></a></li>
+                <li class="r-gg"><a rel="external" href="http://plus.google.com/+revolveclothing"><img src="http://is4.revolveassets.com/r/mobile/images/m/footer_gg.gif"/></a></li>
+                <!--zh-->
+                <li class="r-wb_zh"><a rel="external" href="http://weibo.com/revolveclothingchina"><img src="http://is4.revolveassets.com/r/mobile/images/m/footer_wb.gif"/></a></li>
+                <!-- <li class="r-wb_qr_zh"><a rel="external" href="#"><img src="http://is4.revolveassets.com/r/mobile/images/m/footer_wb_qr.gif"/></a></li> -->
+            </ul>
+        </div>
+        
+        <div class="footer_subscribe">
+            <h3>GET IN THE KNOW</h3>
+            <form action="" id="email_signup_form" onsubmit="emailSignUpM(event);"  data-gender='F' >
+                <span style="display:none;" class="footer_subscribe_confirm">Thanks for subscribing<a href="/r/mobile/myrevolve/MyEmailSettings.jsp">Edit Settings</a></span>
+                <input type="text" name="Email" placeholder="Enter your email for the latest style" autocomplete="on" />
+                <span class="subscribe_go"><a href="#" onclick="emailSignUpM(event);"></a></span>
+            </form>
+        </div>
+        <ul class="footer_nav">
+            <li><a rel="external" href="http://www.revolveclothing.com/mobile/AboutUs">About Us</a></li>
+            <li><a rel="external" href="http://www.revolveclothing.com/mobile/CustomerCare">Customer Care</a></li>
+            <li><a rel="external" href="http://www.revolveclothing.com/r/mobile/myrevolve/Dashboard.jsp">My Revolve</a></li>
+            <li><a rel="external" href="http://www.revolveclothing.com/r/mobile/FeedbackSurvey.jsp">Feedback</a></li>
+            <li><a rel="external" href="http://www.revolveclothing.com/r/mobile/Careers.jsp">Careers</a></li>
+        </ul>
+        <ul class="payments-list">
+            <li class="icon-visa">Visa</li>
+            <li class="icon-mastercard">Mastercard</li>
+            <li class="icon-americanexpress">American Express</li>
+            <li class="icon-jcb">JCB</li>
+            <li class="icon-paypal">Paypal</li>
+
+        </ul>
+        <div class="footer_currency_language">
+            
+            <div class="currency">
+                <a class="usd_currency" href="/r/mobile/MenuCurrency.jsp?from=http%3A%2F%2Fwww.revolveclothing.com%2Fr%2Fmobile%2FDisplayProduct.jsp%3FaliasURL%3Dmobile%2Fatlas-mini-dress%2Fdp%2FJENS-WD300%26d%3DWomens%26product%3DJENS-WD300">$ USD</a>
+            </div>
+            <div class="language">
+                <a id="en_language" class="language" href="/r/mobile/MenuLanguage.jsp?from=http%3A%2F%2Fwww.revolveclothing.com%2Fr%2Fmobile%2FDisplayProduct.jsp%3FaliasURL%3Dmobile%2Fatlas-mini-dress%2Fdp%2FJENS-WD300%26d%3DWomens%26product%3DJENS-WD300"><span>flag</span> EN</a>
+            </div>
+        </div><!-- footer_currency_language -->
+        
+        <div style="clear: left;padding: 10px 0;"></div>&#169; Eminent, Inc. All rights reserved
+        
+        <a class="full_site_link_mhp" href="http://revolveclothing.com/Homepage.jsp?from=mobile" rel="external">Switch to Desktop Version</a>    
+        </div>
+                        
+                        
+      </div>    
+      
+    
+    <!-- Login tracking-->
+    
+    <!-- /Login tracking-->
+
+    <!-- Add Item to ShoppingCart tracking Start-->
+    
+    <!-- /Add Item to ShoppingCart tracking End-->
+
+    
+                <script>tellapartDisplayProduct('1392934081646','pOqISteqUNEvWjC1A0t1UIzB55JKrJ','Womens > New > All New Items','JENS-WD300'); </script>
+           
+
+
+
+
+    
+
+<script>
+    $(window).load(function() {
+        doMobileOnLoad();
+    });
+
+    function doMobileOnLoad() {
+        insertGoogleRemarketing();
+    }
+
+    function insertGoogleRemarketing(){
+
+        
+
+        var google_tag_params = {
+            ecomm_prodid: 'JENS-WD300',
+            ecomm_pagetype: 'product',
+            ecomm_totalvalue: 193.0
+        };
+
+        
+
+
+        $.getScript("//www.googleadservices.com/pagead/conversion_async.js", function(){
+			if (typeof window.google_trackConversion === 'function') {
+				window.google_trackConversion({
+					google_conversion_id: 1072201209,
+					google_custom_params: google_tag_params,
+					google_conversion_label: 'bP-DCMus-AIQ-fuh_wM',
+					google_remarketing_only: true
+				});
+			}
+        });
+
+        /* ]]> */
+        
+
+    }
+
+    function insertGoogleRemarketingAddToCart(){
+        
+        // Google Remarketing Script add to bag start
+        try{
+            if (typeof window.google_trackConversion === 'function') {
+                window.google_trackConversion({
+                    google_conversion_id: 1015759326,
+                    google_custom_params: {
+                        ecomm_pagetype: 'cart',
+                        ecomm_prodid: 'JENS-WD300',
+                        ecomm_totalvalue: 193.0
+                    },
+                    google_remarketing_only: true
+                });
+            }
+            // Google Remarketing Script add to bag end
+        }
+        catch(googleRemarketingBagException){
+            console.log('Google remarketing bag exception: ' + googleRemarketingBagException);
+        }
+        
+    }
+
+</script>
+
+                </div>
+				</div><!-- end .scroll -->
+			</div><!-- end #home -->
+		</div><!-- end #jqt -->
+		<!-- Criteo Product Tracking Start -->
+
+ <script type="text/javascript" src="//static.criteo.net/js/ld/ld.js" async="true"></script>
+ <script type="text/javascript">
+ window.criteo_q = window.criteo_q || [];
+ window.criteo_q.push(
+     { event: "setAccount", account: 22418 },
+     { event: "setCustomerId", id: "pOqISteqUNEvWjC1A0t1UIzB55JKrJ"},
+     { event: "setHashedEmail", email: "2e5ce78c2ebb15c4661829c9b2e1adc6"},
+     { event: "setSiteType", type: /Mobile|iP(hone|od)|Android|BlackBerry|IEMobile|Silk/.test(navigator.userAgent) ? "m" : /iPad/.test(navigator.userAgent) ? "t" : "d"},
+     { event: "viewItem", product: "JENS-WD300" } );
+ </script>
+ 
+ <!-- Criteo Product Tracking  End-->
+	</body>
+</html>

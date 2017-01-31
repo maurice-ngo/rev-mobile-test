@@ -1,0 +1,23 @@
+/**
+
+  @fixed-alpha
+--------------------------------------------------------
+  modules/_fixed-alpha.scss
+--------------------------------------------------------
+
+  fixed alpha list
+  this is used for designer index
+
+------------------------------------------------------ */
+.fixed-alpha {
+  position: fixed;
+  top: rem(100);
+  right: rem(16);
+  list-style: none;
+  &__item {
+    line-height: rem(20);
+  }
+  &__item-link {
+    color: $color__grey--light;
+  }
+}

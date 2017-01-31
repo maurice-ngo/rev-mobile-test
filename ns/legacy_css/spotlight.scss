@@ -1,0 +1,1236 @@
+/* Spotlight Breadcrumb
+=================================================== */
+.content_breadcrumb {
+    position: absolute; 
+    z-index: 102; 
+    right: 0; 
+    left: 0;
+}
+.spotlight_breadcrumb {
+    text-align: left;
+    font-size: 14px;
+    width: 100%;
+    margin: 10px 0 30px;
+    li {            
+        color: #444;
+        @include inline-block;
+        a {
+            color: #666 !important;
+        }
+        &.spotlight_current {
+            color: $black-text;
+        }
+    }
+    .spotlight_divider {
+        padding: 0 5px;
+    }
+}
+.spotlight_designers {
+    .spotlight_breadcrumb {
+        li {
+            color: #FFF;
+        }
+        .spotlight_divider {
+            color: #666;
+        }
+        a {
+            //color: #FFF;
+        }
+    }
+}
+
+/* Spotlight Navigation
+=================================================== */
+.main_navigation {
+    .spotlight_nav {
+        // .first {
+        //     padding-left: 15% !important;
+        // }
+        li {
+            &.page_item {
+                padding: 0 3.95%;
+                padding: 0 3.7%\9; //IE specific
+
+            }
+        }
+    } //.spotlight_nav
+} // .main_navigation
+
+.sp_personalities {
+    padding: 25px 0;
+    .sub_content {
+        float: left;
+        width: 500px;
+        padding-right: 100px;
+        h1 {
+            font-family: $header-font-family;
+            font-size: 24px;
+            line-height: 42px;
+            color: $black-text;
+            text-transform: uppercase;
+            &:after {
+            margin-left: 0 !important;
+            border-color: $border-color !important;
+            @include weird-keyline;
+            }
+        }
+        h2 {
+            font-family: $text-font-family;
+            font-size: 21px;
+            line-height: 24px;
+            color: $black-text;
+            letter-spacing: 0;
+            margin: 15px 0;
+        }
+        p {
+            font-size: 14px;
+            line-height: 21px;
+        }
+    }
+} //.sp_personalities
+
+.personalities_menu {
+    width: 420px;
+    float: right;
+    margin-left: 40px;
+    div {
+        float: left;
+        margin-right: 5px;
+        width: 100px;
+        word-wrap: break-word;
+        overflow: visible;
+        a {
+        width: 100px;
+        padding: 0;
+        text-decoration: none;
+        }
+        img { 
+            width: 100%;
+            height: auto;
+            border: 2px solid #FFF;
+            margin: 0;
+            &:hover {
+                border: 2px solid #000;
+            }
+        }
+        h2 {
+            font-family: $header-font-family;
+            font-size: 12px;
+            line-height: 14px;
+            text-transform:uppercase;
+            color: $grey-text;
+            margin: -7px 0 5px 0;
+            padding: 0;
+            display: block;
+            height: 28px;
+            &:hover {
+                color: $black-text;
+                text-decoration: underline;
+            }
+        }
+    }
+    
+} // .personalities_menu
+
+/* Spotlight Section
+=================================================== */
+.rev_spotlight {
+    //padding-bottom: 25px;
+    .spotlight_title {
+        display: none; // activated on the Mobile version
+        width: 100%;
+        background: #000;
+         h1 {
+            font-family: 'ProximaNovaBold', 'Helvetica Neue', Arial, sans-serif;
+            color: #FFF;
+            font-size: 14px;
+            text-transform: uppercase;
+            padding: 15px;
+            margin: 0 auto;
+            text-align: center;
+            letter-spacing: 0.139em;
+        }
+    }
+
+    .container_center {
+          @include width-960;
+          overflow: auto;
+          margin: 0 auto;
+          position: absolute;
+          z-index: 99 !important;
+          top: 0; left: 0; bottom: 0; right: 0;
+        .cta {
+            margin-top: 100px;
+            max-width: 320px;
+            width: 100%;
+            padding-left: 35px;
+            padding-right: 35px;
+            padding-top: 6%;
+            .title {
+                font-size: 32px !important;
+                line-height: 1.25 !important;
+                padding: 0 25px;
+                @include main-title;
+                &:after {
+                    text-align: center;
+                    margin-left: auto !important;
+                    margin-right: auto !important;
+                    padding: 10px 0;
+                    @include weird_keyline;
+                }
+            }
+            .sub_title {
+                color: $grey-text;
+                font-size: 21px;
+                font-family: $text-font-family;
+                margin: 25px auto;
+            }
+            .alt_title {
+                font-size: 14px;
+                margin: 15px auto;
+                font-family: $text-font-family;
+                text-transform:uppercase;
+                color: $grey-text;
+            }
+            .caption { 
+                font-size: 14px;
+            }
+
+            p {
+                line-height: 21px;
+            }
+        }
+    }
+} //.rev_spotlight
+
+/* Spotlight Designers
+=================================================== */
+.spotlight_designers {
+    width: 100%;
+    .slider {
+        li {
+            width: 100%;
+            height: 1900px;
+        }
+        .cycle-slideshow {
+            img {
+                width: 100%;
+                height: auto;
+                display: block;
+            }
+        }
+    }
+    .container_center {
+        .cta {
+            margin-top: 250px;
+        }
+        .designers_video {
+            background: #FFF;
+            height: 250px;
+            float: right;
+            margin-top: -250px;
+            display: table;
+            a {
+                display: table-cell;
+                vertical-align: middle;
+                opacity: 1;
+                &:hover {
+                    opacity: 0.8;
+                    @include transition;
+                }
+            }
+
+        }
+    }
+    .designer_btn {
+        clear:both;
+        display: block;
+        margin: 25px auto;
+        text-align: center;
+        a {
+            font-size: 12px !important;
+            width: 210px;
+            padding: 15px 10px;
+            @include button;
+            &:hover {
+                @include button-hover;
+            }
+        }
+    }
+} //.spotlight_designers
+
+.designers_featured {
+    .designers_featured_products,
+    .designers_featured_shopthelook {
+        background: #FFF;
+        padding: 25px;
+        position: absolute;
+        z-index: 99 !important;
+        //top: 0; bottom: 0; 
+        left: 0; right: 0;
+        margin-top: -900px;
+        text-align: center;
+    }
+
+}// .designers_featured
+
+.featured_brand_top {
+    margin: 10px auto 25px;
+    .brand_title, .collection {
+        text-align: center;
+        margin: 0 auto;
+        @include main-title;
+    }
+    .brand_title {
+        font-size: 24px;
+        margin: 0 0 10px 0;
+    }
+    .collection {
+        font-size: 14px;
+    }
+    &:after {
+        text-align: center;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        padding: 10px 0;
+        @include weird_keyline;
+    }
+}
+
+
+.designers_featured_products {
+    .product_item {
+        width: 24%;
+        margin: 0 0.75% 0 0;
+        padding: 0;
+        display: inline-block;
+        .product_image {
+            width: 100%;
+            height: auto;
+            img {
+                width: 100%;
+                height: auto;
+            }
+            &:nth-child(4) {
+                margin-right: 0 !important;
+            }
+            .main_img_heart {
+                background: none repeat scroll 0 0 white;
+                border: 1px solid #EEEEEE;
+                transition: background 0.12s ease 0s;
+                width: 30px;
+                height: 30px;
+                position: absolute;
+                padding: 4px 0 0 2px;
+                margin-top: 10px;
+                margin-left: 170px;
+                span {
+                    background: url("../i/designers_heart.png") no-repeat scroll -54px 0 transparent;
+                    display: block;
+                    height: 23px;
+                    text-indent: -9999px;
+                    width: 26px;
+                }
+                &:hover,
+                &.active {
+                    background: none repeat scroll 0 0 #FDCDCA;
+                    span {
+                        background: url("../i/designers_heart.png") no-repeat scroll -27px 0 transparent;
+                    }
+                }
+            }
+        }
+        .product_info {
+            padding: 10px 0;
+            text-align: left;
+        }
+        .product_name {
+            font-size: 14px;
+            line-height: 1.5;
+            font-family: $header-font-family;
+            text-transform: uppercase;
+            color: $black-text;
+        }
+        .designer_brand {
+            a {
+                font-size: 12px;
+                font-family: $header-semi-font-family;
+                font-weight: normal;
+                color: $grey-text;
+            }
+        }
+        .price {
+            padding: 5px 0;
+            line-height: 1.5;
+            font-size: 14px;
+        }
+    }
+} // .designers_featured_products
+
+
+.designers_featured_shopthelook {
+    .product_item {
+        @include inline-block;
+        width: 225px;
+        height: 582px;
+        margin: 0;
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+    .product_image {
+        span {
+        width: 225px;
+        height: 582px;
+        background: rgba(0, 0, 0, 0.7); ;
+        position: absolute;
+        opacity: 0;
+        @include transition;
+        display: table;
+            a { 
+                display: table-cell;
+                vertical-align: middle;
+                width: 100%;
+                color: #FFF !important;
+                font-size: 16px !important;
+                @include main-title;
+                padding: 0 75px;
+                margin: 0 auto;
+                text-align: center;
+            }
+            &:hover {
+                opacity: 100;
+                margin-top: 0;
+            }
+        }
+
+    }
+} //.designers_featured_shopthelook
+
+.content_switch {
+    width: 54px;
+    height: 54px;
+    margin: 15px auto;
+    a {
+        img {
+            opacity: 1;
+            @include transition;
+            &:hover {
+                opacity: 0.5;
+            }
+        }
+    }
+}
+
+/* Spotlight Personalities
+=================================================== */
+.spotlight_personalities {
+    width: 100%;
+    padding-bottom: 25px;
+    &.mens {
+        padding-bottom: 0 !important;
+    }
+    .slider {
+        //min-width: 1300px;
+        li {
+            width: 100%;
+            height: 1500px;
+        }
+        .cycle-slideshow {
+            img {
+                width: 100%;
+                height: auto;
+                display: block;
+            }
+        }
+    }
+
+    .rev_content {
+         .cta_small {
+            display: block;
+            width: 50%;
+            max-width: 480px;
+            position: absolute;
+            z-index: 99;
+            text-align: center;
+            padding: 100px 30px 0;
+            .titles {
+                font-size: 26px !important;
+                line-height: 1.25 !important;
+                @include main-title;
+                color: #FFF;
+                padding: 0 25px;
+            }
+            .weird_center_keyline {
+                margin: 15px auto;
+            }
+            p {
+                font-size: 14px;
+                color: #FFF;
+            }
+            .play_btn {
+                margin: 10px auto;
+                display: table !important;
+                p, a {
+                    display: table-cell;
+                    vertical-align: middle;
+                }
+                p {
+                    font-family: $header-semi-font-family;
+                    letter-spacing: 0.125em;
+                    padding: 0 10px;
+                }
+            }
+            .cta_btn {
+                display: block;
+                clear: both;
+                margin: 15px auto;
+                a { 
+                    display: inline-block;
+                    padding: 12px 10px;
+                    @include button-white;
+                    &:hover {
+                        @include button-hover;
+                    }
+                }
+            }
+        }
+    } // .rev_content
+} //.spotlight_personalities
+
+.personalities_featured {
+    position: absolute;
+    z-index: 991;
+    margin-top: -530px;
+    li {
+        width: 50%;
+        max-width: 480px;
+        height: 480px;
+        float: left;
+        @include inline-block;
+    }
+    img {
+        width: 100%;
+        height: auto;
+    }
+} // .personalities_featured
+
+.personalities_featured_bottom {
+    margin-top: 25px;
+    display: block;
+    margin-bottom: 25px;
+    ul {
+        min-height: 200px;
+        li {
+            width: 50%;
+            max-width: 480px;
+            height: 480px;
+            float: left;
+            @include inline-block;
+        }
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+    .rev_content {
+        display: block;
+    }
+} // .personaliteis_featured_bottom
+
+//Widget: Video
+.personalities_video {
+    background: #000;
+    padding: 0;
+    display: table !important;
+    .video_wrap {
+        display: table-cell;
+        vertical-align: middle;
+    }
+}
+
+//Widget: CTA
+.personalities_cta {
+    background: #000;
+    padding: 0;
+    .cta_wrap {
+        display: table !important;
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+    .cta_small {
+        padding-top: 150px !important;
+        display: table-cell;
+        vertical-align: middle;                   
+    }
+}
+//Widget: Revolve Me Slideshow
+.personalities_revolveme {
+    display: table !important;
+    background: #e7e7e7;
+    .revolveme_wrap {
+        display: table-cell;
+        vertical-align: middle;
+        text-align: center;
+        .titles {
+            text-align: center;
+            font-size: 26px !important;
+            @include main-title;
+            color: $black-text;
+            margin-top: 5%;
+        }
+        .weird_center_keyline {
+            background-color: $keyline-color;
+            margin-bottom: 10px;
+        }
+        p {
+            font-size: 14px;
+        }
+        ul {
+            margin: 10px auto;
+            width: 342px;
+        }
+        li {
+            float: left;
+            max-width: 171px;
+            width: 100%;
+            height: 171px;
+            overflow: hidden;
+            .insta_icon {
+                position: absolute;
+                width: 33px;
+                height: 32px;
+                margin-left: 130px;
+                margin-top: 133px;
+                opacity: 1;
+                &:hover {
+                    opacity: 0.7;
+                    border-radius: 25px;
+                }
+            }
+            .insta_imgpost {
+                height: auto;
+            }
+        }
+    }
+    .revolveme_btn {
+        display:block;
+        clear: both;
+        margin: 25px auto;
+        text-align: center;
+        a {
+            margin: 0 auto;
+            width: 225px;
+            padding: 10px;
+            color: #FFF;
+            @include button;
+            &:hover {
+                @include button-hover;
+            }
+        }
+    }
+}
+
+
+//Widget: Sign Up
+.personalities_rev_signup {
+    background: #000;
+    .signup_wrap {
+        //height: 480px;
+        .cta_small {
+            padding-top: 150px !important;
+        }
+        p {
+            color: #FFF;
+            font-size: 14px;
+            text-align: center;
+            margin: 0 50px;
+        }
+        .signup_email {
+            text-align:center;
+            margin: 5px auto 10px;
+        }
+        img {
+            width: 480px;
+            height: auto;
+        }
+    }
+}
+
+.personalities_info {
+        position: absolute;
+        z-index: 110;
+        display: block;
+        margin-top:  75px;
+        margin-left: 64%;
+    .info_btn {
+        width: 51px;
+        height: 51px;
+        a {
+            display: block;
+        }
+    }
+    .personalities_content {
+        display: none;
+    }
+}
+
+   // }
+
+
+/* Spotlight RevolveMe
+=================================================== */
+
+.insta_revolveme {
+    border: 1px solid #e1e1e1;
+    #cboxLoadedContent {
+        padding: 0 !important;
+        overflow: visible;
+    }
+    #cboxClose {
+        background: url('../i/insta-box-sprite.png') -71px 0 no-repeat;
+        width: 37px;
+        height: 37px;   
+        text-indent: 100%;
+        white-space: nowrap;
+        overflow: hidden;
+        right: 5px;
+        top: 5px;
+        display: block;
+        &:hover {
+            background-position: -71px 0;
+        }
+    }
+}
+
+.spotlight_revolveme {
+    text-align: center;
+    min-height: 1950px;
+    h1 {
+        font-size: 40px;
+        text-transform: uppercase;
+        color: $black-text;
+    }
+    p {
+        font-size: 18px;
+        margin-top: 20px;
+        margin-bottom: 30px;
+        .tag_rm_icon {
+            img {
+                display:inline-block;
+                vertical-align: middle;
+            }
+        }
+    }
+    .instagram_upload {
+        width: 200px;
+        display: block;
+        padding: 15px 20px;
+        margin: 10px auto;
+        @include button;
+        &:hover {
+            @include button-hover;
+        }
+    }
+}
+.hashtag_menu {
+    padding: 15px 20px;
+    margin: 40px auto 20px;
+    background: #f7f7f7;
+    border: 1px solid $border-color;
+    div.active_page > a {
+	    color: $black-text;
+		border-bottom: 2px solid #000;	
+    }
+    div {
+        &.insta-hash { 
+        @include inline-block;
+        padding: 0 2%;
+        background: url(../i/sep_diamond.png) -5px -2px no-repeat;
+            a {
+                font-size: 12px;
+                letter-spacing: 0.125em;
+                font-family: $header-font-family;
+                text-transform: uppercase;
+                color: $black-text;
+                &:hover {
+                    color: $black-text;
+                    border-bottom: 2px solid #000;
+                }
+            }
+
+            span {
+                background: url('../i/arrow_sprite.png') right -64px no-repeat;
+                display:inline-block;
+                width: 20px;
+                height: 10px;
+            }
+            &.revme_sub_dd {
+                position: relative;
+                cursor:pointer;
+                .revme_sub_dd_drop {
+                    display: none;
+                    z-index: 101;
+                    border: 1px solid #e1e1e1;
+                    position: absolute;
+                    background: white;
+                    padding: 15px;
+                    top: 15px;
+                    left: -15px;
+                    ul {
+                        li {
+                            a {
+                                font-family: $text-font-family;
+                                color: $body-text;
+                                text-align: center;
+                                text-transform: none;
+                                &:hover {text-decoration:underline;border:none;}
+                            }
+                        }
+                    }
+                }
+            }
+            &.revme_sub_dd:hover .revme_sub_dd_drop {
+                display: block;
+            }
+        }
+        &:nth-child(1) {
+            background: none;
+        }
+    }
+}
+
+.insta-box-thumb {
+	width: 300px;
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+    margin-bottom: 15px;
+    a {
+        border: none;
+        overflow: hidden;
+        img {
+            border: none;
+            overflow: hidden;
+        }
+    }
+    img {
+    	max-height: 300px;
+    	max-width: 300px;
+    	width: auto;
+    	height: auto;
+    }
+    &:hover img {
+        outline: 10px solid black;
+        transition: all .09s fade-in;
+        -moz-transition: all .09s ease-in;
+        -webkit-transition: all .09s ease-in;
+        -o-transition: all .09s ease-in;
+        -ms-transition: all .09s ease-in;
+    }
+}
+
+.insta-box {
+	border: 1px solid #ccc;
+	height: 100%;
+    .insta-post {
+        width: 470px;
+        height: 100%;
+        min-height: 600px;
+        background: #f7f7f7;
+        padding: 40px;
+        @include inline-block;
+        .insta-box-top {
+        	text-align: center;
+            width: 388px;
+            height: 388px;
+            img {
+            	max-height: 388px;
+            	max-width: 388px;
+            	width: auto;
+                height: auto;
+            }
+        }
+        .social_icons {
+            a {
+                text-indent: -99999px;
+                width: 30px;
+                height: 30px;
+                display: inline-block;
+                margin-right: 20px;
+            }
+            .insta-fb-icon {
+                a {background: url(../i/social_nav.png) -5px 0 no-repeat;}
+                a:hover {background: url(../i/social_nav.png) -5px -30px no-repeat;}
+            }
+            .insta-tw-icon {
+                a {background: url(../i/social_nav.png) -53px 0 no-repeat;}
+                a:hover {background: url(../i/social_nav.png) -53px -30px no-repeat;}
+            }
+            .insta-pin-icon {
+                a {background: url(../i/social_nav.png) -100px 0 no-repeat;}
+                a:hover {background: url(../i/social_nav.png) -100px -30px no-repeat;}
+            }
+            .insta-gg-icon {
+                a {background: url(../i/social_nav.png) -196px 0 no-repeat;}
+                a:hover {background: url(../i/social_nav.png) -196px -30px no-repeat;}
+            }
+        }
+        .insta-box-profile {
+            width: 100%;
+            margin: 15px 0 0 0;
+            img.profile_avi {
+                padding: 0;
+                margin: 0;
+                width: 40px;
+                height: 40px;
+                float: left;
+            }
+            .posted_by {
+                float: left;
+                margin-top: 10px;
+                margin-left: 10px;
+                img {
+                    float: left;
+                    margin-top: 6px;
+                    margin-right: 8px;
+                }
+                h3 {
+                    float: left;
+                    clear: none;
+                    font-family: $header-font-family !important;
+                    font-size: 12px;
+                    color: $black-text;
+                    text-transform: uppercase;
+                    letter-spacing: 0.115em;
+                    p {
+                        font-family: $text-font-family;
+                        color: #666;
+                        text-transform: none;
+                        letter-spacing: 0;
+                        font-size: 14px;
+                    }
+                }
+            }
+            .info {
+                display: none;
+            }
+            .caption {
+            	min-height: 25px;
+            	max-height: 55px;
+                margin: 10px 0;
+                font-size: 14px;
+            }
+        }
+        .insta-box-info {
+            display: none;
+        }
+    }
+    .insta-shop {
+        width: 430px;
+        @include inline-block;
+        float: right;
+        padding: 40px;
+        h2.alsolike {
+				margin-top: 32px;
+				margin-bottom: 13px;
+				color: #000;
+				text-transform: uppercase;
+				letter-spacing: .125em;
+				font-size: 11px;
+		}
+        h1 {
+            font-family: $header-font-family;
+            color: $black-text;
+            text-transform: uppercase;
+            letter-spacing: 0.125em;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        li {
+            padding: 10px 0;
+            .product-image {
+                width: 80px;
+                @include inline-block;
+                float: left;
+                margin-right: 10px;
+                img {
+                    width: 100%;
+                    height: auto;
+                }
+            }
+        }
+        .product-info {
+            font-family: $text-font-family;
+            color: $black-text;
+            line-height: 1.6;
+            @include inline-block;
+            .product-name {
+                font-family: $text-font-family;
+                font-weight: normal;
+                letter-spacing: 0;
+                font-size: 14px;
+                line-height: 1.4;
+            }
+            h3.brand-name {
+                font-family: $text-font-family !important;
+                font-size: 14px;
+                font-weight: normal;
+                color: #999;
+            }
+            .product-color,
+            .price {
+                font-size: 14px;
+            }
+            .product-cta {
+                background: black;
+                padding: 8px 25px;
+                text-align: center;
+                border: none;
+                color: white;
+                font-size: 12px;
+                margin: 5px 0 0 0;
+            }
+            .product-cta:hover {
+                background: #888;
+                transition: all .09s fade-in;
+                -moz-transition: all .09s ease-in;
+                -webkit-transition: all .09s ease-in;
+                -o-transition: all .09s ease-in;
+                -ms-transition: all .09s ease-in;
+            }
+        }
+        .insta-box-lower {
+            position: absolute;
+            width: 320px;
+            bottom: 30px;
+            .list-nav {
+                width: 152px;
+                margin: 0 auto 20px;
+                a {
+                    margin: 0 20px;
+                    width: 15px;
+                    height: 15px;
+                    text-indent: 100%;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    @include inline-block;
+                    &.list-prev {
+                        background: url('../i/arrow_sprite_left.png') 0 0 no-repeat;
+                    }
+                    &.list-next{
+                        background: url('../i/arrow_sprite_right.png') 0 0 no-repeat;
+                    }
+                }
+            }
+            .insta-tags {
+                margin: 0 auto;
+                text-align: center;
+                span {
+                    margin: 2px;
+                    text-transform: capitalize;
+                    display:inline-block;
+                    a {
+                        background: white;
+                        display:block;
+                        padding: 5px;
+                        color: $body-text;
+                        border: 1px solid #e1e1e1;
+                    }
+                    a:hover {
+                        background: #eaeaea;
+                        color: black;
+                    }
+                }
+            }
+        }
+    }
+} //.insta-shop
+
+
+
+
+.mobile_nav_menu {
+    display: none;
+    background: #FFF;
+    border-top: 1px solid #e7e7e7;
+    &.spotlight_nav {
+        .menu_toggle {
+            margin-top: -50px;
+            position: absolute;
+        }
+        ul {
+            display: none;
+        }
+        li {
+            display: block;
+            width: 100%;
+            clear: both;
+            border-bottom: 1px solid #e7e7e7;
+            padding-left: 10px;
+            a {
+                display: block;
+                color: $black-text;
+                border-bottom: 0;
+
+            }
+        }
+    }
+}
+.mobile_section_title {
+    display: none;
+    background: #000;
+    padding: 15px 0;
+    h2 {
+        text-align: center;
+        font-size: 14px;
+        color: #FFF;
+        text-transform: uppercase;
+        font-family: $header-font-family;
+        letter-spacing: 0.139em;
+    }
+}
+.mobile_personalities_menu {
+    display: none;
+    position: relative;
+    bottom: 0;
+    border-top: 1px solid #e7e7e7;
+    margin-top: 50px;
+    li {
+        display: table;
+        padding: 10px 0 5px 10px;
+        width: 100%;
+        border-bottom: 1px solid #e7e7e7;
+        a {
+            display: block;
+        }
+    }
+    .menu_profile {
+        //@include inline-block;
+        display: table-cell; 
+        vertical-align: middle; 
+        width: 150px;
+        padding-right: 10px;
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+    h2 {
+        //@include inline-block;
+        font-size: 14px;
+        color: $black-text;
+        text-transform: uppercase;
+        display: table-cell; 
+        vertical-align: middle;
+    }
+
+}
+
+/* Media Queries 
+=================================================== */
+
+/* Maximum width of 768 pixels. */
+@media screen and (max-width: 768px) {
+    .sticky-wrapper {
+        //height: auto !important;
+    }
+    .rev_spotlight {
+        padding-bottom: 0;
+        .container_center {
+            @include width-768;
+            .cta {
+                margin-top: 100px;
+                max-width: 275px;
+            }
+        }
+        .spotlight_personalities {
+            .slider {
+                min-width: 768px;
+                width: 100%;
+                li {
+                    height: 1100px;
+                }
+            }
+            .slide_nextprev {
+                width: 100%;
+            }
+
+            .personalities_featured {
+                //margin-top: -420px;
+                margin-top: -580px;
+                //margin-left: 5px;
+                li {
+                    height: 375px;
+                    &.cycle-slide {
+                        height: 171px;
+                    }
+                    img {
+                        width: 100%;
+                        height: auto;
+                    }
+                }
+            }
+            .personalities_featured_bottom {
+             li {
+                //margin-top: 480px;
+                height: 375px;
+                    img {
+                        width: 100%;
+                        height: auto;
+                    }
+                }
+            }
+        }
+    }
+    .spotlight_designers,
+    .spotlight_personalities {
+        .cycle-slideshow {
+            li {
+                background-size: 1300px 1440px !important;
+            }
+        }
+    }
+    .designers_featured_products {
+        .product_item {
+            width: 171px;
+        }
+    }
+    .designers_featured_shopthelook {
+
+        .product_item {
+            width: 177px;
+            height: 458px;
+        }
+        .product_image {
+            span {
+            width: 177px;
+            height: 458px;
+                a {
+                    padding: 0;
+                }
+            }
+        }
+    }
+} // End @media screen and (max-width: 768px)
+/* Maximum width of 768 pixels. */
+@media screen and (min-width: 480px) and (max-width: 768px) {
+    .personalities_featured_bottom {
+        //margin-top: -50px !important;
+    }
+}
+
+/* Maximum width of 768 pixels. */
+@media screen and (min-width: 768px) and (max-width: 960px) {
+
+    .personalities_featured {
+        margin-top: -200px !important;
+    }
+    .personalities_featured_bottom {
+        margin-top: 275px !important;
+    }
+
+}

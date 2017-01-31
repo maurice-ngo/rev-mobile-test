@@ -1,0 +1,200 @@
+.icheckbox_line,
+.iradio_line {
+  position: relative;
+  display: block;
+  margin: 0;
+  font-size: 12px;
+  line-height: 17px;
+  color: #979797;
+  background: #FFFFFF;
+  cursor: pointer;
+  text-align: center;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  text-transform: capitalize;
+  width: 100%;
+  border: 1px #EAEAEA solid;
+}
+.icheckbox_line.hover,
+.icheckbox_line.checked.hover,
+.iradio_line.hover {
+  color: white;
+  background-color: black;
+}
+.icheckbox_line.checked,
+.iradio_line.checked {
+  background: #000;
+  color: white;
+}
+.size_rec_radio {
+	display: block;
+	margin:  25px auto 0 auto;
+}
+.radio_list {
+	display: block;
+	width: 100%;
+	overflow: hidden;
+  text-align: center;
+}
+.radio_list li {
+	/*float: left;*/
+	display: inline-block;
+	/*width: auto;*/
+	line-height: 22px;
+  margin: 0 5px 13px 5px;
+  width: 29%;
+}
+
+/* Stand up to cancer css */
+
+.sutc_wrap .nps_cta_submit {
+  color: white;
+  background: black;
+  font-family: "ProximaNovaBold","Helvetica Neue",Arial,sans-serif;
+  padding: 15px 25px;
+  letter-spacing: .120em;
+  border: none;
+  text-align: center;
+  /*width: 100%;*/
+  width: 96%;
+  margin: 0 auto;
+  display: block;
+  -webkit-appearance: none;
+  border-radius: 0 0 0 0;
+}
+.sutc_ul_wrap {
+  width: 97%;
+  margin: 0 auto;
+}
+.sutc_ul_wrap .radio_list li.sutc_amount_other .iradio_square {
+  margin: 0 3px 0 0;
+}
+.radio_list li.sutc_amount_wrap {
+  width: 69%;
+  margin: 0px 0 14px -5px;
+  vertical-align: top;
+  height: 48px;
+}
+.radio_list li.sutc_amount_other {
+  width: 30%;
+  margin: 0px;
+  border-top: 1px #EAEAEA solid;
+  border-left: 1px #EAEAEA solid;
+  border-bottom: 1px #EAEAEA solid;
+  padding: 10px;
+  height: 48px;
+  font-size: 14px;
+  /*vertical-align: baseline;*/
+  line-height: 26px;
+}
+.sutc_wrap {
+  border-top: 1px #EAEAEA solid;
+  padding: 20px 10px 15px 10px;
+  margin-top: 15px;
+  min-height: 200px;
+}
+.sutc_wrap h1 {
+  /*font-size: 40px;*/
+  font-size: 1.6em;
+  text-align: center;
+  font-family: "ProximaNovaBold", "Helvetica Neue", Arial, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.125em;
+}
+.sutc_wrap h1 span {
+  color: #ed4e4a;
+}
+.sutc_wrap p {
+  color: #231f20;
+  text-align: center;
+  /*font-size: 22px;*/
+  font-size: 1em;
+  margin-top: 10px;
+  font-family: "Karla", Arial, sans-serif;
+}
+.sutc_amount_input {
+  background-color: #f7f7f7;
+  border-radius: 0 0 0 0;
+  display: block;
+  font-size: 14px;
+  height: 48px;
+  margin: 0;
+  padding: 10px;
+  width: 100%;
+  color: #b4b3b4;
+  border: 1px #EAEAEA solid;
+  -webkit-appearance: none;
+  font-family: "Karla", Arial, sans-serif;
+  text-indent: 10px;
+  line-height: 26px;
+}
+/* sutc amount error */
+
+.sutc_amount_error .sutc_amount_input {
+  background-color: #F4E8E8;
+  color: #b4b3b4;
+  border: 1px #961c1c solid;
+}
+.sutc_amount_error .radio_list li.sutc_amount_other {
+  border-top: 1px #961c1c solid;
+  border-left: 1px #961c1c solid;
+  border-bottom: 1px #961c1c solid;
+}
+.sutc_amount_error .radio_list li.sutc_amount_wrap .sutc_amount_input::-webkit-input-placeholder {
+  color: #961c1c;
+}
+
+.sutc_wrap input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.sutc_wrap .submit_sutc_thank_you {
+  padding: 15px 0px;
+  margin: 0 auto;
+  display: block;
+  background: #FFFFFF;
+  color: #000000;
+  font-family: 'ProximaNovaBold', 'Helvetica', 'Arial', sans-serif;
+  border: 2px solid #000000;
+  font-size: 3.5vw;
+  text-align: center;
+  letter-spacing: 0.120em;
+  text-transform: uppercase;
+  width: 95%;
+  margin-top: 8%;
+}
+.su2c_banner_m img {
+  width: 100%;
+}
+.su2c_bottom_links {
+  position: relative;
+}
+.su2c_bottom_links a {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 25px; 
+  top: 69%;
+}
+.su2c_top_link {
+  position: relative;
+}
+.su2c_top_link a {
+  position: absolute;
+  display: block;
+  width: 36%;
+  height: 15%;
+  top: 65%;
+  left: 52%;
+}
+/*.sutc_amount input {
+    -moz-box-sizing: border-box;
+    background: none repeat scroll 0 0 #EAEAEA;
+    border: 1px solid #E1E1E1;
+    display: block;
+    height: 45px;
+    margin-top: 10px;
+    text-indent: 10px;
+    width: 100%;
+}*/

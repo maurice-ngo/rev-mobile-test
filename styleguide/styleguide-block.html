@@ -1,0 +1,219 @@
+<!doctype html>
+<html class="no-js eagle fonts-loaded" lang="en">
+	<head>
+
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="chrome=1">
+		<title>Revolve | Styleguide</title>
+
+		<!-- Canonical Meta -->
+		<link rel="canonical" href="**YOUR-URL-HERE***">
+
+		<!-- Viewport Meta-->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<!-- SEO Meta -->
+		<meta name="description" content="***YOUR-CONTENT-HERE-***">
+		<meta name="keywords" content="***YOUR-CONTENT-HERE-***">
+		<meta name="robots" content="INDEX,FOLLOW">
+
+		<!-- Favicons -->
+		<link rel="shortcut icon" type="image/ico" href="/favicon.ico">
+		<link href="/lib/img/apple-touch-icon.png" rel="apple-touch-icon" />
+		<link href="/lib/img/apple-touch-icon-60x60.png" rel="apple-touch-icon" sizes="60x60" />
+		<link href="/lib/img/apple-touch-icon-76x76.png" rel="apple-touch-icon" sizes="76x76" />
+		<link href="/lib/img/apple-touch-icon-120x120.png" rel="apple-touch-icon" sizes="120x120" />
+		<link href="/lib/img/apple-touch-icon-152x152.png" rel="apple-touch-icon" sizes="152x152" />
+		<meta name="apple-mobile-web-app-title" content="***YOUR-SITE'S-NAME-HERE-***">
+
+		<!-- Facebook -->
+		<meta property="og:image" content="***YOUR-URL-HERE-***/lib/img/avatar.png">
+		<meta property="og:title" content="Revolve | Styleguide">
+		<meta property="og:site_name" content="Revolve | Styleguide">
+		<meta property="og:url" content="***YOUR-URL-HERE-***">
+		<meta property="og:description" content="Revolve Styleguide, Framework, and Modules">
+
+		<!-- Windows 8 Pin app to start screen -->
+		<meta name="msapplication-TileColor" content="****BRAND-COLOR-HERE***">
+		<meta name="msapplication-TileImage" content="***YOUR-URL-HERE-***/lib/img/apple-touch-icon-precomposed.png">
+
+		<!-- Style Guide Stylesheet -->
+		<!--<link rel="stylesheet" href="../dist/css/style.css" /> -->
+
+		<link rel="stylesheet" href="../dist/css/style-guide-mobile.css" />
+
+		<!--[if (lt IE 9) & (!IEMobile)]>
+			<link rel="stylesheet" href="../dist/css/ie.css" />
+		<![endif]-->
+
+		<!-- Syntax highlight Stylesheet -->
+		<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/styles/solarized_dark.min.css"> -->
+
+		<!-- Header Scripts -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+		<!--[if gt IE 8]><!-->
+			<script async src="../lib/scripts/styleguide/mustache.js"></script>
+		<!--<![endif]-->
+
+		<!--[if (gte IE 6)&(lte IE 8)]>
+			<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/selectivizr/1.0.2/selectivizr-min.js"></script>
+		<![endif]-->
+
+		<!-- Inline Header Scripts -->
+		<script>
+			// Test for SVG support & Ajax SVG defs sprite
+			// Probably safest to only serve first part of conditional and include svg-defs in header instead of Ajax
+			var supportsSvg = function() {
+				var div = document.createElement('div');
+				div.innerHTML = '<svg/>';
+				return (div.firstChild && div.firstChild.namespaceURI) == 'http://www.w3.org/2000/svg';
+			};
+			if (!supportsSvg()) {
+				// Could do this and use the class name, but not needed here.
+				// document.documentElement.className += " no-svg";
+				// It duplicates the SVG test, but that's probably OK because it also tests for Data URI support and loads that stylesheet too.
+				(function(e){function t(t,n,r,o){"use strict";function a(){for(var e,n=0;u.length>n;n++)u[n].href&&u[n].href.indexOf(t)>-1&&(e=!0);e?i.media=r||"all":setTimeout(a)}var i=e.document.createElement("link"),l=n||e.document.getElementsByTagName("script")[0],u=e.document.styleSheets;return i.rel="stylesheet",i.href=t,i.media="only x",i.onload=o||null,l.parentNode.insertBefore(i,l),a(),i}var n=function(r,o){"use strict";if(r&&3===r.length){var a=e.navigator,i=e.Image,l=!(!document.createElementNS||!document.createElementNS("http://www.w3.org/2000/svg","svg").createSVGRect||!document.implementation.hasFeature("http://www.w3.org/TR/SVG11/feature#Image","1.1")||e.opera&&-1===a.userAgent.indexOf("Chrome")||-1!==a.userAgent.indexOf("Series40")),u=new i;u.onerror=function(){n.method="png",n.href=r[2],t(r[2])},u.onload=function(){var e=1===u.width&&1===u.height,a=r[e&&l?0:e?1:2];n.method=e&&l?"svg":e?"datapng":"png",n.href=a,t(a,null,null,o)},u.src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==",document.documentElement.className+=" grunticon"}};n.loadCSS=t,e.grunticon=n})(this);(function(e,t){"use strict";var n=t.document,r="grunticon:",o=function(e){if(n.attachEvent?"complete"===n.readyState:"loading"!==n.readyState)e();else{var t=!1;n.addEventListener("readystatechange",function(){t||(t=!0,e())},!1)}},a=function(e){return t.document.querySelector('link[href$="'+e+'"]')},c=function(e){var t,n,o,a,c,i,u={};if(t=e.sheet,!t)return u;n=t.cssRules?t.cssRules:t.rules;for(var l=0;n.length>l;l++)o=n[l].cssText,a=r+n[l].selectorText,c=o.split(");")[0].match(/US\-ASCII\,([^"']+)/),c&&c[1]&&(i=decodeURIComponent(c[1]),u[a]=i);return u},i=function(e){var t,o,a;o="data-grunticon-embed";for(var c in e)if(a=c.slice(r.length),t=n.querySelectorAll(a+"["+o+"]"),t.length)for(var i=0;t.length>i;i++)t[i].innerHTML=e[c],t[i].style.backgroundImage="none",t[i].removeAttribute(o);return t},u=function(t){"svg"===e.method&&o(function(){i(c(a(e.href))),"function"==typeof t&&t()})};e.embedIcons=i,e.getCSS=a,e.getIcons=c,e.ready=o,e.svgLoadedCallback=u,e.embedSVG=u})(grunticon,this);
+				// Note the empty first item in the array. Don't do anything if supported.
+				grunticon(["", "../dist/img/svg/fallbacks/icons.data.png.css", "../dist/img/svg/fallbacks/icons.fallback.css"]);
+			} else {
+				// Inline SVG is supported so Ajax for the sprite.
+				var ajax = new XMLHttpRequest();
+				ajax.open("GET", "../dist/img/svg/processed/svg-defs.svg", true);
+				ajax.send();
+				ajax.onload = function(e) {
+					document.addEventListener("DOMContentLoaded", function(event) {
+					var div = document.createElement("div");
+					div.innerHTML = ajax.responseText;
+					div.id = "svg-sprites";
+					document.body.insertBefore(div, document.body.childNodes[0]);
+                    populateSVGLibary();
+					});
+				}
+			}
+            function populateSVGLibary() {
+                // Couldn't get the ajax compelete option to work http://www.w3schools.com/ajax/ajax_xmlhttprequest_onreadystatechange.asp
+                // That's why I'm using window on load... my bad - maurice
+                var svgLibHTML = "";
+                var svgSymbol = $('#svg-sprites').find('symbol');
+                  svgSymbol.each( function() {
+
+                    var svgName = $(this).attr('id').replace('icon-','');
+
+                    svgLibHTML += "<div class='grid__col'><div class='sg-style-bg sg-text-c js-svg-clipboard u-pointer'><span class='icon icon--lg icon--"+svgName+"'><svg><use xlink:href='#icon-"+svgName+"'></use></svg></span></div></div>";
+                  } );
+                $('.js-svg-libary').html(svgLibHTML);
+            };
+		</script>
+
+
+
+
+	</head>
+
+
+  <body>
+
+  <!-- EXAMPLE DOCUMENTATION MODULE -->
+
+    <header class="site-header sg-page__header" role="banner">
+      <div class="container u-clearfix">
+        <div class="flag flag--bottom">
+          <div class="flag__image">
+            <a class="branding" href="index.html">
+              <span class="icon--revolve-logo">
+                <svg class="branding__logo" aria-labelledby="title" aria-describedby="desc" role="img">
+                  <title>Revolve Clothing</title>
+                  <desc>Ecommerce Clothing</desc>
+                  <use xlink:href="#icon-revolve-logo"></use>
+                </svg>
+              </span>
+            </a><!-- end .branding -->
+          </div>
+          <div class="flag__body">
+            <div class="sg-page__title">Web Style Guide</div>
+            <nav>
+              <ul class="sg-main-nav ui-list">
+                <li class="sg-main-nav__item ui-list__item"><a href="index.html">Base</a></li>
+                <li class="sg-main-nav__item ui-list__item"><a href="modules.html">Modules</a></li>
+                <li class="sg-main-nav__item ui-list__item"><a href="javascript.html">JavaScript</a></li>
+                <li class="sg-main-nav__item ui-list__item"><a href="documentation.html">Coding Standards</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="page__header  sg-hero" role="banner">
+       <div class="container">
+         <h1>Style Guide Code Block Example</h1>
+         <p>Use this block when documenting a new style guide module or example.</p>
+
+       </div>
+    </div>
+    <main class="site-main" role="main">
+
+      <div class="container">
+        <pre>
+          <code class="sg-code  sg-code--html  html">
+&lt;!-- [NAME] --&gt;
+&lt;section id="name" class="block  sg-section"&gt;
+  &lt;header class="sg-section__header"&gt;
+    &lt;h2 class="sg-section__title"&gt;Name of the main section - EX: Typography&lt;/h2&gt;
+    &lt;h3 class="sg-section__sub-title"&gt;Brief sub-title of the section - EX: Sitewide typographic elements&lt;/h3&gt;
+  &lt;/header&gt;
+
+  &lt;article class="block"&gt;
+    &lt;p&gt;Only use the article tag if the main section block documentation exceeds a simple paragraph. If used, this block
+    should be used to explain all the block examples that follow.&lt;/p&gt;
+    &lt;ol&gt;
+      &lt;li&gt;More than a paragraph&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/article&gt;
+
+  &lt;div id="[CHILD-NAME]-example" class="block  sg-section"&gt;
+    &lt;h4 class="sg-section__ex-title"&gt;An optional child example heading of the main section - EX: Headings&lt;/h3&gt;
+    &lt;p&gt;Short documentation for example don't use article tag&lt;/p&gt;
+    &lt;div class="sg-ex-block"&gt;
+      &lt;h5 class="sg-ex-block__title"&gt;Code Example&lt;/h5&gt;
+      &lt;!-- [CODE EXAMPLE BLOCK - USE SAME FORMATTING] --&gt;
+      &lt;div class="sg-ex-block__sample"&gt;
+      &lt;!-- [VISUAL EXAMPLE] --&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;&lt;!-- #[CHILD-NAME]-example --&gt;
+
+  &lt;div id="[OTHER-NAME]-example" class="block  sg-section"&gt;
+    &lt;h4 class="sg-section__ex-title"&gt;An optional child example heading of the main section - EX: Headings&lt;/h3&gt;
+    &lt;p&gt;Short documentation for example don't use article tag&lt;/p&gt;
+    &lt;div class="sg-ex-block"&gt;
+      &lt;h5 class="sg-ex-block__title"&gt;Code Example&lt;/h5&gt;
+      &lt;!-- [CODE EXAMPLE BLOCK - USE SAME FORMATTING] --&gt;
+      &lt;div class="sg-ex-block__sample"&gt;
+      &lt;!-- [VISUAL EXAMPLE] --&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;&lt;!-- #[OTHER-NAME]-example --&gt;
+&lt;/section&gt;
+&lt;!-- END [NAME] --&gt;
+&lt;hr&gt;
+&lt;br&gt;
+&lt;br&gt;
+          </code>
+        </pre>
+
+      </div><!-- end .container -->
+
+    </main><!-- end .site-main -->
+
+  </div><!-- end .site -->
+
+
+  <!-- Footer Scripts -->
+  <script async src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/highlight.min.js"></script>
+  <script async src="../lib/scripts/styleguide/ZeroClipboard.js"></script>
+  <script async src="../lib/scripts/styleguide/scripts.js"></script>
+
+  </body>
+</html>
