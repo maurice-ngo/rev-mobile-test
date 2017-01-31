@@ -14,8 +14,7 @@ module.exports = {
     chrome: helpers.entryPoint('chrome'),
     homepage: helpers.entryPoint('homepage'),
     welcomejapan: helpers.entryPoint('welcomejapan'),
-    plp: helpers.entryPoint('plp'),
-    styleguide: helpers.entryPoint('styleguide'),
+    plp: helpers.entryPoint('plp')
   },
 
   // Responsible for resolving file system related lookup

@@ -42,15 +42,9 @@
 /************************************************************************/
 /******/ ([
 /* 0 */
-/***/ function(module, exports, __webpack_require__) {
-
-	eval("__webpack_require__(1);\n\n\n//////////////////\n// WEBPACK FOOTER\n// ./lib/scripts/entry-points/mobile-app/index.js\n// module id = 0\n// module chunks = 0\n//# sourceURL=webpack:///./lib/scripts/entry-points/mobile-app/index.js?");
-
-/***/ },
-/* 1 */
 /***/ function(module, exports) {
 
-	eval("// removed by extract-text-webpack-plugin\n\n//////////////////\n// WEBPACK FOOTER\n// ./lib/scss/mobile-app.scss\n// module id = 1\n// module chunks = 0\n//# sourceURL=webpack:///./lib/scss/mobile-app.scss?");
+	eval("//require('../../../scss/mobile-app.scss');\n\n\n//////////////////\n// WEBPACK FOOTER\n// ./lib/scripts/entry-points/mobile-app/index.js\n// module id = 0\n// module chunks = 0\n//# sourceURL=webpack:///./lib/scripts/entry-points/mobile-app/index.js?");
 
 /***/ }
 /******/ ]);
